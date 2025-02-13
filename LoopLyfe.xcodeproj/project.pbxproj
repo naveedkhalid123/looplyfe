@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EAECAF2D5E23E500C4F1DF /* AppDelegate.swift */; };
+		67EAECB22D5E23E500C4F1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EAECB12D5E23E500C4F1DF /* SceneDelegate.swift */; };
+		67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECB52D5E23E500C4F1DF /* Main.storyboard */; };
+		67EAECB92D5E23E600C4F1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECB82D5E23E600C4F1DF /* Assets.xcassets */; };
+		67EAECBC2D5E23E600C4F1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECBA2D5E23E600C4F1DF /* LaunchScreen.storyboard */; };
+		67EAECCF2D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECC62D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf */; };
+		67EAECD02D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECC72D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf */; };
+		67EAECD12D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECC82D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf */; };
+		67EAECD22D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECC92D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf */; };
+		67EAECD32D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECCA2D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf */; };
+		67EAECD42D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECCB2D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf */; };
+		67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECCC2D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf */; };
+		67EAECD62D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECCD2D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf */; };
+		67EAECD72D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECCE2D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		67EAECAC2D5E23E500C4F1DF /* LoopLyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoopLyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67EAECAF2D5E23E500C4F1DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67EAECB12D5E23E500C4F1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		67EAECB62D5E23E500C4F1DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67EAECB82D5E23E600C4F1DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67EAECBB2D5E23E600C4F1DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67EAECBD2D5E23E600C4F1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67EAECC62D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		67EAECC72D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		67EAECC82D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		67EAECC92D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		67EAECCA2D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		67EAECCB2D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		67EAECCC2D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		67EAECCD2D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		67EAECCE2D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		67EAECD92D5E263200C4F1DF /* LoopLyfe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoopLyfe.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67EAECA92D5E23E500C4F1DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67EAECA32D5E23E500C4F1DF = {
+			isa = PBXGroup;
+			children = (
+				67EAECAE2D5E23E500C4F1DF /* LoopLyfe */,
+				67EAECAD2D5E23E500C4F1DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67EAECAD2D5E23E500C4F1DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67EAECAC2D5E23E500C4F1DF /* LoopLyfe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67EAECAE2D5E23E500C4F1DF /* LoopLyfe */ = {
+			isa = PBXGroup;
+			children = (
+				67EAECD92D5E263200C4F1DF /* LoopLyfe.entitlements */,
+				67EAECD82D5E24C100C4F1DF /* ViewController */,
+				67EAECC42D5E243900C4F1DF /* HelpingClass */,
+				67EAECC32D5E242700C4F1DF /* Delegates */,
+				67EAECB52D5E23E500C4F1DF /* Main.storyboard */,
+				67EAECB82D5E23E600C4F1DF /* Assets.xcassets */,
+				67EAECBA2D5E23E600C4F1DF /* LaunchScreen.storyboard */,
+				67EAECBD2D5E23E600C4F1DF /* Info.plist */,
+			);
+			path = LoopLyfe;
+			sourceTree = "<group>";
+		};
+		67EAECC32D5E242700C4F1DF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				67EAECB12D5E23E500C4F1DF /* SceneDelegate.swift */,
+				67EAECAF2D5E23E500C4F1DF /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		67EAECC42D5E243900C4F1DF /* HelpingClass */ = {
+			isa = PBXGroup;
+			children = (
+				67EAECC52D5E24AE00C4F1DF /* Fonts */,
+			);
+			path = HelpingClass;
+			sourceTree = "<group>";
+		};
+		67EAECC52D5E24AE00C4F1DF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				67EAECC62D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf */,
+				67EAECC72D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf */,
+				67EAECC82D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf */,
+				67EAECC92D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf */,
+				67EAECCA2D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf */,
+				67EAECCB2D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf */,
+				67EAECCC2D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf */,
+				67EAECCD2D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf */,
+				67EAECCE2D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		67EAECD82D5E24C100C4F1DF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67EAECAB2D5E23E500C4F1DF /* LoopLyfe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67EAECC02D5E23E600C4F1DF /* Build configuration list for PBXNativeTarget "LoopLyfe" */;
+			buildPhases = (
+				67EAECA82D5E23E500C4F1DF /* Sources */,
+				67EAECA92D5E23E500C4F1DF /* Frameworks */,
+				67EAECAA2D5E23E500C4F1DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoopLyfe;
+			productName = LoopLyfe;
+			productReference = 67EAECAC2D5E23E500C4F1DF /* LoopLyfe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67EAECA42D5E23E500C4F1DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					67EAECAB2D5E23E500C4F1DF = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 67EAECA72D5E23E500C4F1DF /* Build configuration list for PBXProject "LoopLyfe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67EAECA32D5E23E500C4F1DF;
+			productRefGroup = 67EAECAD2D5E23E500C4F1DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67EAECAB2D5E23E500C4F1DF /* LoopLyfe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67EAECAA2D5E23E500C4F1DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67EAECD32D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf in Resources */,
+				67EAECCF2D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf in Resources */,
+				67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */,
+				67EAECD02D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf in Resources */,
+				67EAECBC2D5E23E600C4F1DF /* LaunchScreen.storyboard in Resources */,
+				67EAECB92D5E23E600C4F1DF /* Assets.xcassets in Resources */,
+				67EAECD22D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf in Resources */,
+				67EAECD12D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf in Resources */,
+				67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */,
+				67EAECD62D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf in Resources */,
+				67EAECD42D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf in Resources */,
+				67EAECD72D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67EAECA82D5E23E500C4F1DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */,
+				67EAECB22D5E23E500C4F1DF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		67EAECB52D5E23E500C4F1DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67EAECB62D5E23E500C4F1DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67EAECBA2D5E23E600C4F1DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67EAECBB2D5E23E600C4F1DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67EAECBE2D5E23E600C4F1DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67EAECBF2D5E23E600C4F1DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67EAECC12D5E23E600C4F1DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoopLyfe/LoopLyfe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G99QAZBHL2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoopLyfe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naveed.looplyfe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67EAECC22D5E23E600C4F1DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoopLyfe/LoopLyfe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G99QAZBHL2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoopLyfe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naveed.looplyfe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67EAECA72D5E23E500C4F1DF /* Build configuration list for PBXProject "LoopLyfe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67EAECBE2D5E23E600C4F1DF /* Debug */,
+				67EAECBF2D5E23E600C4F1DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67EAECC02D5E23E600C4F1DF /* Build configuration list for PBXNativeTarget "LoopLyfe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67EAECC12D5E23E600C4F1DF /* Debug */,
+				67EAECC22D5E23E600C4F1DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67EAECA42D5E23E500C4F1DF /* Project object */;
+}
