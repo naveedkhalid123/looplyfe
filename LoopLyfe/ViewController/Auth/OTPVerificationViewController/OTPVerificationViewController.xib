@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPVerificationViewController" customModule="LoopLyfe" customModuleProvider="target">
+            <connections>
+                <outlet property="OTPView" destination="kuT-tX-x04" id="b0r-4b-MFV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hki-7o-ben">
+                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-5S-UJa">
+                            <rect key="frame" x="17" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="dbo-r3-oKM"/>
+                                <constraint firstAttribute="width" constant="24" id="udB-Pe-z48"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backArrow"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-Wg-35c">
+                            <rect key="frame" x="374" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="svh-uL-YWw"/>
+                                <constraint firstAttribute="height" constant="24" id="uyE-qd-ARk"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="info"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hdW-Wg-35c" firstAttribute="centerY" secondItem="Hki-7o-ben" secondAttribute="centerY" id="2yC-6R-31v"/>
+                        <constraint firstItem="hS2-5S-UJa" firstAttribute="centerY" secondItem="Hki-7o-ben" secondAttribute="centerY" id="WoW-gK-FFK"/>
+                        <constraint firstAttribute="trailing" secondItem="hdW-Wg-35c" secondAttribute="trailing" constant="16" id="gKM-Zr-Bj0"/>
+                        <constraint firstAttribute="height" constant="50" id="nGx-3J-ahX"/>
+                        <constraint firstItem="hS2-5S-UJa" firstAttribute="leading" secondItem="Hki-7o-ben" secondAttribute="leading" constant="17" id="yh6-4D-K7Q"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 6 digit code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kat-O6-TGB">
+                    <rect key="frame" x="40" y="96" width="159" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your code was sent to  +6583794988" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-2g-1c2">
+                    <rect key="frame" x="39.999999999999986" y="128" width="224.66666666666663" height="17"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-tX-x04" customClass="DPOTPView" customModule="DPOTPView">
+                    <rect key="frame" x="38" y="175" width="338" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ab4-1d-CtI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="count">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                            <color key="value" name="yellow"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="AccentColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="11"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend Code 23s" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-yk-5F9">
+                    <rect key="frame" x="40" y="243" width="105" height="17"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    <color key="textColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t get a code?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-oB-e5i">
+                    <rect key="frame" x="40" y="276.66666666666669" width="106" height="17"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    <color key="textColor" name="black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0n-c1-8ye">
+                    <rect key="frame" x="155" y="277.66666666666669" width="112" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="cee-Nz-Jjm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Request phone call">
+                        <color key="titleColor" name="yellow"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hki-7o-ben" secondAttribute="trailing" id="1ck-sZ-9ma"/>
+                <constraint firstItem="qhw-oB-e5i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="2a6-pU-QcT"/>
+                <constraint firstItem="Y0n-c1-8ye" firstAttribute="centerY" secondItem="qhw-oB-e5i" secondAttribute="centerY" id="5T3-li-cgT"/>
+                <constraint firstItem="vAf-yk-5F9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="6WZ-GQ-VYY"/>
+                <constraint firstItem="Hki-7o-ben" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Aub-tj-pQP"/>
+                <constraint firstItem="kat-O6-TGB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="D2R-OG-lN1"/>
+                <constraint firstItem="qhw-oB-e5i" firstAttribute="top" secondItem="vAf-yk-5F9" secondAttribute="bottom" constant="16.666666666666686" id="EbJ-3q-jn2"/>
+                <constraint firstItem="9mc-2g-1c2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Fjq-pY-edi"/>
+                <constraint firstItem="Hki-7o-ben" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JNP-yV-X76"/>
+                <constraint firstItem="kuT-tX-x04" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="L8b-4F-7bb"/>
+                <constraint firstItem="kat-O6-TGB" firstAttribute="top" secondItem="Hki-7o-ben" secondAttribute="bottom" constant="26" id="V21-2M-gEF"/>
+                <constraint firstItem="vAf-yk-5F9" firstAttribute="top" secondItem="kuT-tX-x04" secondAttribute="bottom" constant="28" id="ggz-xc-lpS"/>
+                <constraint firstItem="9mc-2g-1c2" firstAttribute="top" secondItem="kat-O6-TGB" secondAttribute="bottom" constant="8" symbolic="YES" id="j63-qU-h8S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kuT-tX-x04" secondAttribute="trailing" constant="38" id="npY-Ls-ju6"/>
+                <constraint firstItem="Y0n-c1-8ye" firstAttribute="leading" secondItem="qhw-oB-e5i" secondAttribute="trailing" constant="9" id="uqf-DD-irj"/>
+                <constraint firstItem="kuT-tX-x04" firstAttribute="top" secondItem="9mc-2g-1c2" secondAttribute="bottom" constant="30" id="zMD-ID-0pw"/>
+            </constraints>
+            <point key="canvasLocation" x="26.086956521739133" y="-1.6304347826086958"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backArrow" width="24" height="24"/>
+        <image name="info" width="28" height="28"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.80000001192092896" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

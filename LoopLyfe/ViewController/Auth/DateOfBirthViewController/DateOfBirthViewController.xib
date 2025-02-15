@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateOfBirthViewController" customModule="LoopLyfe" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2z-Lb-rRe">
+                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-Mf-49g">
+                            <rect key="frame" x="37" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Ajl-L4-lM8"/>
+                                <constraint firstAttribute="width" constant="24" id="f91-Zp-Yj2"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backArrow"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck8-aT-LCZ">
+                            <rect key="frame" x="179.33333333333334" y="14.666666666666664" width="58.666666666666657" height="21"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ck8-aT-LCZ" firstAttribute="centerX" secondItem="C2z-Lb-rRe" secondAttribute="centerX" constant="1.6666666666666572" id="1k6-c0-jgd"/>
+                        <constraint firstItem="vAv-Mf-49g" firstAttribute="centerY" secondItem="C2z-Lb-rRe" secondAttribute="centerY" id="9dk-Yg-evJ"/>
+                        <constraint firstAttribute="height" constant="50" id="Arb-5p-fyk"/>
+                        <constraint firstItem="vAv-Mf-49g" firstAttribute="leading" secondItem="C2z-Lb-rRe" secondAttribute="leading" constant="37" id="CYu-R7-Z2X"/>
+                        <constraint firstItem="Ck8-aT-LCZ" firstAttribute="centerY" secondItem="C2z-Lb-rRe" secondAttribute="centerY" id="gbb-NB-zYp"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When’s your birthday?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-a1-YBu">
+                    <rect key="frame" x="37" y="100" width="204" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your birthday won’t be shown publily" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7S-gG-A8Y">
+                    <rect key="frame" x="36.999999999999986" y="135" width="243.66666666666663" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" red="0.35686274509803922" green="0.3529411764705882" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-ki-uUH">
+                    <rect key="frame" x="324" y="100" width="54" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="d7I-IV-eJc"/>
+                        <constraint firstAttribute="height" constant="54" id="gcF-St-Gwk"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-Ol-wVC">
+                    <rect key="frame" x="37" y="203" width="341" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="OvZ-P4-Yss"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-oq-KRx">
+                    <rect key="frame" x="37" y="244" width="340" height="1"/>
+                    <color key="backgroundColor" red="0.55686274509803924" green="0.56470588235294117" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="8Ua-t9-gEB"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiq-YW-hph">
+                    <rect key="frame" x="37" y="285" width="340" height="50"/>
+                    <color key="backgroundColor" name="yellow"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ILj-1o-pcn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" name="black"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="7jY-RW-VrP">
+                    <rect key="frame" x="35" y="499" width="344" height="178"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="178" id="Br1-8J-5M3"/>
+                    </constraints>
+                </datePicker>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C2z-Lb-rRe" secondAttribute="trailing" id="5OZ-5o-AU9"/>
+                <constraint firstItem="7jY-RW-VrP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7mY-Yi-aLE"/>
+                <constraint firstItem="7jY-RW-VrP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="AEa-4p-kjZ"/>
+                <constraint firstItem="MRG-a1-YBu" firstAttribute="top" secondItem="C2z-Lb-rRe" secondAttribute="bottom" constant="30" id="Ca1-HH-N7w"/>
+                <constraint firstItem="J3B-Ol-wVC" firstAttribute="top" secondItem="n7S-gG-A8Y" secondAttribute="bottom" constant="48.666666666666657" id="EBX-p5-cR4"/>
+                <constraint firstItem="n7S-gG-A8Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="GTA-LT-V4V"/>
+                <constraint firstItem="J3B-Ol-wVC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="JlG-Uy-YZt"/>
+                <constraint firstItem="jNK-oq-KRx" firstAttribute="top" secondItem="J3B-Ol-wVC" secondAttribute="bottom" constant="15" id="JmH-Mv-ecc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J3B-Ol-wVC" secondAttribute="trailing" constant="36" id="O27-i9-YUU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7jY-RW-VrP" secondAttribute="trailing" constant="35" id="TdK-dq-UhD"/>
+                <constraint firstItem="Kiq-YW-hph" firstAttribute="top" secondItem="jNK-oq-KRx" secondAttribute="bottom" constant="40" id="Wqg-p9-w7s"/>
+                <constraint firstItem="n7S-gG-A8Y" firstAttribute="top" secondItem="MRG-a1-YBu" secondAttribute="bottom" constant="11" id="Wwf-Du-qR3"/>
+                <constraint firstItem="MRG-a1-YBu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="br4-Lh-iUT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kiq-YW-hph" secondAttribute="trailing" constant="37" id="dGB-cA-xQl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jNK-oq-KRx" secondAttribute="trailing" constant="37" id="dlJ-7r-R3D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7jY-RW-VrP" secondAttribute="bottom" constant="59" id="dlf-iV-Ryd"/>
+                <constraint firstItem="5v6-ki-uUH" firstAttribute="top" secondItem="MRG-a1-YBu" secondAttribute="bottom" constant="-24" id="kC7-Tz-RR3"/>
+                <constraint firstItem="C2z-Lb-rRe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kka-7B-0vo"/>
+                <constraint firstItem="C2z-Lb-rRe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o2Q-mz-VMy"/>
+                <constraint firstItem="Kiq-YW-hph" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="qfK-pI-T4a"/>
+                <constraint firstItem="jNK-oq-KRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="rd7-vE-14X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5v6-ki-uUH" secondAttribute="trailing" constant="36" id="usH-Eg-egU"/>
+            </constraints>
+            <point key="canvasLocation" x="26.086956521739133" y="19.565217391304348"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backArrow" width="24" height="24"/>
+        <image name="cake" width="54" height="63"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.80000001192092896" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

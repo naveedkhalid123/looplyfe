@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InterestCollectionViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="108" height="55"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StP-vr-fVz">
+                        <rect key="frame" x="0.0" y="0.0" width="108" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B04-3u-kGC">
+                                <rect key="frame" x="23" y="17" width="63" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="B04-3u-kGC" secondAttribute="bottom" constant="18" id="Yg0-jY-EeA"/>
+                            <constraint firstItem="B04-3u-kGC" firstAttribute="top" secondItem="StP-vr-fVz" secondAttribute="top" constant="17" id="axM-vn-oym"/>
+                            <constraint firstAttribute="trailing" secondItem="B04-3u-kGC" secondAttribute="trailing" constant="22" id="nqY-jf-2eu"/>
+                            <constraint firstItem="B04-3u-kGC" firstAttribute="leading" secondItem="StP-vr-fVz" secondAttribute="leading" constant="23" id="qAR-si-ge4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="27"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="StP-vr-fVz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8CB-0P-STu"/>
+                <constraint firstItem="StP-vr-fVz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BxH-Lm-heO"/>
+                <constraint firstAttribute="trailing" secondItem="StP-vr-fVz" secondAttribute="trailing" id="pdp-kH-iNn"/>
+                <constraint firstAttribute="bottom" secondItem="StP-vr-fVz" secondAttribute="bottom" id="vzL-CE-U9P"/>
+            </constraints>
+            <connections>
+                <outlet property="interestLbl" destination="B04-3u-kGC" id="aa9-1D-wIk"/>
+                <outlet property="interestView" destination="StP-vr-fVz" id="cjP-cZ-YWu"/>
+            </connections>
+            <point key="canvasLocation" x="-73.282442748091597" y="-1.0563380281690142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
