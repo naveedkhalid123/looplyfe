@@ -11,6 +11,12 @@
 		6783B0B42D60B0E300E5AEC1 /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6783B0B22D60B0E300E5AEC1 /* DateOfBirthViewController.xib */; };
 		6783B0B82D60BBD800E5AEC1 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6783B0B62D60BBD800E5AEC1 /* OTPVerificationViewController.swift */; };
 		6783B0B92D60BBD800E5AEC1 /* OTPVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6783B0B72D60BBD800E5AEC1 /* OTPVerificationViewController.xib */; };
+		67B719D32D61FEA700D79804 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B719D12D61FEA700D79804 /* SignInViewController.swift */; };
+		67B719D42D61FEA700D79804 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B719D22D61FEA700D79804 /* SignInViewController.xib */; };
+		67B719D92D620F8C00D79804 /* SignInWithEmailAndPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B719D72D620F8C00D79804 /* SignInWithEmailAndPhone.swift */; };
+		67B719DA2D620F8C00D79804 /* SignInWithEmailAndPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B719D82D620F8C00D79804 /* SignInWithEmailAndPhone.xib */; };
+		67B719DE2D62120900D79804 /* SignInCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B719DC2D62120900D79804 /* SignInCollectionViewCell.swift */; };
+		67B719DF2D62120900D79804 /* SignInCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B719DD2D62120900D79804 /* SignInCollectionViewCell.xib */; };
 		67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEAC42D60F0FF00FBCED7 /* CreatePasswordViewController.swift */; };
 		67CBEAC72D60F0FF00FBCED7 /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */; };
 		67CBEACB2D60F6D500FBCED7 /* CreateUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEAC92D60F6D500FBCED7 /* CreateUserNameViewController.swift */; };
@@ -53,6 +59,12 @@
 		6783B0B22D60B0E300E5AEC1 /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
 		6783B0B62D60BBD800E5AEC1 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
 		6783B0B72D60BBD800E5AEC1 /* OTPVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVerificationViewController.xib; sourceTree = "<group>"; };
+		67B719D12D61FEA700D79804 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		67B719D22D61FEA700D79804 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		67B719D72D620F8C00D79804 /* SignInWithEmailAndPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailAndPhone.swift; sourceTree = "<group>"; };
+		67B719D82D620F8C00D79804 /* SignInWithEmailAndPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInWithEmailAndPhone.xib; sourceTree = "<group>"; };
+		67B719DC2D62120900D79804 /* SignInCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCollectionViewCell.swift; sourceTree = "<group>"; };
+		67B719DD2D62120900D79804 /* SignInCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInCollectionViewCell.xib; sourceTree = "<group>"; };
 		67CBEAC42D60F0FF00FBCED7 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
 		67CBEAC92D60F6D500FBCED7 /* CreateUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserNameViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +133,34 @@
 				6783B0B72D60BBD800E5AEC1 /* OTPVerificationViewController.xib */,
 			);
 			path = OTPVerificationViewController;
+			sourceTree = "<group>";
+		};
+		67B719D02D61FE9100D79804 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67B719D12D61FEA700D79804 /* SignInViewController.swift */,
+				67B719D22D61FEA700D79804 /* SignInViewController.xib */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		67B719D62D620F6D00D79804 /* SignInWithEmailAndPhone */ = {
+			isa = PBXGroup;
+			children = (
+				67B719DB2D6211EC00D79804 /* SignInCollectionViewCell */,
+				67B719D72D620F8C00D79804 /* SignInWithEmailAndPhone.swift */,
+				67B719D82D620F8C00D79804 /* SignInWithEmailAndPhone.xib */,
+			);
+			path = SignInWithEmailAndPhone;
+			sourceTree = "<group>";
+		};
+		67B719DB2D6211EC00D79804 /* SignInCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				67B719DC2D62120900D79804 /* SignInCollectionViewCell.swift */,
+				67B719DD2D62120900D79804 /* SignInCollectionViewCell.xib */,
+			);
+			path = SignInCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		67CBEAC32D60F0E500FBCED7 /* CreatePasswordViewController */ = {
@@ -211,6 +251,7 @@
 		67EAECD82D5E24C100C4F1DF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				67EAECDA2D5E626700C4F1DF /* OnbordingViewController */,
 				67FEE9E22D5F5A68004DEAA5 /* Auth */,
 			);
 			path = ViewController;
@@ -294,6 +335,8 @@
 		67FEE9E22D5F5A68004DEAA5 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				67B719D62D620F6D00D79804 /* SignInWithEmailAndPhone */,
+				67B719D02D61FE9100D79804 /* SignInViewController */,
 				67CBEAC82D60F6BF00FBCED7 /* CreateUserNameViewController */,
 				67CBEAC32D60F0E500FBCED7 /* CreatePasswordViewController */,
 				6783B0B52D60BBBD00E5AEC1 /* OTPVerificationViewController */,
@@ -306,7 +349,6 @@
 		67FEE9E32D5F5A77004DEAA5 /* SignUpViewController */ = {
 			isa = PBXGroup;
 			children = (
-				67EAECDA2D5E626700C4F1DF /* OnbordingViewController */,
 				67FEE9E42D5F5A90004DEAA5 /* SignUpViewController.swift */,
 				67FEE9E52D5F5A90004DEAA5 /* SignUpViewController.xib */,
 			);
@@ -390,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B719DF2D62120900D79804 /* SignInCollectionViewCell.xib in Resources */,
 				67EAECD32D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf in Resources */,
 				67EAECCF2D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf in Resources */,
 				67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */,
@@ -406,6 +449,8 @@
 				67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */,
 				67EAECDF2D5E62B200C4F1DF /* Onboriding1ViewController.xib in Resources */,
 				67EAECD62D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf in Resources */,
+				67B719DA2D620F8C00D79804 /* SignInWithEmailAndPhone.xib in Resources */,
+				67B719D42D61FEA700D79804 /* SignInViewController.xib in Resources */,
 				6783B0B92D60BBD800E5AEC1 /* OTPVerificationViewController.xib in Resources */,
 				67FEE9D92D5F2852004DEAA5 /* InterestCollectionViewCell.xib in Resources */,
 				67FEE9E72D5F5A90004DEAA5 /* SignUpViewController.xib in Resources */,
@@ -466,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6783B0B32D60B0E300E5AEC1 /* DateOfBirthViewController.swift in Sources */,
+				67B719D92D620F8C00D79804 /* SignInWithEmailAndPhone.swift in Sources */,
 				67EAECDE2D5E62B200C4F1DF /* Onboriding1ViewController.swift in Sources */,
 				67CBEACB2D60F6D500FBCED7 /* CreateUserNameViewController.swift in Sources */,
 				67FEE9D82D5F2852004DEAA5 /* InterestCollectionViewCell.swift in Sources */,
@@ -473,9 +519,11 @@
 				67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */,
 				67FEE9D32D5F26E4004DEAA5 /* InterestTblViewCell.swift in Sources */,
 				67FEE9CE2D5F1639004DEAA5 /* Onbording2ViewController.swift in Sources */,
+				67B719D32D61FEA700D79804 /* SignInViewController.swift in Sources */,
 				67FEE9E62D5F5A90004DEAA5 /* SignUpViewController.swift in Sources */,
 				67FEE9E02D5F31D7004DEAA5 /* Onbording4ViewController.swift in Sources */,
 				67FEE9C92D5F0BD7004DEAA5 /* Onbording3ViewController.swift in Sources */,
+				67B719DE2D62120900D79804 /* SignInCollectionViewCell.swift in Sources */,
 				67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */,
 				67EAECB22D5E23E500C4F1DF /* SceneDelegate.swift in Sources */,
 				67FEE9DC2D5F2EA5004DEAA5 /* Extension.swift in Sources */,
