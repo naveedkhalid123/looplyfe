@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPVerificationViewController" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
                 <outlet property="OTPView" destination="kuT-tX-x04" id="b0r-4b-MFV"/>
+                <outlet property="navigationBar" destination="Rbi-9o-Mls" id="rEN-Lg-px7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,37 +30,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hki-7o-ben">
-                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-5S-UJa">
-                            <rect key="frame" x="17" y="13" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="dbo-r3-oKM"/>
-                                <constraint firstAttribute="width" constant="24" id="udB-Pe-z48"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="backArrow"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-Wg-35c">
-                            <rect key="frame" x="374" y="13" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="24" id="svh-uL-YWw"/>
-                                <constraint firstAttribute="height" constant="24" id="uyE-qd-ARk"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="info"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="hdW-Wg-35c" firstAttribute="centerY" secondItem="Hki-7o-ben" secondAttribute="centerY" id="2yC-6R-31v"/>
-                        <constraint firstItem="hS2-5S-UJa" firstAttribute="centerY" secondItem="Hki-7o-ben" secondAttribute="centerY" id="WoW-gK-FFK"/>
-                        <constraint firstAttribute="trailing" secondItem="hdW-Wg-35c" secondAttribute="trailing" constant="16" id="gKM-Zr-Bj0"/>
-                        <constraint firstAttribute="height" constant="50" id="nGx-3J-ahX"/>
-                        <constraint firstItem="hS2-5S-UJa" firstAttribute="leading" secondItem="Hki-7o-ben" secondAttribute="leading" constant="17" id="yh6-4D-K7Q"/>
-                    </constraints>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 6 digit code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kat-O6-TGB">
                     <rect key="frame" x="40" y="96" width="159" height="24"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
@@ -122,23 +92,48 @@
                         <color key="titleColor" name="yellow"/>
                     </state>
                 </button>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbi-9o-Mls">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                    <items>
+                        <navigationItem title="Sign up" id="k2q-0q-ipz">
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="7pg-ml-nUo">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4wf-S4-gwb">
+                                    <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="black"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="uwz-2S-HbD">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nbu-8A-EKT">
+                                    <rect key="frame" x="342" y="1" width="52" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="info"/>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hki-7o-ben" secondAttribute="trailing" id="1ck-sZ-9ma"/>
                 <constraint firstItem="qhw-oB-e5i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="2a6-pU-QcT"/>
                 <constraint firstItem="Y0n-c1-8ye" firstAttribute="centerY" secondItem="qhw-oB-e5i" secondAttribute="centerY" id="5T3-li-cgT"/>
                 <constraint firstItem="vAf-yk-5F9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="6WZ-GQ-VYY"/>
-                <constraint firstItem="Hki-7o-ben" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Aub-tj-pQP"/>
+                <constraint firstItem="Rbi-9o-Mls" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="C0e-gI-Y7V"/>
                 <constraint firstItem="kat-O6-TGB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="D2R-OG-lN1"/>
                 <constraint firstItem="qhw-oB-e5i" firstAttribute="top" secondItem="vAf-yk-5F9" secondAttribute="bottom" constant="16.666666666666686" id="EbJ-3q-jn2"/>
                 <constraint firstItem="9mc-2g-1c2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Fjq-pY-edi"/>
-                <constraint firstItem="Hki-7o-ben" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JNP-yV-X76"/>
                 <constraint firstItem="kuT-tX-x04" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="L8b-4F-7bb"/>
-                <constraint firstItem="kat-O6-TGB" firstAttribute="top" secondItem="Hki-7o-ben" secondAttribute="bottom" constant="26" id="V21-2M-gEF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rbi-9o-Mls" secondAttribute="trailing" id="Oc1-lh-R68"/>
+                <constraint firstItem="Rbi-9o-Mls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aUo-k8-My1"/>
                 <constraint firstItem="vAf-yk-5F9" firstAttribute="top" secondItem="kuT-tX-x04" secondAttribute="bottom" constant="28" id="ggz-xc-lpS"/>
                 <constraint firstItem="9mc-2g-1c2" firstAttribute="top" secondItem="kat-O6-TGB" secondAttribute="bottom" constant="8" symbolic="YES" id="j63-qU-h8S"/>
+                <constraint firstItem="kat-O6-TGB" firstAttribute="top" secondItem="Rbi-9o-Mls" secondAttribute="bottom" constant="32" id="kHw-nA-Z7r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kuT-tX-x04" secondAttribute="trailing" constant="38" id="npY-Ls-ju6"/>
                 <constraint firstItem="Y0n-c1-8ye" firstAttribute="leading" secondItem="qhw-oB-e5i" secondAttribute="trailing" constant="9" id="uqf-DD-irj"/>
                 <constraint firstItem="kuT-tX-x04" firstAttribute="top" secondItem="9mc-2g-1c2" secondAttribute="bottom" constant="30" id="zMD-ID-0pw"/>
@@ -147,7 +142,7 @@
         </view>
     </objects>
     <resources>
-        <image name="backArrow" width="24" height="24"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="info" width="28" height="28"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

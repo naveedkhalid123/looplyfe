@@ -23,6 +23,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateOfBirthViewController" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
+                <outlet property="navigationBar" destination="mFE-CH-c2W" id="6I1-eg-JGC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,34 +32,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2z-Lb-rRe">
-                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-Mf-49g">
-                            <rect key="frame" x="37" y="13" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="Ajl-L4-lM8"/>
-                                <constraint firstAttribute="width" constant="24" id="f91-Zp-Yj2"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="backArrow"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck8-aT-LCZ">
-                            <rect key="frame" x="179.33333333333334" y="14.666666666666664" width="58.666666666666657" height="21"/>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="Ck8-aT-LCZ" firstAttribute="centerX" secondItem="C2z-Lb-rRe" secondAttribute="centerX" constant="1.6666666666666572" id="1k6-c0-jgd"/>
-                        <constraint firstItem="vAv-Mf-49g" firstAttribute="centerY" secondItem="C2z-Lb-rRe" secondAttribute="centerY" id="9dk-Yg-evJ"/>
-                        <constraint firstAttribute="height" constant="50" id="Arb-5p-fyk"/>
-                        <constraint firstItem="vAv-Mf-49g" firstAttribute="leading" secondItem="C2z-Lb-rRe" secondAttribute="leading" constant="37" id="CYu-R7-Z2X"/>
-                        <constraint firstItem="Ck8-aT-LCZ" firstAttribute="centerY" secondItem="C2z-Lb-rRe" secondAttribute="centerY" id="gbb-NB-zYp"/>
-                    </constraints>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When’s your birthday?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-a1-YBu">
                     <rect key="frame" x="37" y="100" width="204" height="24"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
@@ -116,18 +89,36 @@
                         <constraint firstAttribute="height" constant="178" id="Br1-8J-5M3"/>
                     </constraints>
                 </datePicker>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFE-CH-c2W">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                    <items>
+                        <navigationItem title="Sign up" id="lw1-3z-L7W">
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="FRp-Ks-SOJ">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9zA-cK-yUb">
+                                    <rect key="frame" x="20" y="0.0" width="44" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chevron.left" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C2z-Lb-rRe" secondAttribute="trailing" id="5OZ-5o-AU9"/>
                 <constraint firstItem="7jY-RW-VrP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7mY-Yi-aLE"/>
+                <constraint firstItem="mFE-CH-c2W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7xF-11-Rth"/>
                 <constraint firstItem="7jY-RW-VrP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="AEa-4p-kjZ"/>
-                <constraint firstItem="MRG-a1-YBu" firstAttribute="top" secondItem="C2z-Lb-rRe" secondAttribute="bottom" constant="30" id="Ca1-HH-N7w"/>
                 <constraint firstItem="J3B-Ol-wVC" firstAttribute="top" secondItem="n7S-gG-A8Y" secondAttribute="bottom" constant="48.666666666666657" id="EBX-p5-cR4"/>
+                <constraint firstItem="mFE-CH-c2W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F19-rm-Ar2"/>
                 <constraint firstItem="n7S-gG-A8Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="GTA-LT-V4V"/>
                 <constraint firstItem="J3B-Ol-wVC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="JlG-Uy-YZt"/>
                 <constraint firstItem="jNK-oq-KRx" firstAttribute="top" secondItem="J3B-Ol-wVC" secondAttribute="bottom" constant="15" id="JmH-Mv-ecc"/>
+                <constraint firstItem="mFE-CH-c2W" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MQ5-Lo-W6F"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J3B-Ol-wVC" secondAttribute="trailing" constant="36" id="O27-i9-YUU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7jY-RW-VrP" secondAttribute="trailing" constant="35" id="TdK-dq-UhD"/>
                 <constraint firstItem="Kiq-YW-hph" firstAttribute="top" secondItem="jNK-oq-KRx" secondAttribute="bottom" constant="40" id="Wqg-p9-w7s"/>
@@ -137,8 +128,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jNK-oq-KRx" secondAttribute="trailing" constant="37" id="dlJ-7r-R3D"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7jY-RW-VrP" secondAttribute="bottom" constant="59" id="dlf-iV-Ryd"/>
                 <constraint firstItem="5v6-ki-uUH" firstAttribute="top" secondItem="MRG-a1-YBu" secondAttribute="bottom" constant="-24" id="kC7-Tz-RR3"/>
-                <constraint firstItem="C2z-Lb-rRe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kka-7B-0vo"/>
-                <constraint firstItem="C2z-Lb-rRe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o2Q-mz-VMy"/>
+                <constraint firstItem="MRG-a1-YBu" firstAttribute="top" secondItem="mFE-CH-c2W" secondAttribute="bottom" constant="36" id="nKx-JW-L3C"/>
                 <constraint firstItem="Kiq-YW-hph" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="qfK-pI-T4a"/>
                 <constraint firstItem="jNK-oq-KRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="rd7-vE-14X"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5v6-ki-uUH" secondAttribute="trailing" constant="36" id="usH-Eg-egU"/>
@@ -147,14 +137,17 @@
         </view>
     </objects>
     <resources>
-        <image name="backArrow" width="24" height="24"/>
         <image name="cake" width="54" height="63"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="yellow">
             <color red="1" green="0.80000001192092896" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,7 +9,6 @@ import UIKit
 
 class SignUpViewController: UIViewController, UITextViewDelegate  {
     
-    
 
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var facebookView: UIView!

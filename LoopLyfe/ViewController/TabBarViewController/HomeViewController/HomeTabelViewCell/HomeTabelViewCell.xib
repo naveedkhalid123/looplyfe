@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeTabelViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="667"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMG-UZ-t8U">
+                        <rect key="frame" x="358" y="596" width="56" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="kOp-B7-dNg"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="music"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1vD-ql-0v2">
+                        <rect key="frame" x="362" y="492" width="48" height="69"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf0-HG-PiF">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="share"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-VS-osY">
+                                <rect key="frame" x="6.6666666666666856" y="52" width="34.666666666666664" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="darkWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mf0-HG-PiF" firstAttribute="top" secondItem="1vD-ql-0v2" secondAttribute="top" id="APS-Cp-ClU"/>
+                            <constraint firstItem="mf0-HG-PiF" firstAttribute="centerX" secondItem="1vD-ql-0v2" secondAttribute="centerX" id="bTn-Mh-7ZE"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fcS-wB-JUI">
+                        <rect key="frame" x="362" y="405" width="48" height="69"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnC-Ay-Vb2">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="comment"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="330k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGP-9O-1Rm">
+                                <rect key="frame" x="7.3333333333333144" y="52" width="33.666666666666664" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="darkWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LnC-Ay-Vb2" firstAttribute="top" secondItem="fcS-wB-JUI" secondAttribute="top" id="1Vp-mW-Oit"/>
+                            <constraint firstItem="LnC-Ay-Vb2" firstAttribute="centerX" secondItem="fcS-wB-JUI" secondAttribute="centerX" id="4B8-Df-8Mr"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-gQ-AwT">
+                        <rect key="frame" x="362" y="318" width="48" height="69"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2X-0A-hHD">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="likeIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.9M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-eW-kNX">
+                                <rect key="frame" x="7.6666666666666856" y="52" width="33" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" name="darkWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="J2X-0A-hHD" firstAttribute="centerX" secondItem="GWH-gQ-AwT" secondAttribute="centerX" id="VLt-MC-Nzd"/>
+                            <constraint firstItem="J2X-0A-hHD" firstAttribute="top" secondItem="GWH-gQ-AwT" secondAttribute="top" id="qzh-CA-GFp"/>
+                        </constraints>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS5-zh-qJk">
+                        <rect key="frame" x="358" y="224" width="58" height="74"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="37R-yF-h2u"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="addProfile"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@johnuwick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ0-yQ-4bc">
+                        <rect key="frame" x="13" y="554.33333333333337" width="95" height="21.666666666666629"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                        <color key="textColor" name="darkWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is actually the place to visit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coC-OW-fJX">
+                        <rect key="frame" x="13" y="581.66666666666663" width="208.33333333333334" height="19.333333333333371"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="darkWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#googleearth #google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-2m-QJc">
+                        <rect key="frame" x="13" y="604.66666666666663" width="154" height="19.333333333333371"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="darkWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3y-fj-SuT">
+                        <rect key="frame" x="13" y="630" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="RE3-eK-Rk2"/>
+                            <constraint firstAttribute="width" constant="20" id="lXZ-lK-vad"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="music 1"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(LoopLyfeTunes)   original Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYT-q9-4F9">
+                        <rect key="frame" x="40.999999999999986" y="631.33333333333337" width="215.66666666666663" height="19.333333333333371"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="darkWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemTealColor"/>
+                <constraints>
+                    <constraint firstItem="coC-OW-fJX" firstAttribute="top" secondItem="wZ0-yQ-4bc" secondAttribute="bottom" constant="5.6666666666666288" id="2gf-jP-VG8"/>
+                    <constraint firstItem="coC-OW-fJX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="4ow-ZQ-gwK"/>
+                    <constraint firstItem="Q8a-2m-QJc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="8eA-dg-len"/>
+                    <constraint firstItem="GWH-gQ-AwT" firstAttribute="top" secondItem="fS5-zh-qJk" secondAttribute="bottom" constant="20" id="8hS-FV-eqz"/>
+                    <constraint firstItem="fcS-wB-JUI" firstAttribute="top" secondItem="GWH-gQ-AwT" secondAttribute="bottom" constant="18" id="BRI-EL-kbi"/>
+                    <constraint firstItem="GWH-gQ-AwT" firstAttribute="leading" secondItem="fcS-wB-JUI" secondAttribute="leading" id="DNy-y1-Sqv"/>
+                    <constraint firstAttribute="bottom" secondItem="GMG-UZ-t8U" secondAttribute="bottom" constant="15" id="GyI-9s-w1R"/>
+                    <constraint firstItem="fcS-wB-JUI" firstAttribute="leading" secondItem="1vD-ql-0v2" secondAttribute="leading" id="MKa-3H-eUh"/>
+                    <constraint firstAttribute="bottom" secondItem="e3y-fj-SuT" secondAttribute="bottom" constant="15" id="PD6-UF-p3w"/>
+                    <constraint firstItem="GMG-UZ-t8U" firstAttribute="top" secondItem="1vD-ql-0v2" secondAttribute="bottom" constant="35" id="SrZ-i3-a7m"/>
+                    <constraint firstItem="1vD-ql-0v2" firstAttribute="top" secondItem="fcS-wB-JUI" secondAttribute="bottom" constant="18" id="TIJ-U5-zDO"/>
+                    <constraint firstItem="1vD-ql-0v2" firstAttribute="centerX" secondItem="GMG-UZ-t8U" secondAttribute="centerX" id="g4w-O3-ka1"/>
+                    <constraint firstItem="e3y-fj-SuT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="hCs-oY-HtE"/>
+                    <constraint firstItem="wZ0-yQ-4bc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="hFV-2F-1iA"/>
+                    <constraint firstItem="zYT-q9-4F9" firstAttribute="centerY" secondItem="e3y-fj-SuT" secondAttribute="centerY" id="jJ0-5x-Ijp"/>
+                    <constraint firstAttribute="trailing" secondItem="GMG-UZ-t8U" secondAttribute="trailing" constant="14" id="mDa-gy-M8l"/>
+                    <constraint firstItem="e3y-fj-SuT" firstAttribute="top" secondItem="Q8a-2m-QJc" secondAttribute="bottom" constant="6" id="qzx-t2-UJG"/>
+                    <constraint firstItem="zYT-q9-4F9" firstAttribute="leading" secondItem="e3y-fj-SuT" secondAttribute="trailing" constant="8" symbolic="YES" id="yk3-hm-Zxh"/>
+                    <constraint firstItem="Q8a-2m-QJc" firstAttribute="top" secondItem="coC-OW-fJX" secondAttribute="bottom" constant="3.6666666666666288" id="ypX-uH-lwE"/>
+                    <constraint firstItem="fS5-zh-qJk" firstAttribute="leading" secondItem="GMG-UZ-t8U" secondAttribute="leading" id="zKz-M9-dCe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentBtn" destination="LnC-Ay-Vb2" id="bD3-mf-G6J"/>
+                <outlet property="commentCountLbl" destination="PGP-9O-1Rm" id="FdJ-YV-2vk"/>
+                <outlet property="followProfileBtn" destination="fS5-zh-qJk" id="upE-vT-neY"/>
+                <outlet property="likeBtn" destination="J2X-0A-hHD" id="nwW-8B-J5A"/>
+                <outlet property="likeCount" destination="q3l-eW-kNX" id="0R4-Ph-eEg"/>
+                <outlet property="postCaptionLbl" destination="coC-OW-fJX" id="0b8-Sc-cQu"/>
+                <outlet property="postHashTagsLbl" destination="Q8a-2m-QJc" id="RjG-AA-Tcw"/>
+                <outlet property="shareBtn" destination="mf0-HG-PiF" id="pAJ-mW-9Wk"/>
+                <outlet property="shareLbl" destination="CQB-VS-osY" id="emA-jg-6B3"/>
+                <outlet property="soundNameLbl" destination="zYT-q9-4F9" id="qxn-VL-jmp"/>
+                <outlet property="userNameLbl" destination="wZ0-yQ-4bc" id="fxD-VC-RTJ"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="addProfile" width="58" height="74"/>
+        <image name="comment" width="48" height="48"/>
+        <image name="likeIcon" width="48" height="48"/>
+        <image name="music" width="56" height="56"/>
+        <image name="music 1" width="20" height="20"/>
+        <image name="share" width="48" height="48"/>
+        <namedColor name="darkWhite">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

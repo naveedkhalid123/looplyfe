@@ -23,6 +23,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateUserNameViewController" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
+                <outlet property="navigationBar" destination="JVs-Zi-7Bo" id="aCr-Fm-N8H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,48 +32,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-4k-EwP">
-                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xx-XU-JKy">
-                            <rect key="frame" x="16" y="13" width="35" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="ibN-9c-Ulg"/>
-                                <constraint firstAttribute="width" constant="35" id="itw-DH-Z0S"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Skip">
-                                <color key="titleColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2T-rJ-3rJ">
-                            <rect key="frame" x="169.66666666666666" y="11.999999999999998" width="75" height="26.333333333333329"/>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-2H-QYH">
-                            <rect key="frame" x="374" y="13" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="24" id="k3V-gs-sHo"/>
-                                <constraint firstAttribute="width" constant="24" id="l03-4H-V3v"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="info"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="6xx-XU-JKy" firstAttribute="centerY" secondItem="8Ce-4k-EwP" secondAttribute="centerY" id="ILo-Xj-G30"/>
-                        <constraint firstItem="G2T-rJ-3rJ" firstAttribute="centerX" secondItem="8Ce-4k-EwP" secondAttribute="centerX" id="NhY-I1-QOn"/>
-                        <constraint firstAttribute="height" constant="50" id="QcB-Y1-lPO"/>
-                        <constraint firstItem="6xx-XU-JKy" firstAttribute="leading" secondItem="8Ce-4k-EwP" secondAttribute="leading" constant="16" id="iRN-cJ-SRu"/>
-                        <constraint firstItem="G2T-rJ-3rJ" firstAttribute="centerY" secondItem="8Ce-4k-EwP" secondAttribute="centerY" id="xou-5y-qlC"/>
-                        <constraint firstAttribute="trailing" secondItem="Khd-2H-QYH" secondAttribute="trailing" constant="16" id="xp4-6z-T6j"/>
-                        <constraint firstItem="Khd-2H-QYH" firstAttribute="centerY" secondItem="G2T-rJ-3rJ" secondAttribute="centerY" id="yxW-EQ-V57"/>
-                    </constraints>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2J-1U-hWQ">
                     <rect key="frame" x="37" y="96" width="156.33333333333334" height="24"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
@@ -153,6 +112,31 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-Zi-7Bo">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                    <items>
+                        <navigationItem title="Sign up" id="5nJ-gx-hg4">
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="Mgx-9d-NXe">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kQZ-ZD-W76">
+                                    <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="black"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="ATc-Vy-g8c">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="do7-pn-c0d">
+                                    <rect key="frame" x="342" y="1" width="52" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="info"/>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,19 +145,19 @@
                 <constraint firstItem="cjM-bp-NhN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="2pa-wA-qkF"/>
                 <constraint firstItem="KwD-7i-tqE" firstAttribute="centerY" secondItem="XC1-9c-WgP" secondAttribute="centerY" id="8f7-Yd-44i"/>
                 <constraint firstItem="XC1-9c-WgP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="8xg-px-Vtr"/>
-                <constraint firstItem="8Ce-4k-EwP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ccp-EE-lRU"/>
-                <constraint firstItem="Q2J-1U-hWQ" firstAttribute="top" secondItem="8Ce-4k-EwP" secondAttribute="bottom" constant="26" id="J8H-eF-mgk"/>
+                <constraint firstItem="JVs-Zi-7Bo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M6k-Rf-JY2"/>
                 <constraint firstItem="XC1-9c-WgP" firstAttribute="top" secondItem="cjM-bp-NhN" secondAttribute="bottom" constant="52" id="Wc0-ft-cVs"/>
                 <constraint firstItem="91p-fG-eSi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="Xvl-zG-aGs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="91p-fG-eSi" secondAttribute="trailing" constant="36" id="Yhs-LL-Zg9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Ce-4k-EwP" secondAttribute="trailing" id="bwl-uX-Ked"/>
-                <constraint firstItem="8Ce-4k-EwP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cX7-LW-Q4C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XC1-9c-WgP" secondAttribute="trailing" constant="36" id="cew-Zn-UeW"/>
                 <constraint firstItem="cjM-bp-NhN" firstAttribute="top" secondItem="Q2J-1U-hWQ" secondAttribute="bottom" constant="7" id="eSd-f2-HAV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JVs-Zi-7Bo" secondAttribute="trailing" id="iBL-uS-ImA"/>
+                <constraint firstItem="JVs-Zi-7Bo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iWx-qo-n85"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KwD-7i-tqE" secondAttribute="trailing" constant="37" id="isF-ku-1E7"/>
                 <constraint firstItem="Gg7-gK-Hdk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="lLY-7I-Y5B"/>
                 <constraint firstItem="Gg7-gK-Hdk" firstAttribute="top" secondItem="ryz-aG-LtL" secondAttribute="bottom" constant="14" id="nSN-xQ-pWm"/>
                 <constraint firstItem="ryz-aG-LtL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="owx-wP-P3c"/>
+                <constraint firstItem="Q2J-1U-hWQ" firstAttribute="top" secondItem="JVs-Zi-7Bo" secondAttribute="bottom" constant="32" id="pOh-2J-BFd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ryz-aG-LtL" secondAttribute="trailing" constant="37" id="xEc-R0-GU6"/>
                 <constraint firstItem="ryz-aG-LtL" firstAttribute="top" secondItem="Q2J-1U-hWQ" secondAttribute="bottom" constant="121" id="xNo-Jy-BJZ"/>
                 <constraint firstItem="Q2J-1U-hWQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="xxY-Ki-C8J"/>
@@ -183,6 +167,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="greenTick" width="20" height="20"/>
         <image name="info" width="28" height="28"/>
         <image name="warning" width="16" height="16"/>

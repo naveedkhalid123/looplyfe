@@ -11,10 +11,18 @@ import DPOTPView
 class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
 
     
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     @IBOutlet weak var OTPView: DPOTPView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = true
+        navigationBar.backgroundColor = .clear
         
         OTPView.dpOTPViewDelegate = self
         OTPView.count = 6
@@ -25,6 +33,8 @@ class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
         OTPView.selectedBorderColorTextField = .systemYellow
         OTPView.selectedBorderWidthTextField = 1.5
         OTPView.spacing = 15
+        OTPView.tintColorTextField = .red
+
         OTPView.backGroundColorTextField = .clear
         OTPView.textColorTextField = .black
         OTPView.fontTextField = UIFont.systemFont(ofSize: 22, weight: .medium)
