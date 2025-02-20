@@ -42,10 +42,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5mS-96-sP2" firstAttribute="centerX" secondItem="arm-XZ-938" secondAttribute="centerX" id="0lE-d7-mOH"/>
                             <constraint firstItem="arm-XZ-938" firstAttribute="leading" secondItem="Wh4-JK-baM" secondAttribute="leading" constant="6" id="ATu-Hz-rPu"/>
                             <constraint firstAttribute="bottom" secondItem="5mS-96-sP2" secondAttribute="bottom" constant="1" id="B86-m1-VoY"/>
+                            <constraint firstItem="5mS-96-sP2" firstAttribute="leading" secondItem="Wh4-JK-baM" secondAttribute="leading" constant="15.333333333333336" id="CFD-7y-UbA"/>
                             <constraint firstItem="5mS-96-sP2" firstAttribute="top" secondItem="arm-XZ-938" secondAttribute="bottom" constant="3" id="Dgy-IQ-Xr2"/>
+                            <constraint firstAttribute="trailing" secondItem="5mS-96-sP2" secondAttribute="trailing" constant="15" id="Gmf-VC-M52"/>
                             <constraint firstAttribute="trailing" secondItem="arm-XZ-938" secondAttribute="trailing" constant="6" id="dJ8-pV-KXj"/>
                             <constraint firstItem="arm-XZ-938" firstAttribute="centerX" secondItem="Wh4-JK-baM" secondAttribute="centerX" id="lS8-z3-R2L"/>
                             <constraint firstItem="arm-XZ-938" firstAttribute="top" secondItem="Wh4-JK-baM" secondAttribute="top" id="lfE-A9-UBF"/>
