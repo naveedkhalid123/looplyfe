@@ -29,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLx-MI-Nbe">
-                    <rect key="frame" x="0.0" y="388" width="414" height="348"/>
+                    <rect key="frame" x="0.0" y="389.33333333333326" width="414" height="346.66666666666674"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-60-NzL">
                             <rect key="frame" x="378" y="17" width="22" height="22"/>
@@ -44,21 +44,21 @@
                             <rect key="frame" x="167" y="59" width="80" height="80"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reposted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-GX-U2H">
-                            <rect key="frame" x="173" y="160" width="68" height="20"/>
+                            <rect key="frame" x="173" y="160.00000000000006" width="68" height="18.666666666666657"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share why you reposted this video" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-gS-X5u">
-                            <rect key="frame" x="93.333333333333329" y="198" width="227.66666666666669" height="19.333333333333343"/>
+                            <rect key="frame" x="93.333333333333329" y="196.66666666666669" width="227.66666666666669" height="19.333333333333343"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                             <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoE-HU-sLf">
-                            <rect key="frame" x="16" y="266" width="384" height="40"/>
+                            <rect key="frame" x="16" y="264.66666666666669" width="384" height="40"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="repostProfile" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-Xv-N8b">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-Xv-N8b">
                                     <rect key="frame" x="0.0" y="1" width="38" height="38"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="38" id="G6X-J9-7w4"/>
@@ -120,8 +120,8 @@
     </objects>
     <resources>
         <image name="dismiss" width="15.666666984558105" height="15.666666984558105"/>
+        <image name="greyProfile" width="54" height="54"/>
         <image name="repostDone" width="80" height="80"/>
-        <image name="repostProfile" width="38" height="38"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klO-61-arT">
-                    <rect key="frame" x="0.0" y="316" width="414" height="420"/>
+                    <rect key="frame" x="0.0" y="309" width="414" height="427"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6V-Ln-b94">
                             <rect key="frame" x="184" y="20" width="46.333333333333343" height="17"/>
@@ -45,10 +45,10 @@
                             <state key="normal" image="dismiss"/>
                         </button>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pL9-Df-UNl">
-                            <rect key="frame" x="22" y="51" width="392" height="84"/>
+                            <rect key="frame" x="22" y="51" width="392" height="90"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="84" id="fqg-fE-e2K"/>
+                                <constraint firstAttribute="height" constant="90" id="fqg-fE-e2K"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="scD-pG-ekf">
                                 <size key="itemSize" width="128" height="128"/>
@@ -58,10 +58,10 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-3M-g1x">
-                            <rect key="frame" x="22" y="161" width="392" height="84"/>
+                            <rect key="frame" x="22" y="167" width="392" height="90"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="84" id="LcC-rN-PVm"/>
+                                <constraint firstAttribute="height" constant="90" id="LcC-rN-PVm"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h4M-we-tXR">
                                 <size key="itemSize" width="128" height="128"/>
@@ -71,17 +71,17 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dde-CC-wb2">
-                            <rect key="frame" x="22" y="147" width="370" height="1"/>
+                            <rect key="frame" x="22" y="153" width="370" height="1"/>
                             <color key="backgroundColor" red="0.55294117647058827" green="0.5725490196078431" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="gTd-v6-WWb"/>
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xSx-c8-de7">
-                            <rect key="frame" x="22" y="271" width="392" height="95"/>
+                            <rect key="frame" x="22" y="283" width="392" height="90"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="95" id="UO7-ve-8eU"/>
+                                <constraint firstAttribute="height" constant="90" id="UO7-ve-8eU"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W2s-8m-1iB">
                                 <size key="itemSize" width="128" height="128"/>

@@ -70,9 +70,9 @@ class ShareViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == repostCollectionView {
-            return CGSize(width: collectionView.frame.width / 6, height: 74)
+            return CGSize(width: collectionView.frame.width / 6, height: 90)
         } else if collectionView == messgaeCollectionView  {
-            return CGSize(width: collectionView.frame.width / 6, height: 74)
+            return CGSize(width: collectionView.frame.width / 6, height: 90)
         } else {
             return CGSize(width: collectionView.frame.width / 6, height: 90)
         }
