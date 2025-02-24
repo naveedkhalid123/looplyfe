@@ -12,8 +12,9 @@ class HomeTabelViewCell: UITableViewCell {
     
 
     @IBOutlet weak var userNameLbl: UILabel!
-    @IBOutlet weak var postCaptionLbl: UILabel!
-    @IBOutlet weak var postHashTagsLbl: UILabel!
+
+    @IBOutlet weak var descriptionTxtView: UITextView!
+    
     @IBOutlet weak var soundNameLbl: UILabel!
     
     @IBOutlet weak var followProfileBtn: UIButton!

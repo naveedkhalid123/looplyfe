@@ -8,10 +8,9 @@
 import UIKit
 
 class MessageSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var messageSettingArr = [["head": "Welcome message", "subHead": "Welcome message", "desc": "Auto-reply when users start a direct message"], ["head": "Key-word auto-reply", "subHead": "Keyword- auto-reply", "desc": "Custome auto-reply when user message specific keywords"]]
     
-    var messageSettingArr = [["head":"Welcome message","subHead":"Welcome message","desc":"Auto-reply when users start a direct message"],["head":"Key-word auto-reply","subHead":"Keyword- auto-reply","desc":"Custome auto-reply when user message specific keywords"]]
-    
-    @IBOutlet weak var messageSettingTblView: UITableView!
+    @IBOutlet var messageSettingTblView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +18,7 @@ class MessageSettingViewController: UIViewController, UITableViewDelegate, UITab
         messageSettingTblView.dataSource = self
         messageSettingTblView.register(UINib(nibName: "MessageSettingTblViewCell", bundle: nil), forCellReuseIdentifier: "MessageSettingTblViewCell")
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageSettingArr.count
     }
@@ -34,5 +34,4 @@ class MessageSettingViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
 }

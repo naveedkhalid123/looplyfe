@@ -95,7 +95,7 @@
                     <items>
                         <navigationItem title="Sign up" id="lw1-3z-L7W">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="FRp-Ks-SOJ">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9zA-cK-yUb">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9zA-cK-yUb">
                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" systemColor="labelColor"/>

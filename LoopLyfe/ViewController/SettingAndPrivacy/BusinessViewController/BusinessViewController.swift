@@ -8,10 +8,8 @@
 import UIKit
 
 class BusinessViewController: UIViewController {
-    
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
+    @IBOutlet var navigationBar: UINavigationBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -19,6 +17,4 @@ class BusinessViewController: UIViewController {
         navigationBar.isTranslucent = true
         navigationBar.backgroundColor = .clear
     }
-
-
 }

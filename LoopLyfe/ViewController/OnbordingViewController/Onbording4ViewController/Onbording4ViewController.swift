@@ -8,8 +8,7 @@
 import UIKit
 
 class Onbording4ViewController: UIViewController, UITextViewDelegate {
-    
-    @IBOutlet weak var termsTextView: UITextView!
+    @IBOutlet var termsTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +53,7 @@ class Onbording4ViewController: UIViewController, UITextViewDelegate {
 }
 
 // MARK: - UITextViewDelegate to Handle Link Clicks
+
 extension Onbording4ViewController {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         UIApplication.shared.open(URL)

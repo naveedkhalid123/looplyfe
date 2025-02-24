@@ -38,7 +38,7 @@
                     <items>
                         <navigationItem id="TwQ-c5-XKL">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="ecD-8D-Urz">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b4v-KA-604">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b4v-KA-604">
                                     <rect key="frame" x="20" y="11" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" systemColor="labelColor"/>
@@ -53,7 +53,7 @@
                     <rect key="frame" x="171" y="88" width="72" height="72"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keeping LoopLyfe family-friendly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-ZS-daa">
-                    <rect key="frame" x="57" y="179" width="300.33333333333331" height="24"/>
+                    <rect key="frame" x="57" y="179" width="300.33333333333337" height="24"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

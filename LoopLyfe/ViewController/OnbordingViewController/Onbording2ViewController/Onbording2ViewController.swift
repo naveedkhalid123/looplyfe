@@ -8,14 +8,11 @@
 import UIKit
 
 class Onbording2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    var ineterstTblArr = ["Music","Culture","Weather"]
+    var ineterstTblArr = ["Music", "Culture", "Weather"]
  
-    
-    @IBOutlet weak var skipButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var interestsTabelView: UITableView!
+    @IBOutlet var skipButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var interestsTabelView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +33,7 @@ class Onbording2ViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InterestTblViewCell" , for: indexPath) as! InterestTblViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InterestTblViewCell", for: indexPath) as! InterestTblViewCell
         cell.interestLbl.text = ineterstTblArr[indexPath.row]
         return cell
     }
@@ -44,5 +41,4 @@ class Onbording2ViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-
 }

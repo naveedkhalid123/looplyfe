@@ -8,14 +8,13 @@
 import UIKit
 
 class FamilyPairingLinkedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var linkedAccountArr = [["img": "accountImg", "accountHead": "mobbincms7", "accountSubHead": "mobbincms7"], ["img": "addAccount", "accountHead": "Add Account", "accountSubHead": ""]]
     
-    var linkedAccountArr = [["img":"accountImg","accountHead":"mobbincms7","accountSubHead":"mobbincms7"],["img":"addAccount","accountHead":"Add Account","accountSubHead":""],]
+    var helpingResourcesArr = [["Img": "bulb", "lbl": "Digital parenting tips"]]
     
-    var helpingResourcesArr = [["Img":"bulb","lbl":"Digital parenting tips"],]
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var linkedAccTableView: UITableView!
-    @IBOutlet weak var helpingResoucesTableView: UITableView!
+    @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var linkedAccTableView: UITableView!
+    @IBOutlet var helpingResoucesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +34,14 @@ class FamilyPairingLinkedViewController: UIViewController, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if tableView == linkedAccTableView {
             return linkedAccountArr.count
         } else {
             return helpingResourcesArr.count
         }
-      
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if tableView == linkedAccTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LinkedAccTblViewCell", for: indexPath) as! LinkedAccTblViewCell
             cell.linkedAccImage.image = UIImage(named: linkedAccountArr[indexPath.row]["img"] ?? "")
@@ -58,8 +54,6 @@ class FamilyPairingLinkedViewController: UIViewController, UITableViewDataSource
             cell.resourcesLbl.text = helpingResourcesArr[indexPath.row]["lbl"]
             return cell
         }
-        
-    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -69,5 +63,4 @@ class FamilyPairingLinkedViewController: UIViewController, UITableViewDataSource
             return 60
         }
     }
-
 }

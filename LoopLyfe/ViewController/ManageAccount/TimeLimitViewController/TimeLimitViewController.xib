@@ -28,7 +28,7 @@
                     <items>
                         <navigationItem title="Time limit" id="hZ2-9q-9xq">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="HYC-Cf-VNV">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="eBY-SE-TqN">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="eBY-SE-TqN">
                                     <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="black"/>

@@ -8,9 +8,8 @@
 import UIKit
 
 class DateOfBirthViewController: UIViewController {
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
+    @IBOutlet var navigationBar: UINavigationBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -18,6 +17,4 @@ class DateOfBirthViewController: UIViewController {
         navigationBar.isTranslucent = true
         navigationBar.backgroundColor = .clear
     }
-
-
 }

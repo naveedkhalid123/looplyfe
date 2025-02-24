@@ -7,11 +7,10 @@
 
 import UIKit
 
-class LinkedAccountViewController: UIViewController, UITextViewDelegate  {
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var QRScanView: UIView!
-    @IBOutlet weak var QRtextView: UITextView!
+class LinkedAccountViewController: UIViewController, UITextViewDelegate {
+    @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var QRScanView: UIView!
+    @IBOutlet var QRtextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +21,6 @@ class LinkedAccountViewController: UIViewController, UITextViewDelegate  {
         
         extendedLayoutIncludesOpaqueBars = true
 
-//        edgesForExtendedLayout = [.top]
-        
         QRScanView.dropShadow(color: .black)
         QRScanView.layer.cornerRadius = 10
         
@@ -76,6 +73,7 @@ class LinkedAccountViewController: UIViewController, UITextViewDelegate  {
 }
 
 // MARK: - UITextViewDelegate to Handle Link Clicks
+
 extension LinkedAccountViewController {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         UIApplication.shared.open(URL)

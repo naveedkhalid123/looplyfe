@@ -8,9 +8,7 @@
 import UIKit
 
 class Onbording3ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

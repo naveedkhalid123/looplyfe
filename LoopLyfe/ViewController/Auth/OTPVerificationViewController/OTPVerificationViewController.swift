@@ -5,16 +5,13 @@
 //  Created by Naveed Khalid on 15/02/2025.
 //
 
-import UIKit
 import DPOTPView
+import UIKit
 
 class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
-
+    @IBOutlet var navigationBar: UINavigationBar!
     
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
-    @IBOutlet weak var OTPView: DPOTPView!
+    @IBOutlet var OTPView: DPOTPView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,26 +38,13 @@ class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
         OTPView.isBottomLineTextField = true
     }
 
-
+    func dpOTPViewAddText(_ text: String, at position: Int) {}
     
-    func dpOTPViewAddText(_ text: String, at position: Int) {
-        
-    }
+    func dpOTPViewRemoveText(_ text: String, at position: Int) {}
     
-    func dpOTPViewRemoveText(_ text: String, at position: Int) {
-        
-    }
+    func dpOTPViewChangePositionAt(_ position: Int) {}
     
-    func dpOTPViewChangePositionAt(_ position: Int) {
-        
-    }
+    func dpOTPViewBecomeFirstResponder() {}
     
-    func dpOTPViewBecomeFirstResponder() {
-        
-    }
-    
-    func dpOTPViewResignFirstResponder() {
-        
-    }
-    
+    func dpOTPViewResignFirstResponder() {}
 }

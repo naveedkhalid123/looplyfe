@@ -36,7 +36,7 @@
                     <items>
                         <navigationItem id="HdW-T5-SJW">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="cEM-rh-a9D">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8DC-eO-GjB">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8DC-eO-GjB">
                                     <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="black"/>
@@ -48,19 +48,19 @@
                     </items>
                 </navigationBar>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="JSf-lh-OtO">
-                    <rect key="frame" x="0.0" y="56" width="414" height="680"/>
+                    <rect key="frame" x="0.0" y="56" width="414" height="585"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-Wy-ZTV">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="689"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="592.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2Y-ZL-gB8">
-                                    <rect key="frame" x="37" y="45" width="188" height="27"/>
+                                    <rect key="frame" x="36.999999999999986" y="45" width="187.66666666666663" height="25.666666666666671"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-84-txt">
-                                    <rect key="frame" x="37" y="78" width="339" height="54"/>
+                                    <rect key="frame" x="37" y="76.666666666666657" width="339" height="54"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="54" id="jud-sv-DVT"/>
                                     </constraints>
@@ -71,27 +71,10 @@ ccount. This category won’t be displayed publicly.</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-wr-kXp">
-                                    <rect key="frame" x="0.0" y="175" width="414" height="410"/>
+                                    <rect key="frame" x="0.0" y="173.66666666666663" width="414" height="419"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <inset key="separatorInset" minX="37" minY="0.0" maxX="37" maxY="0.0"/>
                                 </tableView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-qU-I4z">
-                                    <rect key="frame" x="36" y="604" width="342" height="50"/>
-                                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="xSJ-Kc-lYm"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Next">
-                                        <fontDescription key="titleFontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                                        <color key="baseForegroundColor" name="black"/>
-                                    </buttonConfiguration>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -99,20 +82,17 @@ ccount. This category won’t be displayed publicly.</string>
                                 <constraint firstItem="P2Y-ZL-gB8" firstAttribute="leading" secondItem="jUx-Wy-ZTV" secondAttribute="leading" constant="37" id="KUg-zW-BnH"/>
                                 <constraint firstAttribute="trailing" secondItem="dSz-wr-kXp" secondAttribute="trailing" id="MBb-UI-jz6"/>
                                 <constraint firstItem="kFp-84-txt" firstAttribute="top" secondItem="P2Y-ZL-gB8" secondAttribute="bottom" constant="6" id="Ont-C7-p5z"/>
-                                <constraint firstAttribute="bottom" secondItem="1bn-qU-I4z" secondAttribute="bottom" constant="35" id="ST3-pW-Sbw"/>
-                                <constraint firstItem="1bn-qU-I4z" firstAttribute="top" secondItem="dSz-wr-kXp" secondAttribute="bottom" constant="19" id="Ubf-Hc-YuC"/>
                                 <constraint firstItem="P2Y-ZL-gB8" firstAttribute="top" secondItem="jUx-Wy-ZTV" secondAttribute="top" constant="45" id="YhH-Ne-Tmj"/>
-                                <constraint firstAttribute="trailing" secondItem="1bn-qU-I4z" secondAttribute="trailing" constant="36" id="cSe-Oi-Mz8"/>
                                 <constraint firstItem="dSz-wr-kXp" firstAttribute="top" secondItem="kFp-84-txt" secondAttribute="bottom" constant="43" id="gEE-Lt-wdw"/>
                                 <constraint firstItem="dSz-wr-kXp" firstAttribute="leading" secondItem="jUx-Wy-ZTV" secondAttribute="leading" id="j6i-mA-hcG"/>
-                                <constraint firstItem="1bn-qU-I4z" firstAttribute="leading" secondItem="jUx-Wy-ZTV" secondAttribute="leading" constant="36" id="quH-Lx-lOC"/>
+                                <constraint firstAttribute="bottom" secondItem="dSz-wr-kXp" secondAttribute="bottom" id="spG-Rp-Th6"/>
                                 <constraint firstItem="kFp-84-txt" firstAttribute="leading" secondItem="jUx-Wy-ZTV" secondAttribute="leading" constant="37" id="wmG-Vg-a3P"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="jUx-Wy-ZTV" secondAttribute="bottom" id="8lM-vp-FIh"/>
+                        <constraint firstAttribute="bottom" secondItem="jUx-Wy-ZTV" secondAttribute="bottom" constant="95" id="8lM-vp-FIh"/>
                         <constraint firstItem="jUx-Wy-ZTV" firstAttribute="height" secondItem="JSf-lh-OtO" secondAttribute="height" multiplier="1.01324" priority="250" id="KkF-0c-cTI"/>
                         <constraint firstItem="jUx-Wy-ZTV" firstAttribute="width" secondItem="JSf-lh-OtO" secondAttribute="width" id="Pkr-B1-2Ix"/>
                         <constraint firstItem="jUx-Wy-ZTV" firstAttribute="top" secondItem="JSf-lh-OtO" secondAttribute="top" id="cig-gT-bCw"/>
@@ -122,13 +102,32 @@ ccount. This category won’t be displayed publicly.</string>
                     <viewLayoutGuide key="contentLayoutGuide" id="1Y5-lZ-xr5"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="DpM-09-83v"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCT-1v-kow">
+                    <rect key="frame" x="20" y="666" width="374" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="zXU-yB-DPz"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" name="black"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aCT-1v-kow" secondAttribute="trailing" constant="20" id="0Jr-0v-rXK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JSf-lh-OtO" secondAttribute="trailing" id="63T-7E-kQw"/>
+                <constraint firstItem="aCT-1v-kow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8Ya-x6-Jce"/>
                 <constraint firstItem="JSf-lh-OtO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cj7-a3-qiN"/>
-                <constraint firstAttribute="bottom" secondItem="JSf-lh-OtO" secondAttribute="bottom" id="MzR-Ym-jPS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aCT-1v-kow" secondAttribute="bottom" constant="20" id="GHo-bm-Asz"/>
+                <constraint firstAttribute="bottom" secondItem="JSf-lh-OtO" secondAttribute="bottom" constant="95" id="MzR-Ym-jPS"/>
                 <constraint firstItem="JSf-lh-OtO" firstAttribute="top" secondItem="CNm-Tr-At9" secondAttribute="bottom" id="NbG-4V-ExW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CNm-Tr-At9" secondAttribute="trailing" id="uJo-9Q-sow"/>
                 <constraint firstItem="CNm-Tr-At9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vuN-0N-V9h"/>

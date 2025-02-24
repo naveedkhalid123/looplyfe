@@ -8,9 +8,8 @@
 import UIKit
 
 class LoopLyfeFamilyViewController: UIViewController {
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    
+    @IBOutlet var navigationBar: UINavigationBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,5 +18,4 @@ class LoopLyfeFamilyViewController: UIViewController {
         navigationBar.isTranslucent = true
         navigationBar.backgroundColor = .clear
     }
-
 }

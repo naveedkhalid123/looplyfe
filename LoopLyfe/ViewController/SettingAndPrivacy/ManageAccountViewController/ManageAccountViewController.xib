@@ -27,8 +27,8 @@
                     <items>
                         <navigationItem title="Manage account" id="tqR-1O-mZS">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="ep1-WI-VkO">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v2c-W2-guO">
-                                    <rect key="frame" x="19.999999999999996" y="8" width="39.666666666666657" height="34.333333333333336"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v2c-W2-guO">
+                                    <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="black"/>
                                     <state key="normal" title="Button"/>

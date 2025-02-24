@@ -8,10 +8,7 @@
 import UIKit
 
 class LogoutPopUpViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
 }

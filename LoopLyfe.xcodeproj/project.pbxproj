@@ -83,6 +83,22 @@
 		67CBEAC72D60F0FF00FBCED7 /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */; };
 		67CBEACB2D60F6D500FBCED7 /* CreateUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEAC92D60F6D500FBCED7 /* CreateUserNameViewController.swift */; };
 		67CBEACC2D60F6D500FBCED7 /* CreateUserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEACA2D60F6D500FBCED7 /* CreateUserNameViewController.xib */; };
+		67E6D4882D6C43BD008436CA /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4862D6C43BD008436CA /* GoalViewController.swift */; };
+		67E6D4892D6C43BD008436CA /* GoalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4872D6C43BD008436CA /* GoalViewController.xib */; };
+		67E6D48D2D6C49C9008436CA /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D48B2D6C49C9008436CA /* GoalTableViewCell.swift */; };
+		67E6D48E2D6C49C9008436CA /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D48C2D6C49C9008436CA /* GoalTableViewCell.xib */; };
+		67E6D4932D6C5230008436CA /* ChooseAudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4912D6C5230008436CA /* ChooseAudienceViewController.swift */; };
+		67E6D4942D6C5230008436CA /* ChooseAudienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4922D6C5230008436CA /* ChooseAudienceViewController.xib */; };
+		67E6D4982D6C5472008436CA /* ChooseAudienceTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4962D6C5472008436CA /* ChooseAudienceTblViewCell.swift */; };
+		67E6D4992D6C5472008436CA /* ChooseAudienceTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4972D6C5472008436CA /* ChooseAudienceTblViewCell.xib */; };
+		67E6D49D2D6C595F008436CA /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D49B2D6C595F008436CA /* DurationViewController.swift */; };
+		67E6D49E2D6C595F008436CA /* DurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D49C2D6C595F008436CA /* DurationViewController.xib */; };
+		67E6D4A22D6C6408008436CA /* CreatorsToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4A02D6C6408008436CA /* CreatorsToolViewController.swift */; };
+		67E6D4A32D6C6408008436CA /* CreatorsToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4A12D6C6408008436CA /* CreatorsToolViewController.xib */; };
+		67E6D4A72D6C69EC008436CA /* ToolsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4A52D6C69EC008436CA /* ToolsTableViewCell.swift */; };
+		67E6D4A82D6C69EC008436CA /* ToolsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4A62D6C69EC008436CA /* ToolsTableViewCell.xib */; };
+		67E6D4AC2D6C7C44008436CA /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4AA2D6C7C44008436CA /* PromotionsViewController.swift */; };
+		67E6D4AD2D6C7C44008436CA /* PromotionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4AB2D6C7C44008436CA /* PromotionsViewController.xib */; };
 		67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EAECAF2D5E23E500C4F1DF /* AppDelegate.swift */; };
 		67EAECB22D5E23E500C4F1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EAECB12D5E23E500C4F1DF /* SceneDelegate.swift */; };
 		67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EAECB52D5E23E500C4F1DF /* Main.storyboard */; };
@@ -199,6 +215,22 @@
 		67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
 		67CBEAC92D60F6D500FBCED7 /* CreateUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserNameViewController.swift; sourceTree = "<group>"; };
 		67CBEACA2D60F6D500FBCED7 /* CreateUserNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserNameViewController.xib; sourceTree = "<group>"; };
+		67E6D4862D6C43BD008436CA /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		67E6D4872D6C43BD008436CA /* GoalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalViewController.xib; sourceTree = "<group>"; };
+		67E6D48B2D6C49C9008436CA /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		67E6D48C2D6C49C9008436CA /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
+		67E6D4912D6C5230008436CA /* ChooseAudienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAudienceViewController.swift; sourceTree = "<group>"; };
+		67E6D4922D6C5230008436CA /* ChooseAudienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAudienceViewController.xib; sourceTree = "<group>"; };
+		67E6D4962D6C5472008436CA /* ChooseAudienceTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAudienceTblViewCell.swift; sourceTree = "<group>"; };
+		67E6D4972D6C5472008436CA /* ChooseAudienceTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAudienceTblViewCell.xib; sourceTree = "<group>"; };
+		67E6D49B2D6C595F008436CA /* DurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
+		67E6D49C2D6C595F008436CA /* DurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationViewController.xib; sourceTree = "<group>"; };
+		67E6D4A02D6C6408008436CA /* CreatorsToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorsToolViewController.swift; sourceTree = "<group>"; };
+		67E6D4A12D6C6408008436CA /* CreatorsToolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatorsToolViewController.xib; sourceTree = "<group>"; };
+		67E6D4A52D6C69EC008436CA /* ToolsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsTableViewCell.swift; sourceTree = "<group>"; };
+		67E6D4A62D6C69EC008436CA /* ToolsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolsTableViewCell.xib; sourceTree = "<group>"; };
+		67E6D4AA2D6C7C44008436CA /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
+		67E6D4AB2D6C7C44008436CA /* PromotionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsViewController.xib; sourceTree = "<group>"; };
 		67EAECAC2D5E23E500C4F1DF /* LoopLyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoopLyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EAECAF2D5E23E500C4F1DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67EAECB12D5E23E500C4F1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -656,6 +688,93 @@
 			path = CreateUserNameViewController;
 			sourceTree = "<group>";
 		};
+		67E6D4842D6C438F008436CA /* CompleteAdsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4A92D6C7C19008436CA /* PromotionsViewController */,
+				67E6D49F2D6C63EC008436CA /* CreatorsToolViewController */,
+				67E6D49A2D6C593B008436CA /* DurationViewController */,
+				67E6D4902D6C5217008436CA /* ChooseAudienceViewController */,
+				67E6D4852D6C43A3008436CA /* GoalViewController */,
+			);
+			path = CompleteAdsFlow;
+			sourceTree = "<group>";
+		};
+		67E6D4852D6C43A3008436CA /* GoalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D48A2D6C49AF008436CA /* GoalTableViewCell */,
+				67E6D4862D6C43BD008436CA /* GoalViewController.swift */,
+				67E6D4872D6C43BD008436CA /* GoalViewController.xib */,
+			);
+			path = GoalViewController;
+			sourceTree = "<group>";
+		};
+		67E6D48A2D6C49AF008436CA /* GoalTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D48B2D6C49C9008436CA /* GoalTableViewCell.swift */,
+				67E6D48C2D6C49C9008436CA /* GoalTableViewCell.xib */,
+			);
+			path = GoalTableViewCell;
+			sourceTree = "<group>";
+		};
+		67E6D4902D6C5217008436CA /* ChooseAudienceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4952D6C5452008436CA /* ChooseAudienceTblViewCell */,
+				67E6D4912D6C5230008436CA /* ChooseAudienceViewController.swift */,
+				67E6D4922D6C5230008436CA /* ChooseAudienceViewController.xib */,
+			);
+			path = ChooseAudienceViewController;
+			sourceTree = "<group>";
+		};
+		67E6D4952D6C5452008436CA /* ChooseAudienceTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4962D6C5472008436CA /* ChooseAudienceTblViewCell.swift */,
+				67E6D4972D6C5472008436CA /* ChooseAudienceTblViewCell.xib */,
+			);
+			path = ChooseAudienceTblViewCell;
+			sourceTree = "<group>";
+		};
+		67E6D49A2D6C593B008436CA /* DurationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D49B2D6C595F008436CA /* DurationViewController.swift */,
+				67E6D49C2D6C595F008436CA /* DurationViewController.xib */,
+			);
+			path = DurationViewController;
+			sourceTree = "<group>";
+		};
+		67E6D49F2D6C63EC008436CA /* CreatorsToolViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4A42D6C69D2008436CA /* ToolsTableViewCell */,
+				67E6D4A02D6C6408008436CA /* CreatorsToolViewController.swift */,
+				67E6D4A12D6C6408008436CA /* CreatorsToolViewController.xib */,
+			);
+			path = CreatorsToolViewController;
+			sourceTree = "<group>";
+		};
+		67E6D4A42D6C69D2008436CA /* ToolsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4A52D6C69EC008436CA /* ToolsTableViewCell.swift */,
+				67E6D4A62D6C69EC008436CA /* ToolsTableViewCell.xib */,
+			);
+			path = ToolsTableViewCell;
+			sourceTree = "<group>";
+		};
+		67E6D4A92D6C7C19008436CA /* PromotionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67E6D4AA2D6C7C44008436CA /* PromotionsViewController.swift */,
+				67E6D4AB2D6C7C44008436CA /* PromotionsViewController.xib */,
+			);
+			path = PromotionsViewController;
+			sourceTree = "<group>";
+		};
 		67EAECA32D5E23E500C4F1DF = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +845,7 @@
 		67EAECD82D5E24C100C4F1DF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				67E6D4842D6C438F008436CA /* CompleteAdsFlow */,
 				67458CA62D673EFF005CB7E4 /* ManageAccount */,
 				67ED5CE12D670957009FAF5E /* SettingAndPrivacy */,
 				671D5BB32D6356BE00926F7E /* TabBarViewController */,
@@ -917,6 +1037,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					QA,
+				);
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
@@ -956,14 +1079,18 @@
 				67458C8C2D6717B7005CB7E4 /* ChooseCategoriesViewController.xib in Resources */,
 				67EAECCF2D5E24AE00C4F1DF /* SF-Pro-Display-Thin.otf in Resources */,
 				67458CA52D67314D005CB7E4 /* ManageAccTblViewCell.xib in Resources */,
+				67E6D49E2D6C595F008436CA /* DurationViewController.xib in Resources */,
 				67458CA02D673040005CB7E4 /* ManageAccountViewController.xib in Resources */,
 				67458CCD2D679690005CB7E4 /* FamilyPairingViewController.xib in Resources */,
 				67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */,
 				67FEE9D42D5F26E4004DEAA5 /* InterestTblViewCell.xib in Resources */,
+				67E6D4A32D6C6408008436CA /* CreatorsToolViewController.xib in Resources */,
 				67458CC82D67935C005CB7E4 /* MessageSettingTblViewCell.xib in Resources */,
 				67CBEAC72D60F0FF00FBCED7 /* CreatePasswordViewController.xib in Resources */,
+				67E6D4942D6C5230008436CA /* ChooseAudienceViewController.xib in Resources */,
 				67A7459E2D68489C00C7BA12 /* ContentPreferncesViewController.xib in Resources */,
 				67FEE9E12D5F31D7004DEAA5 /* Onbording4ViewController.xib in Resources */,
+				67E6D4992D6C5472008436CA /* ChooseAudienceTblViewCell.xib in Resources */,
 				67A745B72D6863C900C7BA12 /* LoopLyfeFamilyViewController.xib in Resources */,
 				67458CBE2D674B9D005CB7E4 /* TimeLineTblViewCell.xib in Resources */,
 				6731B6E72D6878240008F85B /* HelpingResourcesTableViewCell.xib in Resources */,
@@ -971,12 +1098,15 @@
 				67EAECD02D5E24AE00C4F1DF /* SF-Pro-Display-Light.otf in Resources */,
 				67EAECBC2D5E23E600C4F1DF /* LaunchScreen.storyboard in Resources */,
 				67EAECB92D5E23E600C4F1DF /* Assets.xcassets in Resources */,
+				67E6D4A82D6C69EC008436CA /* ToolsTableViewCell.xib in Resources */,
 				67458C9B2D672773005CB7E4 /* SettingTableViewCell.xib in Resources */,
 				67EAECD22D5E24AE00C4F1DF /* SF-Pro-Display-Bold.otf in Resources */,
+				67E6D48E2D6C49C9008436CA /* GoalTableViewCell.xib in Resources */,
 				6731B6E22D6870E50008F85B /* LinkedAccTblViewCell.xib in Resources */,
 				67458CB42D674258005CB7E4 /* ManageThisAccTblViewCell.xib in Resources */,
 				6731B6EC2D6881450008F85B /* LogoutPopUpViewController.xib in Resources */,
 				67EAECD12D5E24AE00C4F1DF /* SF-Pro-Display-Regular.otf in Resources */,
+				67E6D4892D6C43BD008436CA /* GoalViewController.xib in Resources */,
 				67FEE9CF2D5F1639004DEAA5 /* Onbording2ViewController.xib in Resources */,
 				67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */,
 				67A745BC2D686D1800C7BA12 /* FamilyPairingLinkedViewController.xib in Resources */,
@@ -987,6 +1117,7 @@
 				67EAECD62D5E24AE00C4F1DF /* SF-Pro-Display-Ultralight.otf in Resources */,
 				67458C912D671BAA005CB7E4 /* CategoriesTblViewCell.xib in Resources */,
 				67B967E52D6453870092E995 /* HomeTabelViewCell.xib in Resources */,
+				67E6D4AD2D6C7C44008436CA /* PromotionsViewController.xib in Resources */,
 				67458CD22D67A483005CB7E4 /* LinkedAccountViewController.xib in Resources */,
 				67B719DA2D620F8C00D79804 /* SignInWithEmailAndPhone.xib in Resources */,
 				67A745B22D685EEA00C7BA12 /* LangugesTblViewCell.xib in Resources */,
@@ -1061,11 +1192,15 @@
 				67458CA42D67314D005CB7E4 /* ManageAccTblViewCell.swift in Sources */,
 				67A745A22D684A3400C7BA12 /* LangugeTableViewCell.swift in Sources */,
 				67458CAE2D673F7F005CB7E4 /* ManageThisAccountViewController.swift in Sources */,
+				67E6D4982D6C5472008436CA /* ChooseAudienceTblViewCell.swift in Sources */,
 				67458C9A2D672773005CB7E4 /* SettingTableViewCell.swift in Sources */,
 				6783B0B32D60B0E300E5AEC1 /* DateOfBirthViewController.swift in Sources */,
 				671D5BC12D63581900926F7E /* InboxViewController.swift in Sources */,
 				6731B6F02D6886F40008F85B /* SwitchPopUpViewController.swift in Sources */,
+				67E6D48D2D6C49C9008436CA /* GoalTableViewCell.swift in Sources */,
+				67E6D4AC2D6C7C44008436CA /* PromotionsViewController.swift in Sources */,
 				6731B6E62D6878240008F85B /* HelpingResourcesTableViewCell.swift in Sources */,
+				67E6D49D2D6C595F008436CA /* DurationViewController.swift in Sources */,
 				67A745B12D685EEA00C7BA12 /* LangugesTblViewCell.swift in Sources */,
 				671D5BBE2D6357ED00926F7E /* UploadViewController.swift in Sources */,
 				67B719D92D620F8C00D79804 /* SignInWithEmailAndPhone.swift in Sources */,
@@ -1074,6 +1209,7 @@
 				67458CC72D67935C005CB7E4 /* MessageSettingTblViewCell.swift in Sources */,
 				6731B6EB2D6881450008F85B /* LogoutPopUpViewController.swift in Sources */,
 				67B967E42D6453870092E995 /* HomeTabelViewCell.swift in Sources */,
+				67E6D4932D6C5230008436CA /* ChooseAudienceViewController.swift in Sources */,
 				67458C8B2D6717B7005CB7E4 /* ChooseCategoriesViewController.swift in Sources */,
 				67CBEACB2D60F6D500FBCED7 /* CreateUserNameViewController.swift in Sources */,
 				671D5BB52D6356E700926F7E /* TabBarViewController.swift in Sources */,
@@ -1091,13 +1227,16 @@
 				67FEE9CE2D5F1639004DEAA5 /* Onbording2ViewController.swift in Sources */,
 				67A745BB2D686D1800C7BA12 /* FamilyPairingLinkedViewController.swift in Sources */,
 				67A745AC2D685CB000C7BA12 /* ContentLanguagesViewController.swift in Sources */,
+				67E6D4A22D6C6408008436CA /* CreatorsToolViewController.swift in Sources */,
 				67458CB32D674258005CB7E4 /* ManageThisAccTblViewCell.swift in Sources */,
 				67B719D32D61FEA700D79804 /* SignInViewController.swift in Sources */,
 				67ED5CE52D670A24009FAF5E /* BusinessViewController.swift in Sources */,
 				671D5BC42D63583C00926F7E /* ProfileViewController.swift in Sources */,
 				67FEE9E62D5F5A90004DEAA5 /* SignUpViewController.swift in Sources */,
+				67E6D4A72D6C69EC008436CA /* ToolsTableViewCell.swift in Sources */,
 				67A745B62D6863C900C7BA12 /* LoopLyfeFamilyViewController.swift in Sources */,
 				67458C902D671BAA005CB7E4 /* CategoriesTblViewCell.swift in Sources */,
+				67E6D4882D6C43BD008436CA /* GoalViewController.swift in Sources */,
 				67458CD12D67A483005CB7E4 /* LinkedAccountViewController.swift in Sources */,
 				67ED5CDA2D65EA94009FAF5E /* RepostVideoViewController.swift in Sources */,
 				67FEE9E02D5F31D7004DEAA5 /* Onbording4ViewController.swift in Sources */,

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
     
         
-        let languageVC = RepostDoneViewController(nibName: "RepostDoneViewController", bundle: nil)
+        let languageVC = PromotionsViewController(nibName: "PromotionsViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: languageVC)
         navigationController.isNavigationBarHidden = true
         self.window = UIWindow(windowScene: windowScene)

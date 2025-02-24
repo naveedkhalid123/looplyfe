@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var homeTblViewArr: [[String: String]] = [
-        ["likeCount": "1.2M", "commentCount": "223k", "userName": "@naveed", "postDesc": "This is actually the place to visit", "hastag": "#googleearth #googlemaps"],
-        ["likeCount": "1.2M", "commentCount": "223k", "userName": "@naveed", "postDesc": "This is actually the place to visit", "hastag": "#googleearth #googlemaps"]
+        ["likeCount": "1.2M", "commentCount": "223k", "userName": "@naveed", "postDesc": "This is actually the place to visit #googleearth #googlemaps"],
+        ["likeCount": "1.2M", "commentCount": "223k", "userName": "@naveed",  "postDesc": "This is actually the place to visit #googleearth #googlemaps"]
     ]
     
     @IBOutlet weak var homeTableView: UITableView!
@@ -33,8 +33,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.likeCount.text = postData["likeCount"]
         cell.commentCountLbl.text = postData["commentCount"]
         cell.userNameLbl.text = postData["userName"]
-        cell.postCaptionLbl.text = postData["postDesc"]
-        cell.postHashTagsLbl.text = postData["hastag"]
+        cell.descriptionTxtView.text = postData["postDesc"]
+        
         return cell
     }
     

@@ -7,25 +7,22 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UITextViewDelegate  {
+class SignUpViewController: UIViewController, UITextViewDelegate {
+    @IBOutlet var profileView: UIView!
+    @IBOutlet var facebookView: UIView!
+    @IBOutlet var appleView: UIView!
+    @IBOutlet var googleView: UIView!
     
-
-    @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var facebookView: UIView!
-    @IBOutlet weak var appleView: UIView!
-    @IBOutlet weak var googleView: UIView!
+    @IBOutlet var phoneButton: UIButton!
+    @IBOutlet var facebookButton: UIButton!
+    @IBOutlet var appleButton: UIButton!
+    @IBOutlet var googleButton: UIButton!
     
-    @IBOutlet weak var phoneButton: UIButton!
-    @IBOutlet weak var facebookButton: UIButton!
-    @IBOutlet weak var appleButton: UIButton!
-    @IBOutlet weak var googleButton: UIButton!
-    
-    @IBOutlet weak var privacyTxtView: UITextView!
+    @IBOutlet var privacyTxtView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-
         profileView.layer.cornerRadius = 2
         profileView.layer.borderWidth = 0.6
         profileView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
@@ -80,8 +77,6 @@ class SignUpViewController: UIViewController, UITextViewDelegate  {
             .font: UIFont.systemFont(ofSize: 16, weight: .bold)
         ]
     
-
-        
         privacyTxtView.attributedText = attributedString
         privacyTxtView.textAlignment = .center
         privacyTxtView.isEditable = false
@@ -95,7 +90,6 @@ class SignUpViewController: UIViewController, UITextViewDelegate  {
             .font: UIFont.systemFont(ofSize: 16, weight: .bold)
         ]
     }
-    
     
     @IBAction func phoneBtnPressed(_ sender: UIButton) {
         print("phone btn pressed")
@@ -113,23 +107,16 @@ class SignUpViewController: UIViewController, UITextViewDelegate  {
         print("phone btn google")
     }
     
-    
-    
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         print("Sign in btn pressed")
     }
-    
-    
-    
 }
 
-
 // MARK: - UITextViewDelegate to Handle Link Clicks
+
 extension SignUpViewController {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         UIApplication.shared.open(URL)
         return false
     }
 }
-
-

@@ -8,12 +8,10 @@
 import UIKit
 
 class FamilyPairingViewController: UIViewController {
+    @IBOutlet var parentView: UIView!
+    @IBOutlet var teenView: UIView!
     
-    
-    @IBOutlet weak var parentView: UIView!
-    @IBOutlet weak var teenView: UIView!
-    
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet var navigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,17 +25,13 @@ class FamilyPairingViewController: UIViewController {
         
         teenView.dropShadow(color: .black)
         teenView.layer.cornerRadius = 10
-        
     }
-    
     
     @IBAction func parentViewBtnPressed(_ sender: UIButton) {
         print("parent View Clicked")
-        
     }
     
     @IBAction func teanViewBtnPressed(_ sender: UIButton) {
         print("tean View Clicked")
     }
-    
 }

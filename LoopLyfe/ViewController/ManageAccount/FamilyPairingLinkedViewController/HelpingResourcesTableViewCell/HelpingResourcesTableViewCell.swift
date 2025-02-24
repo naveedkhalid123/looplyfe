@@ -8,18 +8,14 @@
 import UIKit
 
 class HelpingResourcesTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var resourcesImage: UIImageView!
-    @IBOutlet weak var resourcesLbl: UILabel!
-    
+    @IBOutlet var resourcesImage: UIImageView!
+    @IBOutlet var resourcesLbl: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
 }

@@ -7,19 +7,16 @@
 
 import UIKit
 
-class SignInViewController: UIViewController , UITextViewDelegate {
+class SignInViewController: UIViewController, UITextViewDelegate {
+    @IBOutlet var emailView: UIView!
+    @IBOutlet var facebookView: UIView!
+    @IBOutlet var appleView: UIView!
+    @IBOutlet var googleView: UIView!
     
-    @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var facebookView: UIView!
-    @IBOutlet weak var appleView: UIView!
-    @IBOutlet weak var googleView: UIView!
-    
-    
-    @IBOutlet weak var policyTxtView: UITextView!
+    @IBOutlet var policyTxtView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         emailView.layer.cornerRadius = 2
         emailView.layer.borderWidth = 0.6
@@ -38,7 +35,6 @@ class SignInViewController: UIViewController , UITextViewDelegate {
         googleView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
         
         configureTextView()
-    
     }
     
     func configureTextView() {
@@ -76,8 +72,6 @@ class SignInViewController: UIViewController , UITextViewDelegate {
             .font: UIFont.systemFont(ofSize: 16, weight: .bold)
         ]
     
-
-        
         policyTxtView.attributedText = attributedString
         policyTxtView.textAlignment = .center
         policyTxtView.isEditable = false
@@ -96,25 +90,19 @@ class SignInViewController: UIViewController , UITextViewDelegate {
         print("phone btn email")
     }
     
-
     @IBAction func facebookBtnPresed(_ sender: UIButton) {
         print("phone btn facebook")
     }
-    
     
     @IBAction func appleBtnPressed(_ sender: UIButton) {
         print("phone btn apple")
     }
     
-    
     @IBAction func googleBtnPressed(_ sender: UIButton) {
         print("phone btn google")
     }
     
-    
-    
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         print("Sign in btn pressed")
     }
-    
 }

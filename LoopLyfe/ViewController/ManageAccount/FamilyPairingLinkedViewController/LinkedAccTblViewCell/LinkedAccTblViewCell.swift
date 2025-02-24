@@ -8,20 +8,15 @@
 import UIKit
 
 class LinkedAccTblViewCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var linkedAccImage: UIImageView!
-    @IBOutlet weak var accountHeadLbl: UILabel!
-    @IBOutlet weak var accountSubHeadLbl: UILabel!
-    
+    @IBOutlet var linkedAccImage: UIImageView!
+    @IBOutlet var accountHeadLbl: UILabel!
+    @IBOutlet var accountSubHeadLbl: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-     
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
 }
