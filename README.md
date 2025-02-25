@@ -5,7 +5,7 @@ LoopLyfe is a feature-rich video streaming platform designed to provide users wi
 
 Features
 
-1.User Onboarding & Authentication
+1. User Onboarding & Authentication
 
 Splash Screen
 
