@@ -5,7 +5,7 @@ LoopLyfe is a feature-rich video streaming platform designed to provide users wi
 
 Features
 
-1. User Onboarding & Authentication
+User Onboarding & Authentication
 
 Splash Screen
 
@@ -23,7 +23,7 @@ Create Password
 
 Create Username
 
-2. Core App Features
+Core App Features
 
 Home Screen – Watch and engage with videos in a dynamic feed
 
@@ -35,7 +35,7 @@ Inbox Screen – Manage messages and notifications
 
 Profile Screen – Customize user profiles
 
-3. User Account & Settings
+User Account & Settings
 
 Manage Account Screen
 
@@ -49,13 +49,13 @@ Dark Mode
 
 Profile QR Scan Code
 
-4. Messaging & Engagement
+Messaging & Engagement
 
 Complete Message Flow
 
 Interactive Commenting & Reactions
 
-5. Ad Flow & Monetization
+Ad Flow & Monetization
 
 Integrated ad system for monetization
 
@@ -75,7 +75,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/LoopLyfe.git
+https://github.com/naveedkhalid123/looplyfe
 
 Navigate to the project directory:
 
