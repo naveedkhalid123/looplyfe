@@ -1,4 +1,4 @@
-# looplyfe
+# Looplyfe
 LoopLyfe - Video Streaming iOS App
 
 LoopLyfe is a feature-rich video streaming platform designed to provide users with a seamless and immersive viewing experience. Inspired by TikTok, LoopLyfe allows users to watch, upload, and share high-quality videos with real-time streaming, video recommendations, and interactive engagement features.
