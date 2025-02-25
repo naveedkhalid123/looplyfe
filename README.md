@@ -5,77 +5,23 @@ LoopLyfe is a feature-rich video streaming platform designed to provide users wi
 
 Features
 
-1.User Onboarding & Authentication
+LoopLyfe offers a comprehensive user onboarding and authentication system, including a splash screen, welcome screen, and onboarding screens. Users can sign in and sign up using email or phone, select their date of birth, verify their account via OTP, create a password, and set up a username.
 
-Splash Screen
+The core app features include a Home Screen where users can watch and engage with videos in a dynamic feed, a Discover Screen for exploring trending and recommended content, an Upload Screen to share videos with the community, an Inbox Screen to manage messages and notifications, and a Profile Screen to customize user profiles.
 
-Welcome Screen
+For account management and settings, users can access the Manage Account Screen, edit their profile, adjust privacy and commenting settings, enable digital parenting controls, switch to dark mode, and use a profile QR scan code for enhanced connectivity.
 
-Onboarding Screens
+Messaging and engagement features include a complete messaging flow, interactive commenting, and reactions. The app also incorporates an integrated ad system for monetization.
 
-2.Sign In & Sign Up (Email & Phone)
+Tech Stack
 
-Date of Birth Selection
-
-OTP Verification
-
-Create Password
-
-Create Username
-
-3.Core App Features
-
-Home Screen – Watch and engage with videos in a dynamic feed
-
-Discover Screen – Explore trending and recommended content
-
-Upload Screen – Share videos with the community
-
-Inbox Screen – Manage messages and notifications
-
-Profile Screen – Customize user profiles
-
-4.User Account & Settings
-
-Manage Account Screen
-
-Edit Profile
-
-Privacy & Commenting Settings
-
-Digital Parenting Controls
-
-Dark Mode
-
-Profile QR Scan Code
-
-5.Messaging & Engagement
-
-Complete Message Flow
-
-Interactive Commenting & Reactions
-
-Ad Flow & Monetization
-
-Integrated ad system for monetization
-
-6.Tech Stack
-
-Language: Swift
-
-Backend: Firebase Realtime Database
-
-UI Design: UIKit, SwiftUI (where applicable)
-
-Authentication: Firebase Authentication
-
-Storage: Firebase Storage (for video uploads)
+LoopLyfe is developed using Swift and utilizes Firebase Realtime Database for backend services. The user interface is built with UIKit and SwiftUI where applicable. Authentication is managed using Firebase Authentication, and video uploads are stored using Firebase Storage.
 
 Installation
 
-Clone the repository:
+To install and run the project, clone the repository from GitHub:
 
-https://github.com/naveedkhalid123/looplyfe
+git clone https://github.com/naveedkhalid123/looplyfe
 
 Navigate to the project directory:
 
@@ -90,5 +36,3 @@ Open LoopLyfe.xcworkspace in Xcode and build the project.
 Contributions
 
 We welcome contributions! Feel free to submit issues or pull requests to enhance the app.
-
-
