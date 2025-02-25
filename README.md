@@ -5,7 +5,7 @@ LoopLyfe is a feature-rich video streaming platform designed to provide users wi
 
 Features
 
-1. User Onboarding & Authentication
+1.User Onboarding & Authentication
 
 Splash Screen
 
@@ -13,7 +13,7 @@ Welcome Screen
 
 Onboarding Screens
 
-Sign In & Sign Up (Email & Phone)
+2.Sign In & Sign Up (Email & Phone)
 
 Date of Birth Selection
 
@@ -23,7 +23,7 @@ Create Password
 
 Create Username
 
-Core App Features
+3.Core App Features
 
 Home Screen – Watch and engage with videos in a dynamic feed
 
@@ -35,7 +35,7 @@ Inbox Screen – Manage messages and notifications
 
 Profile Screen – Customize user profiles
 
-User Account & Settings
+4.User Account & Settings
 
 Manage Account Screen
 
@@ -49,7 +49,7 @@ Dark Mode
 
 Profile QR Scan Code
 
-Messaging & Engagement
+5.Messaging & Engagement
 
 Complete Message Flow
 
@@ -59,7 +59,7 @@ Ad Flow & Monetization
 
 Integrated ad system for monetization
 
-Tech Stack
+6.Tech Stack
 
 Language: Swift
 
