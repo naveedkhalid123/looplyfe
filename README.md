@@ -17,22 +17,6 @@ Tech Stack
 
 LoopLyfe is developed using Swift and utilizes Firebase Realtime Database for backend services. The user interface is built with UIKit and SwiftUI where applicable. Authentication is managed using Firebase Authentication, and video uploads are stored using Firebase Storage.
 
-Installation
-
-To install and run the project, clone the repository from GitHub:
-
-git clone https://github.com/naveedkhalid123/looplyfe
-
-Navigate to the project directory:
-
-cd LoopLyfe
-
-Install dependencies using CocoaPods:
-
-pod install
-
-Open LoopLyfe.xcworkspace in Xcode and build the project.
-
 Contributions
 
 We welcome contributions! Feel free to submit issues or pull requests to enhance the app.
