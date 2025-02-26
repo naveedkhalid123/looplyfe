@@ -19,13 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
     
-        
-        let languageVC = PromotionsViewController(nibName: "PromotionsViewController", bundle: nil)
-        let navigationController = UINavigationController(rootViewController: languageVC)
-        navigationController.isNavigationBarHidden = true
-        self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+//        
+//        let languageVC = PrivacyViewController(nibName: "PrivacyViewController", bundle: nil)
+//        let navigationController = UINavigationController(rootViewController: languageVC)
+//        navigationController.isNavigationBarHidden = true
+//        self.window = UIWindow(windowScene: windowScene)
+//        self.window?.rootViewController = navigationController
+//        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

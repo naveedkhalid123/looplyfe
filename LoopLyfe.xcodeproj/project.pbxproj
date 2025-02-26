@@ -53,6 +53,20 @@
 		6783B0B42D60B0E300E5AEC1 /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6783B0B22D60B0E300E5AEC1 /* DateOfBirthViewController.xib */; };
 		6783B0B82D60BBD800E5AEC1 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6783B0B62D60BBD800E5AEC1 /* OTPVerificationViewController.swift */; };
 		6783B0B92D60BBD800E5AEC1 /* OTPVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6783B0B72D60BBD800E5AEC1 /* OTPVerificationViewController.xib */; };
+		678EA6602D6D8F4000DA4701 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA65E2D6D8F4000DA4701 /* PrivacyViewController.swift */; };
+		678EA6612D6D8F4000DA4701 /* PrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA65F2D6D8F4000DA4701 /* PrivacyViewController.xib */; };
+		678EA6652D6D908C00DA4701 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA6632D6D908C00DA4701 /* CommentsViewController.swift */; };
+		678EA6662D6D908C00DA4701 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA6642D6D908C00DA4701 /* CommentsViewController.xib */; };
+		678EA66A2D6D91B300DA4701 /* CommentsTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA6682D6D91B300DA4701 /* CommentsTblViewCell.swift */; };
+		678EA66B2D6D91B300DA4701 /* CommentsTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA6692D6D91B300DA4701 /* CommentsTblViewCell.xib */; };
+		678EA66F2D6D94F200DA4701 /* FiltersTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA66D2D6D94F200DA4701 /* FiltersTblViewCell.swift */; };
+		678EA6702D6D94F200DA4701 /* FiltersTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA66E2D6D94F200DA4701 /* FiltersTblViewCell.xib */; };
+		678EA6792D6DA0BA00DA4701 /* SyncContactsTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA6772D6DA0BA00DA4701 /* SyncContactsTblViewCell.swift */; };
+		678EA67A2D6DA0BA00DA4701 /* SyncContactsTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA6782D6DA0BA00DA4701 /* SyncContactsTblViewCell.xib */; };
+		678EA67E2D6DA48000DA4701 /* PersonalizeTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA67C2D6DA48000DA4701 /* PersonalizeTblViewCell.swift */; };
+		678EA67F2D6DA48000DA4701 /* PersonalizeTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA67D2D6DA48000DA4701 /* PersonalizeTblViewCell.xib */; };
+		678EA6832D6DABD900DA4701 /* SafetyTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA6812D6DABD900DA4701 /* SafetyTblViewCell.swift */; };
+		678EA6842D6DABD900DA4701 /* SafetyTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */; };
 		67A7459D2D68489C00C7BA12 /* ContentPreferncesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */; };
 		67A7459E2D68489C00C7BA12 /* ContentPreferncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */; };
 		67A745A22D684A3400C7BA12 /* LangugeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */; };
@@ -185,6 +199,20 @@
 		6783B0B22D60B0E300E5AEC1 /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
 		6783B0B62D60BBD800E5AEC1 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
 		6783B0B72D60BBD800E5AEC1 /* OTPVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVerificationViewController.xib; sourceTree = "<group>"; };
+		678EA65E2D6D8F4000DA4701 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		678EA65F2D6D8F4000DA4701 /* PrivacyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyViewController.xib; sourceTree = "<group>"; };
+		678EA6632D6D908C00DA4701 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		678EA6642D6D908C00DA4701 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		678EA6682D6D91B300DA4701 /* CommentsTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTblViewCell.swift; sourceTree = "<group>"; };
+		678EA6692D6D91B300DA4701 /* CommentsTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTblViewCell.xib; sourceTree = "<group>"; };
+		678EA66D2D6D94F200DA4701 /* FiltersTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersTblViewCell.swift; sourceTree = "<group>"; };
+		678EA66E2D6D94F200DA4701 /* FiltersTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersTblViewCell.xib; sourceTree = "<group>"; };
+		678EA6772D6DA0BA00DA4701 /* SyncContactsTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsTblViewCell.swift; sourceTree = "<group>"; };
+		678EA6782D6DA0BA00DA4701 /* SyncContactsTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncContactsTblViewCell.xib; sourceTree = "<group>"; };
+		678EA67C2D6DA48000DA4701 /* PersonalizeTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeTblViewCell.swift; sourceTree = "<group>"; };
+		678EA67D2D6DA48000DA4701 /* PersonalizeTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeTblViewCell.xib; sourceTree = "<group>"; };
+		678EA6812D6DABD900DA4701 /* SafetyTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTblViewCell.swift; sourceTree = "<group>"; };
+		678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyTblViewCell.xib; sourceTree = "<group>"; };
 		67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreferncesViewController.swift; sourceTree = "<group>"; };
 		67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentPreferncesViewController.xib; sourceTree = "<group>"; };
 		67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangugeTableViewCell.swift; sourceTree = "<group>"; };
@@ -547,6 +575,83 @@
 			path = OTPVerificationViewController;
 			sourceTree = "<group>";
 		};
+		678EA65C2D6D8F0200DA4701 /* PrivacyAndCommenting */ = {
+			isa = PBXGroup;
+			children = (
+				678EA6622D6D907A00DA4701 /* CommentsViewController */,
+				678EA65D2D6D8F2900DA4701 /* PrivacyViewController */,
+			);
+			path = PrivacyAndCommenting;
+			sourceTree = "<group>";
+		};
+		678EA65D2D6D8F2900DA4701 /* PrivacyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				678EA6802D6DABC700DA4701 /* SafetyTblViewCell */,
+				678EA67B2D6DA46D00DA4701 /* PersonalizeTblViewCell */,
+				678EA6762D6DA0A800DA4701 /* SyncContactsTblViewCell */,
+				678EA65E2D6D8F4000DA4701 /* PrivacyViewController.swift */,
+				678EA65F2D6D8F4000DA4701 /* PrivacyViewController.xib */,
+			);
+			path = PrivacyViewController;
+			sourceTree = "<group>";
+		};
+		678EA6622D6D907A00DA4701 /* CommentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				678EA66C2D6D94D100DA4701 /* FiltersTblViewCell */,
+				678EA6672D6D919C00DA4701 /* CommentsTblViewCell */,
+				678EA6632D6D908C00DA4701 /* CommentsViewController.swift */,
+				678EA6642D6D908C00DA4701 /* CommentsViewController.xib */,
+			);
+			path = CommentsViewController;
+			sourceTree = "<group>";
+		};
+		678EA6672D6D919C00DA4701 /* CommentsTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				678EA6682D6D91B300DA4701 /* CommentsTblViewCell.swift */,
+				678EA6692D6D91B300DA4701 /* CommentsTblViewCell.xib */,
+			);
+			path = CommentsTblViewCell;
+			sourceTree = "<group>";
+		};
+		678EA66C2D6D94D100DA4701 /* FiltersTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				678EA66D2D6D94F200DA4701 /* FiltersTblViewCell.swift */,
+				678EA66E2D6D94F200DA4701 /* FiltersTblViewCell.xib */,
+			);
+			path = FiltersTblViewCell;
+			sourceTree = "<group>";
+		};
+		678EA6762D6DA0A800DA4701 /* SyncContactsTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				678EA6772D6DA0BA00DA4701 /* SyncContactsTblViewCell.swift */,
+				678EA6782D6DA0BA00DA4701 /* SyncContactsTblViewCell.xib */,
+			);
+			path = SyncContactsTblViewCell;
+			sourceTree = "<group>";
+		};
+		678EA67B2D6DA46D00DA4701 /* PersonalizeTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				678EA67C2D6DA48000DA4701 /* PersonalizeTblViewCell.swift */,
+				678EA67D2D6DA48000DA4701 /* PersonalizeTblViewCell.xib */,
+			);
+			path = PersonalizeTblViewCell;
+			sourceTree = "<group>";
+		};
+		678EA6802D6DABC700DA4701 /* SafetyTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				678EA6812D6DABD900DA4701 /* SafetyTblViewCell.swift */,
+				678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */,
+			);
+			path = SafetyTblViewCell;
+			sourceTree = "<group>";
+		};
 		67A7459A2D68487F00C7BA12 /* ContentPreferncesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,6 +950,7 @@
 		67EAECD82D5E24C100C4F1DF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				678EA65C2D6D8F0200DA4701 /* PrivacyAndCommenting */,
 				67E6D4842D6C438F008436CA /* CompleteAdsFlow */,
 				67458CA62D673EFF005CB7E4 /* ManageAccount */,
 				67ED5CE12D670957009FAF5E /* SettingAndPrivacy */,
@@ -1072,7 +1178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67B719DF2D62120900D79804 /* SignInCollectionViewCell.xib in Resources */,
+				678EA67A2D6DA0BA00DA4701 /* SyncContactsTblViewCell.xib in Resources */,
 				67ED5CDB2D65EA94009FAF5E /* RepostVideoViewController.xib in Resources */,
+				678EA67F2D6DA48000DA4701 /* PersonalizeTblViewCell.xib in Resources */,
 				67ED5CE02D65F291009FAF5E /* RepostDoneViewController.xib in Resources */,
 				67EAECD32D5E24AE00C4F1DF /* SF-Pro-Display-Medium.otf in Resources */,
 				67A745A82D684CBC00C7BA12 /* ScreenTimeManagmentViewController.xib in Resources */,
@@ -1083,6 +1191,7 @@
 				67458CA02D673040005CB7E4 /* ManageAccountViewController.xib in Resources */,
 				67458CCD2D679690005CB7E4 /* FamilyPairingViewController.xib in Resources */,
 				67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */,
+				678EA6662D6D908C00DA4701 /* CommentsViewController.xib in Resources */,
 				67FEE9D42D5F26E4004DEAA5 /* InterestTblViewCell.xib in Resources */,
 				67E6D4A32D6C6408008436CA /* CreatorsToolViewController.xib in Resources */,
 				67458CC82D67935C005CB7E4 /* MessageSettingTblViewCell.xib in Resources */,
@@ -1109,6 +1218,7 @@
 				67E6D4892D6C43BD008436CA /* GoalViewController.xib in Resources */,
 				67FEE9CF2D5F1639004DEAA5 /* Onbording2ViewController.xib in Resources */,
 				67EAECB72D5E23E500C4F1DF /* Main.storyboard in Resources */,
+				678EA66B2D6D91B300DA4701 /* CommentsTblViewCell.xib in Resources */,
 				67A745BC2D686D1800C7BA12 /* FamilyPairingLinkedViewController.xib in Resources */,
 				67458CB92D674A4F005CB7E4 /* TimeLimitViewController.xib in Resources */,
 				67A745AD2D685CB000C7BA12 /* ContentLanguagesViewController.xib in Resources */,
@@ -1127,15 +1237,18 @@
 				67B719D42D61FEA700D79804 /* SignInViewController.xib in Resources */,
 				6783B0B92D60BBD800E5AEC1 /* OTPVerificationViewController.xib in Resources */,
 				67FEE9D92D5F2852004DEAA5 /* InterestCollectionViewCell.xib in Resources */,
+				678EA6702D6D94F200DA4701 /* FiltersTblViewCell.xib in Resources */,
 				67B967EA2D64705B0092E995 /* ShareViewController.xib in Resources */,
 				67FEE9E72D5F5A90004DEAA5 /* SignUpViewController.xib in Resources */,
 				67EAECD42D5E24AE00C4F1DF /* SF-Pro-Display-Heavy.otf in Resources */,
 				67EAECD72D5E24AE00C4F1DF /* SF-Pro-Display-Black.otf in Resources */,
 				67FEE9CA2D5F0BD7004DEAA5 /* Onbording3ViewController.xib in Resources */,
+				678EA6612D6D8F4000DA4701 /* PrivacyViewController.xib in Resources */,
 				67458CC32D67923A005CB7E4 /* MessageSettingViewController.xib in Resources */,
 				67CBEACC2D60F6D500FBCED7 /* CreateUserNameViewController.xib in Resources */,
 				67458C962D6725AE005CB7E4 /* SettingAndPrivacyViewController.xib in Resources */,
 				67A745A32D684A3400C7BA12 /* LangugeTableViewCell.xib in Resources */,
+				678EA6842D6DABD900DA4701 /* SafetyTblViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1305,7 @@
 				67458CA42D67314D005CB7E4 /* ManageAccTblViewCell.swift in Sources */,
 				67A745A22D684A3400C7BA12 /* LangugeTableViewCell.swift in Sources */,
 				67458CAE2D673F7F005CB7E4 /* ManageThisAccountViewController.swift in Sources */,
+				678EA67E2D6DA48000DA4701 /* PersonalizeTblViewCell.swift in Sources */,
 				67E6D4982D6C5472008436CA /* ChooseAudienceTblViewCell.swift in Sources */,
 				67458C9A2D672773005CB7E4 /* SettingTableViewCell.swift in Sources */,
 				6783B0B32D60B0E300E5AEC1 /* DateOfBirthViewController.swift in Sources */,
@@ -1212,6 +1326,7 @@
 				67E6D4932D6C5230008436CA /* ChooseAudienceViewController.swift in Sources */,
 				67458C8B2D6717B7005CB7E4 /* ChooseCategoriesViewController.swift in Sources */,
 				67CBEACB2D60F6D500FBCED7 /* CreateUserNameViewController.swift in Sources */,
+				678EA6832D6DABD900DA4701 /* SafetyTblViewCell.swift in Sources */,
 				671D5BB52D6356E700926F7E /* TabBarViewController.swift in Sources */,
 				67B967EE2D6472990092E995 /* RepostCollectionViewCell.swift in Sources */,
 				6731B6E12D6870E50008F85B /* LinkedAccTblViewCell.swift in Sources */,
@@ -1229,6 +1344,7 @@
 				67A745AC2D685CB000C7BA12 /* ContentLanguagesViewController.swift in Sources */,
 				67E6D4A22D6C6408008436CA /* CreatorsToolViewController.swift in Sources */,
 				67458CB32D674258005CB7E4 /* ManageThisAccTblViewCell.swift in Sources */,
+				678EA6792D6DA0BA00DA4701 /* SyncContactsTblViewCell.swift in Sources */,
 				67B719D32D61FEA700D79804 /* SignInViewController.swift in Sources */,
 				67ED5CE52D670A24009FAF5E /* BusinessViewController.swift in Sources */,
 				671D5BC42D63583C00926F7E /* ProfileViewController.swift in Sources */,
@@ -1243,11 +1359,15 @@
 				67FEE9C92D5F0BD7004DEAA5 /* Onbording3ViewController.swift in Sources */,
 				67B719DE2D62120900D79804 /* SignInCollectionViewCell.swift in Sources */,
 				67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */,
+				678EA66F2D6D94F200DA4701 /* FiltersTblViewCell.swift in Sources */,
 				67B967E92D64705B0092E995 /* ShareViewController.swift in Sources */,
 				67EAECB22D5E23E500C4F1DF /* SceneDelegate.swift in Sources */,
 				67458CC22D67923A005CB7E4 /* MessageSettingViewController.swift in Sources */,
 				67458C9F2D673040005CB7E4 /* ManageAccountViewController.swift in Sources */,
+				678EA6602D6D8F4000DA4701 /* PrivacyViewController.swift in Sources */,
+				678EA6652D6D908C00DA4701 /* CommentsViewController.swift in Sources */,
 				67458CB82D674A4F005CB7E4 /* TimeLimitViewController.swift in Sources */,
+				678EA66A2D6D91B300DA4701 /* CommentsTblViewCell.swift in Sources */,
 				67FEE9DC2D5F2EA5004DEAA5 /* Extension.swift in Sources */,
 				67ED5CDF2D65F291009FAF5E /* RepostDoneViewController.swift in Sources */,
 			);

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PersonalizeTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ads personalization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-J3-hHf">
+                        <rect key="frame" x="16" y="6" width="131" height="20"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get a copy of your LoopLyfe data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlt-AZ-i3Z">
+                        <rect key="frame" x="16" y="31" width="192" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowNext" translatesAutoresizingMaskIntoConstraints="NO" id="j6g-uq-Prf">
+                        <rect key="frame" x="284" y="7" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="kGm-g9-Q2s"/>
+                            <constraint firstAttribute="width" constant="18" id="zgL-z1-ats"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="j6g-uq-Prf" secondAttribute="trailing" constant="18" id="2hd-Xz-yCV"/>
+                    <constraint firstItem="qlt-AZ-i3Z" firstAttribute="top" secondItem="FW8-J3-hHf" secondAttribute="bottom" constant="5" id="4TN-XJ-UGC"/>
+                    <constraint firstItem="qlt-AZ-i3Z" firstAttribute="leading" secondItem="FW8-J3-hHf" secondAttribute="leading" id="70Y-V0-Ltv"/>
+                    <constraint firstItem="j6g-uq-Prf" firstAttribute="centerY" secondItem="FW8-J3-hHf" secondAttribute="centerY" id="foR-ju-vHP"/>
+                    <constraint firstItem="FW8-J3-hHf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="hKS-LA-MeR"/>
+                    <constraint firstItem="FW8-J3-hHf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rt1-jT-65h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="personalizeDesc" destination="qlt-AZ-i3Z" id="50J-nq-QOB"/>
+                <outlet property="personalizeHead" destination="FW8-J3-hHf" id="gGS-ZQ-wc0"/>
+            </connections>
+            <point key="canvasLocation" x="-73.282442748091597" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrowNext" width="18" height="18"/>
+    </resources>
+</document>
