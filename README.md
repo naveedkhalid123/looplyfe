@@ -23,5 +23,7 @@ We welcome contributions! Feel free to submit issues or pull requests to enhance
 
 🎨 Visual Preview
 
-![App Screenshot](https://github.com/naveedkhalid123/looplyfe/blob/9e20d5c7b9ded8075cc5283dec60c1499577ed44/loplyfe1.jpg?raw=true)
+![App Screenshot 1](https://github.com/naveedkhalid123/looplyfe/blob/9e20d5c7b9ded8075cc5283dec60c1499577ed44/loplyfe1.jpg?raw=true)
+
+![App Screenshot 2](https://github.com/naveedkhalid123/looplyfe/blob/b54f90faa801b200831412955934b56fabf9e33d/loplyfe%202.jpg?raw=true)
 
