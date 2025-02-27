@@ -20,3 +20,6 @@ LoopLyfe is developed using Swift and utilizes Firebase Realtime Database for ba
 Contributions
 
 We welcome contributions! Feel free to submit issues or pull requests to enhance the app.
+
+![App Screenshot](https://github.com/naveedkhalid123/looplyfe/blob/9e20d5c7b9ded8075cc5283dec60c1499577ed44/loplyfe1.jpg?raw=true)
+
