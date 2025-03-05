@@ -1,16 +1,41 @@
 PODS:
+  - Alamofire (5.10.2)
   - DPOTPView (1.5.12)
+  - IQKeyboardManager (6.5.19)
+  - PhoneNumberKit (3.8.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.8.0)
+    - PhoneNumberKit/UIKit (= 3.8.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.8.0)
+  - PhoneNumberKit/UIKit (3.8.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - SearchTextField (1.2.4)
+  - Toast-Swift (5.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - DPOTPView
+  - IQKeyboardManager
+  - PhoneNumberKit (~> 3.6)
+  - SearchTextField
+  - Toast-Swift (~> 5.1.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - DPOTPView
+    - IQKeyboardManager
+    - PhoneNumberKit
+    - SearchTextField
+    - Toast-Swift
 
 SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  PhoneNumberKit: ec00ab8cef5342c1dc49fadb99d23fa7e66cf0ef
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 791f046dcdeeb9578c8cd939c096666bd0d4a7d2
+PODFILE CHECKSUM: 9c462edb4bc50115bc000f67cb0278bea06cd9f2
 
 COCOAPODS: 1.16.2

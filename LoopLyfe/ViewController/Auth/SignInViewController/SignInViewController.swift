@@ -87,7 +87,9 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func emailBtnPressed(_ sender: UIButton) {
-        print("phone btn email")
+        let vc = SignInWithEmailAndPhone(nibName: "SignInWithEmailAndPhone", bundle: nil)
+        vc.isSignIn = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func facebookBtnPresed(_ sender: UIButton) {
@@ -103,6 +105,8 @@ class SignInViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
-        print("Sign in btn pressed")
+       
+        let vc = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

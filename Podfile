@@ -8,5 +8,10 @@ target 'LoopLyfe' do
   # Pods for LoopLyfe
 
   pod 'DPOTPView'  
+  pod 'Alamofire'
+  pod 'PhoneNumberKit', '~> 3.6'
+  pod 'Toast-Swift', '~> 5.1.1'
+  pod 'IQKeyboardManager'
+  pod "SearchTextField"
 
 end

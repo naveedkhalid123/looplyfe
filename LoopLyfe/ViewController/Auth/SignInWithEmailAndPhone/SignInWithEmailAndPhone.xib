@@ -36,10 +36,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nkL-Nw-jOe">
-                    <rect key="frame" x="0.0" y="88" width="414" height="25"/>
+                    <rect key="frame" x="0.0" y="70" width="414" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="Qy4-y2-r6H"/>
+                        <constraint firstAttribute="height" constant="50" id="Qy4-y2-r6H"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="01x-eL-9Sc">
                         <size key="itemSize" width="128" height="128"/>
@@ -49,33 +49,89 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-sR-2xb">
-                    <rect key="frame" x="0.0" y="121" width="414" height="1"/>
+                    <rect key="frame" x="0.0" y="119" width="414" height="1"/>
                     <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="S7e-nz-HHp"/>
                     </constraints>
                 </view>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
+                    <rect key="frame" x="36" y="183" width="342" height="237.33333333333337"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-VO-Oj1">
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="sR0-Ta-6Rq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eZF-ca-YbU">
+                            <rect key="frame" x="0.0" y="55.000000000000014" width="342" height="182.33333333333337"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-tC-zn5">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="116.33333333333333"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <string key="text">Your phone number will be used to  improve your LoopLyfe experience, including connecting you with
+people you may know, personalizing your ads,
+experience, and more. If you sign up with SMS,
+SMS fees may apply. Learn more</string>
+                                    <color key="textColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-j9-tAL">
+                                    <rect key="frame" x="0.0" y="132.33333333333331" width="342" height="50"/>
+                                    <color key="backgroundColor" name="yellow"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="8zt-XI-U1K"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Send Code">
+                                        <color key="titleColor" name="black"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="IMo-GW-udg"/>
+                        <constraint firstAttribute="bottom" secondItem="eZF-ca-YbU" secondAttribute="bottom" id="UIx-Ru-AYA"/>
+                        <constraint firstItem="eZF-ca-YbU" firstAttribute="top" secondItem="iS9-VO-Oj1" secondAttribute="bottom" constant="15" id="Yo6-YU-aYO"/>
+                        <constraint firstAttribute="trailing" secondItem="iS9-VO-Oj1" secondAttribute="trailing" id="hG0-RS-Mlq"/>
+                        <constraint firstAttribute="trailing" secondItem="eZF-ca-YbU" secondAttribute="trailing" id="hek-gS-Sz5"/>
+                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="top" secondItem="OOm-Cs-9sg" secondAttribute="top" id="maw-Pg-Fzs"/>
+                        <constraint firstItem="eZF-ca-YbU" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="vhL-EY-t1H"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-Sw-Tti">
-                    <rect key="frame" x="36" y="184" width="342" height="239.33333333333337"/>
+                    <rect key="frame" x="36" y="182" width="342" height="240.33333333333337"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBB-L9-HLW">
                             <rect key="frame" x="0.0" y="0.0" width="342" height="38"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SG +65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-oo-F1O">
-                                    <rect key="frame" x="0.0" y="3" width="53" height="18.666666666666668"/>
+                                    <rect key="frame" x="0.0" y="3" width="53" height="19.333333333333332"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="eid-fw-z72">
-                                    <rect key="frame" x="61" y="5.3333333333333428" width="14" height="14"/>
+                                    <rect key="frame" x="61" y="5.6666666666666572" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="VID-M3-2gp"/>
                                         <constraint firstAttribute="width" constant="14" id="mXl-Id-1la"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHO-fN-CLn">
-                                    <rect key="frame" x="81" y="6" width="1" height="13"/>
+                                    <rect key="frame" x="81" y="6.3333333333333428" width="1" height="13"/>
                                     <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="P5E-R9-5Er"/>
@@ -83,7 +139,7 @@
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0S-jgp">
-                                    <rect key="frame" x="90" y="4.3333333333333428" width="252" height="16"/>
+                                    <rect key="frame" x="90" y="4.6666666666666572" width="252" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="sVo-BM-stU"/>
                                     </constraints>
@@ -112,104 +168,52 @@
                                 <constraint firstAttribute="height" constant="1" id="aZt-1x-DFK"/>
                             </constraints>
                         </view>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsX-cF-U5R">
-                            <rect key="frame" x="0.0" y="53.999999999999993" width="342" height="116.33333333333331"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <string key="text">Your phone number will be used to  improve your LoopLyfe experience, including connecting you with
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-fh-0tp">
+                            <rect key="frame" x="0.0" y="54.000000000000014" width="342" height="186.33333333333337"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsX-cF-U5R">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="116.33333333333333"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <string key="text">Your phone number will be used to  improve your LoopLyfe experience, including connecting you with
 people you may know, personalizing your ads,
 experience, and more. If you sign up with SMS,
 SMS fees may apply. Learn more</string>
-                            <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-uE-okh">
-                            <rect key="frame" x="0.0" y="190.33333333333331" width="342" height="50"/>
-                            <color key="backgroundColor" name="yellow"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="cJD-Ke-IuF"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Send Code">
-                                <color key="titleColor" name="black"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
-                                    <integer key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
+                                    <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-uE-okh">
+                                    <rect key="frame" x="0.0" y="136.33333333333331" width="342" height="50"/>
+                                    <color key="backgroundColor" name="yellow"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="cJD-Ke-IuF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Send Code">
+                                        <color key="titleColor" name="black"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="uDt-fh-0tp" secondAttribute="trailing" id="CcM-FF-Kaw"/>
                         <constraint firstAttribute="trailing" secondItem="zBB-L9-HLW" secondAttribute="trailing" id="He3-3l-rK8"/>
-                        <constraint firstAttribute="trailing" secondItem="SZ0-uE-okh" secondAttribute="trailing" id="IvL-dr-D59"/>
                         <constraint firstItem="74t-ji-r7t" firstAttribute="leading" secondItem="x4I-Sw-Tti" secondAttribute="leading" id="Nqi-Og-sd4"/>
-                        <constraint firstItem="lsX-cF-U5R" firstAttribute="leading" secondItem="x4I-Sw-Tti" secondAttribute="leading" id="Poe-uu-ouw"/>
                         <constraint firstItem="zBB-L9-HLW" firstAttribute="leading" secondItem="x4I-Sw-Tti" secondAttribute="leading" id="RH6-nr-Fqw"/>
-                        <constraint firstItem="SZ0-uE-okh" firstAttribute="top" secondItem="lsX-cF-U5R" secondAttribute="bottom" constant="20" id="UCs-aH-Q2J"/>
+                        <constraint firstItem="uDt-fh-0tp" firstAttribute="leading" secondItem="x4I-Sw-Tti" secondAttribute="leading" id="Vf3-V8-v8B"/>
+                        <constraint firstItem="uDt-fh-0tp" firstAttribute="top" secondItem="74t-ji-r7t" secondAttribute="bottom" constant="15" id="Vvb-62-2NO"/>
+                        <constraint firstAttribute="bottom" secondItem="uDt-fh-0tp" secondAttribute="bottom" id="ZLR-Yd-h9q"/>
                         <constraint firstItem="zBB-L9-HLW" firstAttribute="top" secondItem="x4I-Sw-Tti" secondAttribute="top" id="bnk-Z6-D71"/>
-                        <constraint firstAttribute="bottom" secondItem="SZ0-uE-okh" secondAttribute="bottom" constant="-1" id="jGr-jA-4mT"/>
-                        <constraint firstAttribute="trailing" secondItem="lsX-cF-U5R" secondAttribute="trailing" id="ldz-OV-bic"/>
                         <constraint firstItem="74t-ji-r7t" firstAttribute="top" secondItem="zBB-L9-HLW" secondAttribute="bottom" id="lqJ-FC-k23"/>
-                        <constraint firstItem="SZ0-uE-okh" firstAttribute="leading" secondItem="x4I-Sw-Tti" secondAttribute="leading" id="rjM-qh-ljm"/>
-                        <constraint firstItem="lsX-cF-U5R" firstAttribute="top" secondItem="74t-ji-r7t" secondAttribute="bottom" constant="15" id="tga-qB-PXt"/>
                         <constraint firstAttribute="trailing" secondItem="74t-ji-r7t" secondAttribute="trailing" id="unJ-4h-efq"/>
-                    </constraints>
-                </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
-                    <rect key="frame" x="36" y="185" width="342" height="238"/>
-                    <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-VO-Oj1">
-                            <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="sR0-Ta-6Rq"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-tC-zn5">
-                            <rect key="frame" x="0.0" y="54.999999999999993" width="342" height="116.33333333333331"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <string key="text">Your phone number will be used to  improve your LoopLyfe experience, including connecting you with
-people you may know, personalizing your ads,
-experience, and more. If you sign up with SMS,
-SMS fees may apply. Learn more</string>
-                            <color key="textColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-j9-tAL">
-                            <rect key="frame" x="0.0" y="188" width="342" height="50"/>
-                            <color key="backgroundColor" name="yellow"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="8zt-XI-U1K"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Send Code">
-                                <color key="titleColor" name="black"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
-                                    <integer key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="gOo-j9-tAL" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="0kE-pJ-EBg"/>
-                        <constraint firstAttribute="trailing" secondItem="8Vb-tC-zn5" secondAttribute="trailing" id="C18-8r-o3c"/>
-                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="IMo-GW-udg"/>
-                        <constraint firstAttribute="bottom" secondItem="gOo-j9-tAL" secondAttribute="bottom" id="IlG-wv-1kb"/>
-                        <constraint firstItem="8Vb-tC-zn5" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="XdR-5T-sTL"/>
-                        <constraint firstAttribute="trailing" secondItem="gOo-j9-tAL" secondAttribute="trailing" id="gcH-8f-lZ1"/>
-                        <constraint firstAttribute="trailing" secondItem="iS9-VO-Oj1" secondAttribute="trailing" id="hG0-RS-Mlq"/>
-                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="top" secondItem="OOm-Cs-9sg" secondAttribute="top" id="maw-Pg-Fzs"/>
-                        <constraint firstItem="8Vb-tC-zn5" firstAttribute="top" secondItem="iS9-VO-Oj1" secondAttribute="bottom" constant="15" id="nfu-ta-3Y9"/>
-                        <constraint firstItem="gOo-j9-tAL" firstAttribute="top" secondItem="8Vb-tC-zn5" secondAttribute="bottom" constant="16.666666666666686" id="rrq-3D-BbS"/>
                     </constraints>
                 </view>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHt-y7-rHu">
@@ -224,6 +228,9 @@ SMS fees may apply. Learn more</string>
                                     <color key="tintColor" name="black"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="chevron.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="HlK-Jm-Uy7"/>
+                                    </connections>
                                 </button>
                                 <color key="tintColor" name="black"/>
                             </barButtonItem>
@@ -251,9 +258,9 @@ SMS fees may apply. Learn more</string>
                 <constraint firstItem="oHt-y7-rHu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O5q-QK-4l8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nkL-Nw-jOe" secondAttribute="trailing" id="PHG-5H-VU1"/>
                 <constraint firstItem="x4I-Sw-Tti" firstAttribute="top" secondItem="aC6-sR-2xb" secondAttribute="bottom" constant="62" id="Xp5-n3-SYJ"/>
-                <constraint firstItem="nkL-Nw-jOe" firstAttribute="top" secondItem="oHt-y7-rHu" secondAttribute="bottom" constant="18" id="bLf-qW-KBF"/>
+                <constraint firstItem="nkL-Nw-jOe" firstAttribute="top" secondItem="oHt-y7-rHu" secondAttribute="bottom" id="bLf-qW-KBF"/>
                 <constraint firstItem="nkL-Nw-jOe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bl5-gg-dn4"/>
-                <constraint firstItem="aC6-sR-2xb" firstAttribute="top" secondItem="nkL-Nw-jOe" secondAttribute="bottom" constant="8" id="fpn-fv-UTW"/>
+                <constraint firstItem="aC6-sR-2xb" firstAttribute="top" secondItem="nkL-Nw-jOe" secondAttribute="bottom" constant="-1" id="fpn-fv-UTW"/>
                 <constraint firstItem="OOm-Cs-9sg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="h3c-Rd-OLe"/>
                 <constraint firstItem="aC6-sR-2xb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n0b-Vt-jna"/>
                 <constraint firstItem="oHt-y7-rHu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="x3d-jR-WP7"/>

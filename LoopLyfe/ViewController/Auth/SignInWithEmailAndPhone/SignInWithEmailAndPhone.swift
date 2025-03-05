@@ -8,7 +8,10 @@
 import UIKit
 
 class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    var signInLbl = ["Phone", "Email"]
+    
+    var signInLbl = [["isSelected":"true","lbl":"Phone"],["isSelected": "false","lbl":"Email"]]
+    
+    var isSignIn = false
     
     @IBOutlet var navigationBar: UINavigationBar!
     
@@ -23,6 +26,17 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if isSignIn {
+            navigationBar.topItem?.title = "Sign In"
+            self.emailTextView.isHidden = true
+            self.learnTextView.isHidden = true
+            
+        }else {
+            navigationBar.topItem?.title = "Sign Up"
+            self.emailTextView.isHidden = false
+            self.learnTextView.isHidden = false
+        }
         
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
@@ -125,15 +139,29 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SignInCollectionViewCell", for: indexPath) as! SignInCollectionViewCell
-        cell.signInLbl.text = signInLbl[indexPath.row]
+        cell.signInLbl.text = signInLbl[indexPath.row]["lbl"]
+        
+        if signInLbl[indexPath.row]["isSelected"] == "true" {
+            cell.labelView.isHidden = false
+        }else {
+            cell.labelView.isHidden = true
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 2, height: 16)
+        return CGSize(width: collectionView.frame.width / 2, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        for i in 0..<signInLbl.count {
+            signInLbl[i]["isSelected"] = "false"
+        }
+
+        signInLbl[indexPath.row]["isSelected"] = "true"
+        
+
         if indexPath.item == 0 {
             phoneNumberView.isHidden = false
             emailView.isHidden = true
@@ -141,5 +169,12 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
             phoneNumberView.isHidden = true
             emailView.isHidden = false
         }
+        collectionView.reloadData()
     }
+    
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

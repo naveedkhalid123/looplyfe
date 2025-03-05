@@ -99,19 +99,19 @@
                         <navigationItem title="Sign up" id="k2q-0q-ipz">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="7pg-ml-nUo">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4wf-S4-gwb">
-                                    <rect key="frame" x="20" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="19.999999999999996" y="0.0" width="61.666666666666657" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="black"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chevron.left" catalog="system"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="uwz-2S-HbD">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nbu-8A-EKT">
-                                    <rect key="frame" x="342" y="1" width="52" height="42"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nbu-8A-EKT">
+                                    <rect key="frame" x="350" y="0.0" width="44" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="info"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="info"/>
                                 </button>
                             </barButtonItem>
                         </navigationItem>
@@ -145,7 +145,7 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="info" width="28" height="28"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

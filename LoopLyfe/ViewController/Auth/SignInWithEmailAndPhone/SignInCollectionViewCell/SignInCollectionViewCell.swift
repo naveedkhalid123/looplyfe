@@ -10,6 +10,9 @@ import UIKit
 class SignInCollectionViewCell: UICollectionViewCell {
     
     
+    
+    @IBOutlet weak var labelView: UIView!
+    
     @IBOutlet weak var signInLbl: UILabel!
     
     override func awakeFromNib() {

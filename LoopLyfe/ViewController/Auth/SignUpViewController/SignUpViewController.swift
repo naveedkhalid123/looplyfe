@@ -108,7 +108,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
-        print("Sign in btn pressed")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
