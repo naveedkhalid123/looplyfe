@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Essetional=None, Media Player=None, Money=None, typefaces=None, Arrow=None, Content=None, Emails=None, Design=None, Electronics=None, Grid=None, Programing=None, Files=None, Car=None, Call=None, Weather=None, Time=None, Users=None, Learning=None, 1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -24,6 +24,9 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
     @IBOutlet var phoneNumberView: UIView!
     @IBOutlet var emailView: UIView!
     
+    
+    @IBOutlet weak var passwordTxtField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,10 +51,24 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
         
         emailTxtField.layer.cornerRadius = 8
         emailTxtField.backgroundColor = UIColor(named: "lightGrey")
+        
+        
 
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: emailTxtField.frame.height))
         emailTxtField.leftView = paddingView
         emailTxtField.leftViewMode = .always
+        
+        passwordTxtField.layer.cornerRadius = 8
+        passwordTxtField.backgroundColor = UIColor(named: "lightGrey")
+        
+        
+
+        let passwordPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: passwordTxtField.frame.height))
+        passwordTxtField.leftView = passwordPaddingView
+        passwordTxtField.leftViewMode = .always
+        
+        
+        
         
         phoneNumberView.isHidden = false
         emailView.isHidden = true
@@ -175,6 +192,12 @@ class SignInWithEmailAndPhone: UIViewController, UITextViewDelegate, UICollectio
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    @IBAction func selectPhoneNumberBtnPressed(_ sender: UIButton) {
+        print("Select Country Code")
     }
     
 }

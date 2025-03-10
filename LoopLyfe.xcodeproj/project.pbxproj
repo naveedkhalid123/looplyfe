@@ -90,6 +90,10 @@
 		678EA67F2D6DA48000DA4701 /* PersonalizeTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA67D2D6DA48000DA4701 /* PersonalizeTblViewCell.xib */; };
 		678EA6832D6DABD900DA4701 /* SafetyTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EA6812D6DABD900DA4701 /* SafetyTblViewCell.swift */; };
 		678EA6842D6DABD900DA4701 /* SafetyTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */; };
+		679786AE2D7EDA45006A542E /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679786AC2D7EDA45006A542E /* ProfileCollectionViewCell.swift */; };
+		679786AF2D7EDA45006A542E /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679786AD2D7EDA45006A542E /* ProfileCollectionViewCell.xib */; };
+		679786B32D7EEE41006A542E /* InboxTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679786B12D7EEE41006A542E /* InboxTblViewCell.swift */; };
+		679786B42D7EEE41006A542E /* InboxTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679786B22D7EEE41006A542E /* InboxTblViewCell.xib */; };
 		67A7459D2D68489C00C7BA12 /* ContentPreferncesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */; };
 		67A7459E2D68489C00C7BA12 /* ContentPreferncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */; };
 		67A745A22D684A3400C7BA12 /* LangugeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */; };
@@ -242,6 +246,10 @@
 		678EA67D2D6DA48000DA4701 /* PersonalizeTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeTblViewCell.xib; sourceTree = "<group>"; };
 		678EA6812D6DABD900DA4701 /* SafetyTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTblViewCell.swift; sourceTree = "<group>"; };
 		678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyTblViewCell.xib; sourceTree = "<group>"; };
+		679786AC2D7EDA45006A542E /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		679786AD2D7EDA45006A542E /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		679786B12D7EEE41006A542E /* InboxTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTblViewCell.swift; sourceTree = "<group>"; };
+		679786B22D7EEE41006A542E /* InboxTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxTblViewCell.xib; sourceTree = "<group>"; };
 		67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreferncesViewController.swift; sourceTree = "<group>"; };
 		67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentPreferncesViewController.xib; sourceTree = "<group>"; };
 		67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangugeTableViewCell.swift; sourceTree = "<group>"; };
@@ -409,6 +417,7 @@
 		671D5BBF2D63580300926F7E /* InboxViewController */ = {
 			isa = PBXGroup;
 			children = (
+				679786B02D7EEE28006A542E /* InboxTblViewCell */,
 				671D5BC02D63581900926F7E /* InboxViewController.swift */,
 			);
 			path = InboxViewController;
@@ -417,6 +426,7 @@
 		671D5BC22D63582500926F7E /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				679786AB2D7EDA24006A542E /* ProfileCollectionViewCell */,
 				671D5BC32D63583C00926F7E /* ProfileViewController.swift */,
 			);
 			path = ProfileViewController;
@@ -718,6 +728,24 @@
 				678EA6822D6DABD900DA4701 /* SafetyTblViewCell.xib */,
 			);
 			path = SafetyTblViewCell;
+			sourceTree = "<group>";
+		};
+		679786AB2D7EDA24006A542E /* ProfileCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				679786AC2D7EDA45006A542E /* ProfileCollectionViewCell.swift */,
+				679786AD2D7EDA45006A542E /* ProfileCollectionViewCell.xib */,
+			);
+			path = ProfileCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		679786B02D7EEE28006A542E /* InboxTblViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				679786B12D7EEE41006A542E /* InboxTblViewCell.swift */,
+				679786B22D7EEE41006A542E /* InboxTblViewCell.xib */,
+			);
+			path = InboxTblViewCell;
 			sourceTree = "<group>";
 		};
 		67A7459A2D68487F00C7BA12 /* ContentPreferncesViewController */ = {
@@ -1354,6 +1382,7 @@
 				67B719D42D61FEA700D79804 /* SignInViewController.xib in Resources */,
 				6783B0B92D60BBD800E5AEC1 /* OTPVerificationViewController.xib in Resources */,
 				67FEE9D92D5F2852004DEAA5 /* InterestCollectionViewCell.xib in Resources */,
+				679786B42D7EEE41006A542E /* InboxTblViewCell.xib in Resources */,
 				678EA6702D6D94F200DA4701 /* FiltersTblViewCell.xib in Resources */,
 				67B967EA2D64705B0092E995 /* ShareViewController.xib in Resources */,
 				67FEE9E72D5F5A90004DEAA5 /* SignUpViewController.xib in Resources */,
@@ -1366,6 +1395,7 @@
 				67458C962D6725AE005CB7E4 /* SettingAndPrivacyViewController.xib in Resources */,
 				67A745A32D684A3400C7BA12 /* LangugeTableViewCell.xib in Resources */,
 				678EA6842D6DABD900DA4701 /* SafetyTblViewCell.xib in Resources */,
+				679786AF2D7EDA45006A542E /* ProfileCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1470,6 +1500,7 @@
 				67ED5CE52D670A24009FAF5E /* BusinessViewController.swift in Sources */,
 				671D5BC42D63583C00926F7E /* ProfileViewController.swift in Sources */,
 				67FEE9E62D5F5A90004DEAA5 /* SignUpViewController.swift in Sources */,
+				679786AE2D7EDA45006A542E /* ProfileCollectionViewCell.swift in Sources */,
 				67E6D4A72D6C69EC008436CA /* ToolsTableViewCell.swift in Sources */,
 				67A745B62D6863C900C7BA12 /* LoopLyfeFamilyViewController.swift in Sources */,
 				67458C902D671BAA005CB7E4 /* CategoriesTblViewCell.swift in Sources */,
@@ -1478,6 +1509,7 @@
 				67ED5CDA2D65EA94009FAF5E /* RepostVideoViewController.swift in Sources */,
 				67FEE9E02D5F31D7004DEAA5 /* Onbording4ViewController.swift in Sources */,
 				67FEE9C92D5F0BD7004DEAA5 /* Onbording3ViewController.swift in Sources */,
+				679786B32D7EEE41006A542E /* InboxTblViewCell.swift in Sources */,
 				67B719DE2D62120900D79804 /* SignInCollectionViewCell.swift in Sources */,
 				67EAECB02D5E23E500C4F1DF /* AppDelegate.swift in Sources */,
 				678EA66F2D6D94F200DA4701 /* FiltersTblViewCell.swift in Sources */,

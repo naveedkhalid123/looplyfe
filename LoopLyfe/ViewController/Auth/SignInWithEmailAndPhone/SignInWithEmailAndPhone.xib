@@ -25,6 +25,7 @@
                 <outlet property="emailView" destination="OOm-Cs-9sg" id="qzI-h3-s9e"/>
                 <outlet property="learnTextView" destination="lsX-cF-U5R" id="iMq-bD-iOz"/>
                 <outlet property="navigationBar" destination="oHt-y7-rHu" id="6Rv-VJ-feD"/>
+                <outlet property="passwordTxtField" destination="qyE-vF-qWe" id="rVI-DH-Vly"/>
                 <outlet property="phoneNumberView" destination="x4I-Sw-Tti" id="kiG-J3-FDv"/>
                 <outlet property="signInCollectionView" destination="nkL-Nw-jOe" id="fEn-40-MzN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -55,8 +56,8 @@
                         <constraint firstAttribute="height" constant="1" id="S7e-nz-HHp"/>
                     </constraints>
                 </view>
-                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
-                    <rect key="frame" x="36" y="183" width="342" height="237.33333333333337"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
+                    <rect key="frame" x="36" y="182.99999999999997" width="342" height="322.33333333333326"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-VO-Oj1">
                             <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
@@ -66,8 +67,16 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-vF-qWe">
+                            <rect key="frame" x="0.0" y="60" width="342" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Jwf-yl-waC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eZF-ca-YbU">
-                            <rect key="frame" x="0.0" y="55.000000000000014" width="342" height="182.33333333333337"/>
+                            <rect key="frame" x="0.0" y="140" width="342" height="182.33333333333337"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-tC-zn5">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="116.33333333333333"/>
@@ -102,36 +111,49 @@ SMS fees may apply. Learn more</string>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="eZF-ca-YbU" firstAttribute="top" secondItem="qyE-vF-qWe" secondAttribute="bottom" constant="40" id="Avx-HH-tsZ"/>
                         <constraint firstItem="iS9-VO-Oj1" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="IMo-GW-udg"/>
+                        <constraint firstAttribute="trailing" secondItem="qyE-vF-qWe" secondAttribute="trailing" id="Mn5-OX-9Uu"/>
                         <constraint firstAttribute="bottom" secondItem="eZF-ca-YbU" secondAttribute="bottom" id="UIx-Ru-AYA"/>
-                        <constraint firstItem="eZF-ca-YbU" firstAttribute="top" secondItem="iS9-VO-Oj1" secondAttribute="bottom" constant="15" id="Yo6-YU-aYO"/>
+                        <constraint firstItem="qyE-vF-qWe" firstAttribute="top" secondItem="iS9-VO-Oj1" secondAttribute="bottom" constant="20" id="YmR-tt-Vob"/>
                         <constraint firstAttribute="trailing" secondItem="iS9-VO-Oj1" secondAttribute="trailing" id="hG0-RS-Mlq"/>
                         <constraint firstAttribute="trailing" secondItem="eZF-ca-YbU" secondAttribute="trailing" id="hek-gS-Sz5"/>
                         <constraint firstItem="iS9-VO-Oj1" firstAttribute="top" secondItem="OOm-Cs-9sg" secondAttribute="top" id="maw-Pg-Fzs"/>
+                        <constraint firstItem="qyE-vF-qWe" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="rAP-AY-de8"/>
                         <constraint firstItem="eZF-ca-YbU" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="vhL-EY-t1H"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-Sw-Tti">
-                    <rect key="frame" x="36" y="182" width="342" height="240.33333333333337"/>
+                    <rect key="frame" x="36" y="182" width="342" height="237.33333333333337"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBB-L9-HLW">
-                            <rect key="frame" x="0.0" y="0.0" width="342" height="38"/>
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="35"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SG +65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-oo-F1O">
-                                    <rect key="frame" x="0.0" y="3" width="53" height="19.333333333333332"/>
+                                    <rect key="frame" x="0.0" y="10" width="53" height="15"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-RM-akD">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="GAf-LK-FjD"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="selectPhoneNumberBtnPressed:" destination="-1" eventType="touchUpInside" id="3kZ-X9-sXa"/>
+                                    </connections>
+                                </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="eid-fw-z72">
-                                    <rect key="frame" x="61" y="5.6666666666666572" width="14" height="14"/>
+                                    <rect key="frame" x="61" y="10.666666666666657" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="VID-M3-2gp"/>
                                         <constraint firstAttribute="width" constant="14" id="mXl-Id-1la"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHO-fN-CLn">
-                                    <rect key="frame" x="81" y="6.3333333333333428" width="1" height="13"/>
+                                    <rect key="frame" x="81" y="11" width="1" height="13"/>
                                     <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="P5E-R9-5Er"/>
@@ -139,9 +161,9 @@ SMS fees may apply. Learn more</string>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0S-jgp">
-                                    <rect key="frame" x="90" y="4.6666666666666572" width="252" height="16"/>
+                                    <rect key="frame" x="90" y="-1.3333333333333428" width="252" height="38"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="16" id="sVo-BM-stU"/>
+                                        <constraint firstAttribute="height" constant="38" id="sVo-BM-stU"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -150,26 +172,30 @@ SMS fees may apply. Learn more</string>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="eid-fw-z72" firstAttribute="leading" secondItem="UEd-oo-F1O" secondAttribute="trailing" constant="8" symbolic="YES" id="0sw-JG-x29"/>
+                                <constraint firstItem="UEd-oo-F1O" firstAttribute="centerY" secondItem="eid-fw-z72" secondAttribute="centerY" id="39N-ud-FYP"/>
+                                <constraint firstItem="UEd-oo-F1O" firstAttribute="centerY" secondItem="xbp-0S-jgp" secondAttribute="centerY" id="6yT-EZ-AM4"/>
+                                <constraint firstItem="7oS-RM-akD" firstAttribute="top" secondItem="zBB-L9-HLW" secondAttribute="top" id="Cap-lj-Yyv"/>
                                 <constraint firstItem="PHO-fN-CLn" firstAttribute="leading" secondItem="eid-fw-z72" secondAttribute="trailing" constant="6" id="EUW-Di-7EY"/>
                                 <constraint firstItem="PHO-fN-CLn" firstAttribute="centerY" secondItem="eid-fw-z72" secondAttribute="centerY" id="EmE-cE-EeW"/>
-                                <constraint firstItem="UEd-oo-F1O" firstAttribute="top" secondItem="zBB-L9-HLW" secondAttribute="top" constant="3" id="Hst-xK-FoY"/>
+                                <constraint firstAttribute="bottom" secondItem="7oS-RM-akD" secondAttribute="bottom" id="J09-y3-snY"/>
                                 <constraint firstItem="UEd-oo-F1O" firstAttribute="leading" secondItem="zBB-L9-HLW" secondAttribute="leading" id="RqQ-S8-S1e"/>
-                                <constraint firstItem="eid-fw-z72" firstAttribute="centerY" secondItem="UEd-oo-F1O" secondAttribute="centerY" id="cZP-Tl-evn"/>
-                                <constraint firstItem="xbp-0S-jgp" firstAttribute="centerY" secondItem="PHO-fN-CLn" secondAttribute="centerY" id="iIB-WK-TgG"/>
+                                <constraint firstItem="xbp-0S-jgp" firstAttribute="centerY" secondItem="zBB-L9-HLW" secondAttribute="centerY" id="YFa-S6-YUf"/>
+                                <constraint firstItem="UEd-oo-F1O" firstAttribute="top" secondItem="zBB-L9-HLW" secondAttribute="top" constant="10" id="gj1-gB-sYP"/>
                                 <constraint firstAttribute="trailing" secondItem="xbp-0S-jgp" secondAttribute="trailing" id="ihE-S8-H3M"/>
                                 <constraint firstItem="xbp-0S-jgp" firstAttribute="leading" secondItem="PHO-fN-CLn" secondAttribute="trailing" constant="8" symbolic="YES" id="ndT-fj-iHG"/>
-                                <constraint firstAttribute="height" constant="38" id="ujV-gY-Y2H"/>
+                                <constraint firstItem="7oS-RM-akD" firstAttribute="leading" secondItem="zBB-L9-HLW" secondAttribute="leading" id="nq2-QI-aXv"/>
+                                <constraint firstItem="PHO-fN-CLn" firstAttribute="leading" secondItem="7oS-RM-akD" secondAttribute="trailing" constant="6" id="r7S-0e-b6N"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74t-ji-r7t">
-                            <rect key="frame" x="0.0" y="38" width="342" height="1"/>
+                            <rect key="frame" x="0.0" y="35" width="342" height="1"/>
                             <color key="backgroundColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="aZt-1x-DFK"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-fh-0tp">
-                            <rect key="frame" x="0.0" y="54.000000000000014" width="342" height="186.33333333333337"/>
+                            <rect key="frame" x="0.0" y="51.000000000000014" width="342" height="186.33333333333337"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsX-cF-U5R">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="116.33333333333333"/>
@@ -236,11 +262,15 @@ SMS fees may apply. Learn more</string>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="jyO-eu-4np">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ElU-Va-N5N">
-                                    <rect key="frame" x="342" y="1" width="52" height="42"/>
+                                    <rect key="frame" x="320" y="1" width="74" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="info"/>
+                                    <color key="tintColor" name="black"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="info">
+                                        <color key="titleColor" name="black"/>
+                                    </state>
                                 </button>
+                                <color key="tintColor" name="black"/>
                             </barButtonItem>
                         </navigationItem>
                     </items>
