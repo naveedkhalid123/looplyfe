@@ -6,8 +6,18 @@
 //
 
 import UIKit
+import AuthenticationServices
+import FirebaseAuth
+import FirebaseFirestore
+import CryptoKit
 
 class SignUpViewController: UIViewController, UITextViewDelegate {
+    
+    
+    // make a variable and store the value of view model in the variable
+    private var showUserDetailsModel = ShowUserDetailViewModel()
+    
+    // MARK: - IBOutlets
     @IBOutlet var profileView: UIView!
     @IBOutlet var facebookView: UIView!
     @IBOutlet var appleView: UIView!
@@ -20,91 +30,93 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var privacyTxtView: UITextView!
     
+    // MARK: - Properties
+    fileprivate var currentNonce: String?
+    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        profileView.layer.cornerRadius = 2
-        profileView.layer.borderWidth = 0.6
-        profileView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
-        
-        facebookView.layer.cornerRadius = 2
-        facebookView.layer.borderWidth = 0.6
-        facebookView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
-        
-        appleView.layer.cornerRadius = 2
-        appleView.layer.borderWidth = 0.6
-        appleView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
-        
-        googleView.layer.cornerRadius = 2
-        googleView.layer.borderWidth = 0.6
-        googleView.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
-    
+        configureViews()
         configureTextView()
     }
     
-    func configureTextView() {
-        let message = "By tapping “Continue”, you agree to our Terms of Service and acknowledge that you have read our Privacy Policy to learn how we collect, use, and share your data."
-        
-        let links: [String: String] = [
-            "Terms of Service": "https://www.google.com",
-            "Privacy Policy": "https://www.apple.com"
-        ]
-        
-        let attributedString = NSMutableAttributedString(string: message, attributes: [
-            .foregroundColor: UIColor(named: "darkTxtGrey") ?? UIColor.gray,
-            .font: UIFont.systemFont(ofSize: 16)
-        ])
-        
-        for (word, url) in links {
-            if let linkRange = message.range(of: word) {
-                let nsRange = NSRange(linkRange, in: message)
-                attributedString.addAttributes([
-                    .link: url
-                ], range: nsRange)
-            }
+    // MARK: - UI Configuration
+    private func configureViews() {
+        let views = [profileView, facebookView, appleView, googleView]
+        views.forEach { view in
+            view?.layer.cornerRadius = 2
+            view?.layer.borderWidth = 0.6
+            view?.layer.borderColor = UIColor(named: "viewLineGrey")?.cgColor
         }
-        
-        privacyTxtView.attributedText = attributedString
-        privacyTxtView.textAlignment = .center
-        privacyTxtView.isEditable = false
-        privacyTxtView.isSelectable = true
-        privacyTxtView.isUserInteractionEnabled = true
-        privacyTxtView.delegate = self
-        
-        // Ensure links appear black
-        privacyTxtView.linkTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-        ]
-    
-        privacyTxtView.attributedText = attributedString
-        privacyTxtView.textAlignment = .center
-        privacyTxtView.isEditable = false
-        privacyTxtView.isSelectable = true
-        privacyTxtView.isUserInteractionEnabled = true
-        privacyTxtView.delegate = self
-        
-        // Ensure links appear black
-        privacyTxtView.linkTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-        ]
     }
     
+    
+        func configureTextView() {
+            let message = "By tapping “Continue”, you agree to our Terms of Service and acknowledge that you have read our Privacy Policy to learn how we collect, use, and share your data."
+    
+            let links: [String: String] = [
+                "Terms of Service": "https://www.google.com",
+                "Privacy Policy": "https://www.apple.com"
+            ]
+    
+            let attributedString = NSMutableAttributedString(string: message, attributes: [
+                .foregroundColor: UIColor(named: "darkTxtGrey") ?? UIColor.gray,
+                .font: UIFont.systemFont(ofSize: 16)
+            ])
+    
+            for (word, url) in links {
+                if let linkRange = message.range(of: word) {
+                    let nsRange = NSRange(linkRange, in: message)
+                    attributedString.addAttributes([
+                        .link: url
+                    ], range: nsRange)
+                }
+            }
+    
+            privacyTxtView.attributedText = attributedString
+            privacyTxtView.textAlignment = .center
+            privacyTxtView.isEditable = false
+            privacyTxtView.isSelectable = true
+            privacyTxtView.isUserInteractionEnabled = true
+            privacyTxtView.delegate = self
+    
+            // Ensure links appear black
+            privacyTxtView.linkTextAttributes = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+            ]
+    
+            privacyTxtView.attributedText = attributedString
+            privacyTxtView.textAlignment = .center
+            privacyTxtView.isEditable = false
+            privacyTxtView.isSelectable = true
+            privacyTxtView.isUserInteractionEnabled = true
+            privacyTxtView.delegate = self
+    
+            // Ensure links appear black
+            privacyTxtView.linkTextAttributes = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+            ]
+        }
+        
+    
+    // MARK: - Button Actions
     @IBAction func phoneBtnPressed(_ sender: UIButton) {
-        print("phone btn pressed")
+        print("Phone button pressed")
     }
     
     @IBAction func facebookBtnPressed(_ sender: UIButton) {
-        print("phone btn fb")
+        print("Facebook button pressed")
     }
     
     @IBAction func appleBtnPressed(_ sender: UIButton) {
-        print("phone btn apple")
+        
+        startSignInWithAppleFlow()
     }
     
     @IBAction func googleBtnPressed(_ sender: UIButton) {
-        print("phone btn google")
+        print("Google button pressed")
     }
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
@@ -112,8 +124,114 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     }
 }
 
-// MARK: - UITextViewDelegate to Handle Link Clicks
+// MARK: - Apple Authentication
+private func randomNonceString(length: Int = 32) -> String {
+    precondition(length > 0)
+    let charset: Array<Character> = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+    var result = ""
+    var remainingLength = length
+    
+    while remainingLength > 0 {
+        let randoms: [UInt8] = (0 ..< 16).map { _ in
+            var random: UInt8 = 0
+            let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+            if errorCode != errSecSuccess {
+                fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
+            }
+            return random
+        }
+        
+        randoms.forEach { random in
+            if remainingLength == 0 { return }
+            if random < charset.count {
+                result.append(charset[Int(random)])
+                remainingLength -= 1
+            }
+        }
+    }
+    return result
+}
 
+@available(iOS 13, *)
+private func sha256(_ input: String) -> String {
+    let inputData = Data(input.utf8)
+    let hashedData = SHA256.hash(data: inputData)
+    return hashedData.map { String(format: "%02x", $0) }.joined()
+}
+
+@available(iOS 13, *)
+extension SignUpViewController: ASAuthorizationControllerDelegate {
+    func startSignInWithAppleFlow() {
+        let nonce = randomNonceString()
+        currentNonce = nonce
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        request.nonce = sha256(nonce)
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            guard let nonce = currentNonce else {
+                fatalError("Invalid state: A login callback was received, but no login request was sent.")
+            }
+            guard let appleIDToken = appleIDCredential.identityToken,
+                  let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                print("Unable to fetch identity token")
+                return
+            }
+            
+            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+            Auth.auth().signIn(with: credential) { (authResult, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                guard let user = authResult?.user else { return }
+                
+                // MVVM Implementation , add view model here and access the view model function
+                self.showUserDetailsModel.fetchUserDetails()
+                self.showUserDetailsModel.showUserDetail?.msg?.user.email
+            
+                // User default use for storing the user ID
+                UserDefaults.standard.set("AuthToken", forKey: user.uid)
+                
+//                let db = Firestore.firestore()
+//                db.collection("User").document(user.uid).setData([
+//                    "email": user.email ?? "",
+//                    "displayName": user.displayName ?? "",
+//                    "uid": user.uid
+//                ]) { err in
+//                    if let err = err {
+//                        print("Error writing document: \(err)")
+//                    } else {
+//                        print("User signed up or logged in successfully")
+//                    }
+//                }
+                
+                print((user.uid))
+            }
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("Sign in with Apple errored: \(error)")
+    }
+}
+
+extension SignUpViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+}
+
+// MARK: - UITextViewDelegate for Link Handling
 extension SignUpViewController {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         UIApplication.shared.open(URL)
