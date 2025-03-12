@@ -111,7 +111,6 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func appleBtnPressed(_ sender: UIButton) {
-        
         startSignInWithAppleFlow()
     }
     
@@ -194,28 +193,33 @@ extension SignUpViewController: ASAuthorizationControllerDelegate {
                 }
                 
                 guard let user = authResult?.user else { return }
+//                UserDefaults.standard.set("AuthToken", forKey: "zLIc8WDIncbUa3QQZPT04gVWZrf1")
                 
                 // MVVM Implementation , add view model here and access the view model function
                 self.showUserDetailsModel.fetchUserDetails()
-                self.showUserDetailsModel.showUserDetail?.msg?.user.email
-            
-                // User default use for storing the user ID
-                UserDefaults.standard.set("AuthToken", forKey: user.uid)
                 
-//                let db = Firestore.firestore()
-//                db.collection("User").document(user.uid).setData([
-//                    "email": user.email ?? "",
-//                    "displayName": user.displayName ?? "",
-//                    "uid": user.uid
-//                ]) { err in
-//                    if let err = err {
-//                        print("Error writing document: \(err)")
-//                    } else {
-//                        print("User signed up or logged in successfully")
-//                    }
-//                }
+                self.showUserDetailsModel.onShowUserDetailsLoaded = { isLoaded,code in
+                    if isLoaded {
+                        print("data fetch")
+                        if code == 200 {
+                            print("User already exist go to login screen")
+                            
+                        }else {
+                            print("User does not exist and show call the register api")
+                            let param: [String : Any] = ["username":"maksoo124d","auth_token":"c8MfeuhwUsPK48Oa4AhvYm49Dyv2","device_token":"fnYqrcmDqkcvtPLfvTxNw6:APA91bG1po76fAKdghUavOh-vikn8tSZbrmpwSihroGc96ebd0jtJtDd005CKeMEjJAGJ9Y78g5-sofl2K1pyKSELs2-f9GlAangLWhUFUMoWkD8rC2BDhg","social":"apple"]
+                            self.showUserDetailsModel.registerUser(parameters: param)
+                        }
+                    }else {
+                        print("error")
+                    }
+                }
                 
-                print((user.uid))
+                self.showUserDetailsModel.onRegisterUserLoaded = { isLoaded in
+                    if isLoaded {
+                        print("showUserDetailsModel",self.showUserDetailsModel.showRegisterUser?.msg)
+                    }
+                    
+                }
             }
         }
     }

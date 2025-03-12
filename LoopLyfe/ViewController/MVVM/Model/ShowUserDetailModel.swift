@@ -5,10 +5,10 @@
 //  Created by Naveed Khalid on 11/03/2025.
 //
 
-
 import Foundation
 
 // MARK: - ShowUserDetail
+
 struct ShowUserDetailModel: Codable {
     let code: Int
     var msg: Msg?
@@ -16,22 +16,23 @@ struct ShowUserDetailModel: Codable {
 
     enum CodingKeys: String, CodingKey {
         case code, msg, message
-      }
-      init(from decoder: Decoder) throws {
+    }
+
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         code = try container.decode(Int.self, forKey: .code)
         if code == 200 {
-          msg = try container.decodeIfPresent(Msg.self, forKey: .msg)
-          message = nil
+            msg = try container.decodeIfPresent(Msg.self, forKey: .msg)
+            message = nil
         } else {
-          msg = nil
-          message = try container.decodeIfPresent(String.self, forKey: .message)
+            msg = nil
+            message = try container.decodeIfPresent(String.self, forKey: .message)
         }
-      }
-
+    }
 }
 
 // MARK: - Msg
+
 struct Msg: Codable {
     let user: User
     let pushNotification: PushNotification
@@ -45,6 +46,7 @@ struct Msg: Codable {
 }
 
 // MARK: - PrivacySetting
+
 struct PrivacySetting: Codable {
     let id, videosDownload: Int
     let directMessage, duet, likedVideos, videoComment: String
@@ -60,6 +62,7 @@ struct PrivacySetting: Codable {
 }
 
 // MARK: - PushNotification
+
 struct PushNotification: Codable {
     let id, likes, comments, newFollowers: Int
     let mentions, directMessages, videoUpdates: Int
@@ -74,6 +77,7 @@ struct PushNotification: Codable {
 }
 
 // MARK: - User
+
 struct User: Codable {
     let id: Int
     let firstName, lastName, gender, bio: String
@@ -146,6 +150,7 @@ struct User: Codable {
 }
 
 // MARK: - InterestElement
+
 struct InterestElement: Codable {
     let userInterest: UserInterest
     let interest: InterestInterest
@@ -157,6 +162,7 @@ struct InterestElement: Codable {
 }
 
 // MARK: - InterestInterest
+
 struct InterestInterest: Codable {
     let id, interestSectionID: Int
     let title: String
@@ -171,6 +177,7 @@ struct InterestInterest: Codable {
 }
 
 // MARK: - UserInterest
+
 struct UserInterest: Codable {
     let id, userID: Int
     let interestID: Int?
@@ -186,6 +193,7 @@ struct UserInterest: Codable {
 }
 
 // MARK: - Playlist
+
 struct Playlist: Codable {
     let playlist: UserInterest
 

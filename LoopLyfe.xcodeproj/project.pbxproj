@@ -168,6 +168,7 @@
 		67ED5CE02D65F291009FAF5E /* RepostDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67ED5CDE2D65F291009FAF5E /* RepostDoneViewController.xib */; };
 		67ED5CE52D670A24009FAF5E /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ED5CE32D670A24009FAF5E /* BusinessViewController.swift */; };
 		67ED5CE62D670A24009FAF5E /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67ED5CE42D670A24009FAF5E /* BusinessViewController.xib */; };
+		67F81E852D81856200C21985 /* RegisterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F81E842D81856100C21985 /* RegisterUserModel.swift */; };
 		67FEE9C92D5F0BD7004DEAA5 /* Onbording3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FEE9C72D5F0BD7004DEAA5 /* Onbording3ViewController.swift */; };
 		67FEE9CA2D5F0BD7004DEAA5 /* Onbording3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FEE9C82D5F0BD7004DEAA5 /* Onbording3ViewController.xib */; };
 		67FEE9CE2D5F1639004DEAA5 /* Onbording2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FEE9CC2D5F1639004DEAA5 /* Onbording2ViewController.swift */; };
@@ -330,6 +331,7 @@
 		67ED5CDE2D65F291009FAF5E /* RepostDoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepostDoneViewController.xib; sourceTree = "<group>"; };
 		67ED5CE32D670A24009FAF5E /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		67ED5CE42D670A24009FAF5E /* BusinessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
+		67F81E842D81856100C21985 /* RegisterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserModel.swift; sourceTree = "<group>"; };
 		67FEE9C72D5F0BD7004DEAA5 /* Onbording3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onbording3ViewController.swift; sourceTree = "<group>"; };
 		67FEE9C82D5F0BD7004DEAA5 /* Onbording3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onbording3ViewController.xib; sourceTree = "<group>"; };
 		67FEE9CC2D5F1639004DEAA5 /* Onbording2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onbording2ViewController.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				67253F282D80387A0058161D /* ShowUserDetailModel.swift */,
+				67F81E842D81856100C21985 /* RegisterUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1543,6 +1546,7 @@
 				671D5BC42D63583C00926F7E /* ProfileViewController.swift in Sources */,
 				67FEE9E62D5F5A90004DEAA5 /* SignUpViewController.swift in Sources */,
 				679786AE2D7EDA45006A542E /* ProfileCollectionViewCell.swift in Sources */,
+				67F81E852D81856200C21985 /* RegisterUserModel.swift in Sources */,
 				67E6D4A72D6C69EC008436CA /* ToolsTableViewCell.swift in Sources */,
 				67A745B62D6863C900C7BA12 /* LoopLyfeFamilyViewController.swift in Sources */,
 				67458C902D671BAA005CB7E4 /* CategoriesTblViewCell.swift in Sources */,
