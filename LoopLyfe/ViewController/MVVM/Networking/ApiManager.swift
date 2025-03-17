@@ -4,109 +4,147 @@
 //
 //  Created by Naveed Khalid on 11/03/2025.
 //
-
 import Alamofire
 import Foundation
 
+enum NetworkError: Error {
+    case noInternet
+    case timedOut
+    case serverUnavailable
+    case decodingFailed
+    case unknown
+    
+    var localizedDescription: String {
+        switch self {
+        case .noInternet:
+            return "No internet connection. Please check your network settings."
+        case .timedOut:
+            return "The request timed out. Please try again later."
+        case .serverUnavailable:
+            return "The server is unavailable. Please try again later."
+        case .decodingFailed:
+            return "Failed to decode the server response."
+        case .unknown:
+            return "An unknown error occurred. Please try again."
+        }
+    }
+}
+
+
+
 class ApiManager {
-    // Store the class value inside the shared variable
     static let shared = ApiManager()
-  
-    // Store the url link inside the baseURL variable
+    
     private let baseURL = "https://newapps.qboxus.com/tictic/api/"
-  
-    private var defaultHeaders: HTTPHeaders {
+    
+    private static func headers() -> HTTPHeaders {
         return [
             "Content-Type": "application/json",
-            
-            // Store API Key here
             "Api-Key": "156c4675-9608-4591-b2ec-427503464aac",
-            
-            // Use user default in API Manager for retriving the value
-            "Auth-Token": "c8MfeuhwUsPK48Oa4AhvYm49Dyv2"
+            "Auth-Token": "EtnpZg9zoWd1qRVTHAZvirR79lF2"
         ]
     }
-
+    
     enum Endpoint: String {
-        // Store API endpoint
         case showUserDetail
-        // Store API endpoint
         case registerUser
-
+        
         func url(baseURL: String) -> String {
             return baseURL + rawValue
         }
     }
-  
-    // make the fetch function , which will fetch the api request
-    func fetchData<T: Decodable>(
-        endpoint: Endpoint,
-        responseType: T.Type,
-        parameters: [String: Any]? = nil,
-        method: HTTPMethod = .post,
-        additionalHeaders: HTTPHeaders? = nil,
-        completion: @escaping (Swift.Result<T, Error>) -> Void
-    ) {
+    
+    // MARK: - API Request with Decodable Response
+    func apiRequest<T: Codable>(endpoint: Endpoint, method: HTTPMethod = .post, parameters: Parameters? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         let url = endpoint.url(baseURL: baseURL)
-        let headers = additionalHeaders ?? defaultHeaders
-        let encoding: ParameterEncoding = method == .get ? URLEncoding.default : JSONEncoding.default
         
-        print("🌍 Requesting: \(url)")
-        print("🔄 Method: \(method)")
-        print("📦 Parameters: \(parameters ?? [:])")
-        print("📌 Headers: \(headers)")
-        
-        AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
+        AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default,headers: HTTPHeaders(ApiManager.headers().dictionary))
             .validate()
-            .responseData { response in
+            .responseDecodable(of: T.self) { response in
                 switch response.result {
-                case .success(let data):
-                    do {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        
-                        let decodedData = try decoder.decode(T.self, from: data)
-                        print("✅ Successfully Decoded:", decodedData)
-                        completion(.success(decodedData))
-                    } catch let decodingError as DecodingError {
-                        let handledError = self.handleDecodingError(decodingError)
-                        print("❌ Decoding Failed: \(handledError.localizedDescription)")
-                        completion(.failure(handledError))
-                    } catch {
-                        print("❌ Unknown Decoding Error: \(error.localizedDescription)")
+                case .success(let model):
+                    
+                    completion(.success(model))
+                case .failure(let error):
+            
+                    // Attempt to decode the response and log decoding errors with more detail
+                    if let data = response.data {
+                        do {
+                            let decoder = JSONDecoder()
+                            _ = try decoder.decode(T.self, from: data)
+                        } catch let decodingError as DecodingError {
+                            switch decodingError {
+                            case .typeMismatch(let type, let context):
+                                print("Type Mismatch: Expected \(type), \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                            case .valueNotFound(let type, let context):
+                                print("Value Not Found: Expected \(type), \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                            case .keyNotFound(let key, let context):
+                                print("Key Not Found: \(key), \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                            case .dataCorrupted(let context):
+                                print("Data Corrupted: \(context.debugDescription)")
+                                print("Coding Path: \(context.codingPath)")
+                            @unknown default:
+                                print("Unhandled Decoding Error: \(decodingError)")
+                            }
+                        } catch {
+                            print("Other Error: \(error.localizedDescription)")
+                        }
+                    } else {
+                        print("No data received in the response.")
+                    }
+
+                    // Handle the original error
+                    if let afError = error.asAFError {
+                        switch afError {
+                        case .sessionTaskFailed(let urlError as URLError):
+                            switch urlError.code {
+                            case .notConnectedToInternet:
+                                print("No internet connection.")
+                                completion(.failure(NetworkError.noInternet))
+                            case .timedOut:
+                                print("Request timed out.")
+                                completion(.failure(NetworkError.timedOut))
+                            case .cannotFindHost, .cannotConnectToHost:
+                                print("Cannot connect to server.")
+                                completion(.failure(NetworkError.serverUnavailable))
+                            default:
+                                print("Network error: \(urlError.localizedDescription)")
+                                completion(.failure(NetworkError.unknown))
+                            }
+                        default:
+                            print("AFError: \(afError.localizedDescription)")
+                            completion(.failure(NetworkError.unknown))
+                        }
+                    } else {
                         completion(.failure(error))
                     }
-                case .failure(let error):
-                    print("❌ Request Failed: \(error.localizedDescription)")
+
+                    
+                }
+            }
+    }
+    
+    func apiRequestWithoutT(endpoint: Endpoint, method: HTTPMethod = .post, parameters: Parameters? = nil, completion: @escaping (Result<Int, Error>) -> Void) {
+        let url = endpoint.url(baseURL: baseURL)
+        AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default,headers: HTTPHeaders(ApiManager.headers().dictionary))
+            .response { response in
+                if let statusCode = response.response?.statusCode {
+                    switch statusCode {
+                    case 200, 201:
+                        completion(.success(statusCode))
+                    default:
+                        let error = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Unexpected status code: \(statusCode)"])
+                        completion(.failure(error))
+                    }
+                } else if let error = response.error {
+                    completion(.failure(error))
+                } else {
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unknown error occurred"])
                     completion(.failure(error))
                 }
             }
     }
-
-    /// Handles decoding errors and provides detailed error messages.
-    func handleDecodingError(_ error: DecodingError) -> NSError {
-        switch error {
-        case .valueNotFound(let type, let context):
-            print("❌ Value Not Found: Expected \(type), but got null at \(context.codingPath).")
-            return NSError(domain: "DecodingError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Missing expected data at \(context.codingPath)"])
-
-        case .typeMismatch(let type, let context):
-            print("❌ Type Mismatch: Expected \(type), but got a different type at \(context.codingPath).")
-            return NSError(domain: "DecodingError", code: 2, userInfo: [NSLocalizedDescriptionKey: "Invalid data type at \(context.codingPath)"])
-
-        case .keyNotFound(let key, let context):
-            print("❌ Key Not Found: Missing key '\(key.stringValue)' at \(context.codingPath).")
-            return NSError(domain: "DecodingError", code: 3, userInfo: [NSLocalizedDescriptionKey: "Missing key '\(key.stringValue)' in response"])
-
-        case .dataCorrupted(let context):
-            print("❌ Data Corrupted: \(context.debugDescription)")
-            return NSError(domain: "DecodingError", code: 4, userInfo: [NSLocalizedDescriptionKey: "Corrupted data received"])
-
-        @unknown default:
-            return NSError(domain: "DecodingError", code: 5, userInfo: [NSLocalizedDescriptionKey: "Unknown decoding error"])
-        }
-    }
-
-
-
 }

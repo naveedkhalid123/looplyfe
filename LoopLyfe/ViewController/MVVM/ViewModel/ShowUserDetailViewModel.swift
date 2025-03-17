@@ -8,39 +8,42 @@
 import Foundation
 
 class ShowUserDetailViewModel {
-    // Give here model name
     var showUserDetail: ShowUserDetailModel?
-    var onShowUserDetailsLoaded: ((Bool,Int) -> Void)?
+    var onShowUserDetailsLoaded: ((Bool, Int) -> Void)?
     var showRegisterUser: RegisterUserModel?
     var onRegisterUserLoaded: ((Bool) -> Void)?
-    
+
     func fetchUserDetails() {
-        // send request to alamofire to fetch data and return the result
-        ApiManager.shared.fetchData(endpoint: .showUserDetail, responseType: ShowUserDetailModel.self) { result in
+        ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
             switch result {
             case .success(let showUserDetails):
-                // assign the result to showUserDetails
+                print("showUserDetails",showUserDetails)
+                if showUserDetails.code == 202 {
+                    Utility.shared.showToast(message: "Access Restricted")
+                    return
+                }
                 self.showUserDetail = showUserDetails
-                self.onShowUserDetailsLoaded?(true,self.showUserDetail?.code ?? 0)
+                self.onShowUserDetailsLoaded?(true, showUserDetails.code)
             case .failure(let error):
-                print(error)
-                self.onShowUserDetailsLoaded?(false,404)
+                print("Fetch User Details Error: \(error.localizedDescription)")
+                self.onShowUserDetailsLoaded?(false, 404)
             }
         }
     }
     
-    func registerUser(parameters: [String : Any]) {
-        // send request to alamofire to fetch data and return the result
-        ApiManager.shared.fetchData(endpoint: .registerUser, responseType: RegisterUserModel.self,parameters:parameters) { result in
+    func registerUser(parameters: [String: Any]) {
+        ApiManager.shared.apiRequest(endpoint: .registerUser,parameters: parameters) { (result: Result<RegisterUserModel, Error>) in
             switch result {
             case .success(let showRegisterUser):
-                print("showRegisterUser",showRegisterUser)
-                // assign the result to showRegisterUser
+                print("Registered User:", showRegisterUser)
+                if showRegisterUser.code == 202 {
+                    Utility.shared.showToast(message: "Access Restricted")
+                    return
+                }
                 self.showRegisterUser = showRegisterUser
-                // call the closure
                 self.onRegisterUserLoaded?(true)
             case .failure(let error):
-                print(error)
+                print("Register User Error: \(error.localizedDescription)")
                 self.onRegisterUserLoaded?(false)
             }
         }

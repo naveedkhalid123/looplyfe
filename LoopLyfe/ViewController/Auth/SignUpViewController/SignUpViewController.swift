@@ -10,6 +10,7 @@ import AuthenticationServices
 import FirebaseAuth
 import FirebaseFirestore
 import CryptoKit
+import GoogleSignIn
 
 class SignUpViewController: UIViewController, UITextViewDelegate {
     
@@ -51,55 +52,55 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     }
     
     
-        func configureTextView() {
-            let message = "By tapping “Continue”, you agree to our Terms of Service and acknowledge that you have read our Privacy Policy to learn how we collect, use, and share your data."
-    
-            let links: [String: String] = [
-                "Terms of Service": "https://www.google.com",
-                "Privacy Policy": "https://www.apple.com"
-            ]
-    
-            let attributedString = NSMutableAttributedString(string: message, attributes: [
-                .foregroundColor: UIColor(named: "darkTxtGrey") ?? UIColor.gray,
-                .font: UIFont.systemFont(ofSize: 16)
-            ])
-    
-            for (word, url) in links {
-                if let linkRange = message.range(of: word) {
-                    let nsRange = NSRange(linkRange, in: message)
-                    attributedString.addAttributes([
-                        .link: url
-                    ], range: nsRange)
-                }
+    func configureTextView() {
+        let message = "By tapping “Continue”, you agree to our Terms of Service and acknowledge that you have read our Privacy Policy to learn how we collect, use, and share your data."
+        
+        let links: [String: String] = [
+            "Terms of Service": "https://www.google.com",
+            "Privacy Policy": "https://www.apple.com"
+        ]
+        
+        let attributedString = NSMutableAttributedString(string: message, attributes: [
+            .foregroundColor: UIColor(named: "darkTxtGrey") ?? UIColor.gray,
+            .font: UIFont.systemFont(ofSize: 16)
+        ])
+        
+        for (word, url) in links {
+            if let linkRange = message.range(of: word) {
+                let nsRange = NSRange(linkRange, in: message)
+                attributedString.addAttributes([
+                    .link: url
+                ], range: nsRange)
             }
-    
-            privacyTxtView.attributedText = attributedString
-            privacyTxtView.textAlignment = .center
-            privacyTxtView.isEditable = false
-            privacyTxtView.isSelectable = true
-            privacyTxtView.isUserInteractionEnabled = true
-            privacyTxtView.delegate = self
-    
-            // Ensure links appear black
-            privacyTxtView.linkTextAttributes = [
-                .foregroundColor: UIColor.black,
-                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-            ]
-    
-            privacyTxtView.attributedText = attributedString
-            privacyTxtView.textAlignment = .center
-            privacyTxtView.isEditable = false
-            privacyTxtView.isSelectable = true
-            privacyTxtView.isUserInteractionEnabled = true
-            privacyTxtView.delegate = self
-    
-            // Ensure links appear black
-            privacyTxtView.linkTextAttributes = [
-                .foregroundColor: UIColor.black,
-                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-            ]
         }
         
+        privacyTxtView.attributedText = attributedString
+        privacyTxtView.textAlignment = .center
+        privacyTxtView.isEditable = false
+        privacyTxtView.isSelectable = true
+        privacyTxtView.isUserInteractionEnabled = true
+        privacyTxtView.delegate = self
+        
+        // Ensure links appear black
+        privacyTxtView.linkTextAttributes = [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+        ]
+        
+        privacyTxtView.attributedText = attributedString
+        privacyTxtView.textAlignment = .center
+        privacyTxtView.isEditable = false
+        privacyTxtView.isSelectable = true
+        privacyTxtView.isUserInteractionEnabled = true
+        privacyTxtView.delegate = self
+        
+        // Ensure links appear black
+        privacyTxtView.linkTextAttributes = [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+        ]
+    }
+    
     
     // MARK: - Button Actions
     @IBAction func phoneBtnPressed(_ sender: UIButton) {
@@ -114,9 +115,75 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
         startSignInWithAppleFlow()
     }
     
+    //    @IBAction func googleBtnPressed(_ sender: UIButton) {
+    //        guard let presentingViewController = self as? UIViewController else { return }
+    //
+    //        GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
+    //            if let error = error {
+    //                print("Google Sign-In Error: \(error.localizedDescription)")
+    //                return
+    //            }
+    //
+    //            guard let signInResult = signInResult else { return }
+    //            let user = signInResult.user
+    //
+    //            let emailAddress = user.profile?.email ?? "No Email"
+    //            let fullName = user.profile?.name ?? "No Name"
+    //            let familyName = user.profile?.familyName ?? "No Family Name"
+    //            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+    //
+    //            print("Google User: \(fullName), Email: \(emailAddress)")
+    //
+    //            DispatchQueue.main.async {
+    //                self.googleButton.isHidden = true
+    //            }
+    //        }
+    //    }
+    
+    
     @IBAction func googleBtnPressed(_ sender: UIButton) {
-        print("Google button pressed")
+        guard let presentingViewController = self as? UIViewController else { return }
+        
+        GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
+            if let error = error {
+                print("Google Sign-In Error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let signInResult = signInResult else { return }
+            let user = signInResult.user
+            
+            guard let idToken = user.idToken?.tokenString else {
+                print("Error: Google ID Token missing")
+                return
+            }
+            
+            let accessToken = user.accessToken.tokenString
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+            
+            // 🔥 Sign in with Firebase
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    print("Firebase Auth Error: \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let firebaseUser = authResult?.user else { return }
+                
+                let email = firebaseUser.email ?? "No Email"
+                let name = firebaseUser.displayName ?? "No Name"
+                let profilePicUrl = firebaseUser.photoURL?.absoluteString ?? "No Profile Pic"
+                
+                print("🔥 Firebase User Signed In!")
+                print("Name: \(name), Email: \(email), Profile Pic: \(profilePicUrl)")
+                
+                DispatchQueue.main.async {
+                    self.googleButton.isHidden = true
+                }
+            }
+        }
     }
+    
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -193,7 +260,7 @@ extension SignUpViewController: ASAuthorizationControllerDelegate {
                 }
                 
                 guard let user = authResult?.user else { return }
-//                UserDefaults.standard.set("AuthToken", forKey: "zLIc8WDIncbUa3QQZPT04gVWZrf1")
+                //                UserDefaults.standard.set("AuthToken", forKey: "zLIc8WDIncbUa3QQZPT04gVWZrf1")
                 
                 // MVVM Implementation , add view model here and access the view model function
                 self.showUserDetailsModel.fetchUserDetails()
@@ -206,7 +273,19 @@ extension SignUpViewController: ASAuthorizationControllerDelegate {
                             
                         }else {
                             print("User does not exist and show call the register api")
-                            let param: [String : Any] = ["username":"maksoo124d","auth_token":"c8MfeuhwUsPK48Oa4AhvYm49Dyv2","device_token":"fnYqrcmDqkcvtPLfvTxNw6:APA91bG1po76fAKdghUavOh-vikn8tSZbrmpwSihroGc96ebd0jtJtDd005CKeMEjJAGJ9Y78g5-sofl2K1pyKSELs2-f9GlAangLWhUFUMoWkD8rC2BDhg","social":"apple"]
+                            let param: [String : Any] =
+                            [
+                                "dob": "",
+                                "username": "wasiqtayyabmehmooodiosdev",
+                                "first_name": "tas",
+                                "last_name": "as",
+                                "email": "",
+                                "phone": "",
+                                "social_id": "",
+                                "auth_token": "EtnpZg9zoWd1qRVTHAZvirR79lF2",
+                                "device_token": "fnYqrcmDqkcvtPLfvTxNw6:APA91bG1po76fAKdghUavOh-vikn8tSZbrmpwSihroGc96ebd0jtJtDd005CKeMEjJAGJ9Y78g5-sofl2K1pyKSELs2-f9GlAangLWhUFUMoWkD8rC2BDhg",
+                                "social": "apple"
+                            ]
                             self.showUserDetailsModel.registerUser(parameters: param)
                         }
                     }else {
