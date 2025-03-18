@@ -12,6 +12,10 @@ class ShowUserDetailViewModel {
     var onShowUserDetailsLoaded: ((Bool, Int) -> Void)?
     var showRegisterUser: RegisterUserModel?
     var onRegisterUserLoaded: ((Bool) -> Void)?
+    
+    // for ShowSuggestedUsers
+    var showSuggestedUsers: ShowSuggestedUsersModel?
+    var onnShowSuggestionUsersLoaded: ((Bool) -> Void)?
 
     func fetchUserDetails() {
         ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
@@ -48,4 +52,38 @@ class ShowUserDetailViewModel {
             }
         }
     }
+    
+    
+    func showSuggestionUsers(parameters: [String: Any]){
+        ApiManager.shared.apiRequest(endpoint: .showSuggestedUsers,parameters: parameters){(result: Result<ShowSuggestedUsersModel, Error>) in
+            switch result {
+            case.success(let showSuggestedUsers):
+                print("Show Suggestions User:", showSuggestedUsers)
+                if showSuggestedUsers.code == 202 {
+                    Utility.shared.showToast(message: "Access Restricted")
+                    return
+                }
+                self.showSuggestedUsers = showSuggestedUsers
+                self.onnShowSuggestionUsersLoaded?(true)
+            case.failure(let error):
+                print("Show Suggestion Error: \(error.localizedDescription)")
+                self.onnShowSuggestionUsersLoaded?(false)
+            }
+            
+        }
+        
+    }
+    
+    func followUser(parameters: [String: Any]) {
+        ApiManager.shared.apiRequestWithoutT(endpoint: .followUser, parameters: parameters) { (result: Result<Int, Error>) in
+            switch result {
+            case .success(let statusCode):
+                print("✅ Follow request successful with status code: \(statusCode)")
+                
+            case .failure(let error):
+                print("❌ Follow request failed: \(error.localizedDescription)")
+            }
+        }
+    }
+
 }

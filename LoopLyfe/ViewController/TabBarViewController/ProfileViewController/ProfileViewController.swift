@@ -61,5 +61,15 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3 , height: 40)
     }
-
+    
+    
+    @IBAction func followingBtnPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func followersBtnPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func likesBtnPressed(_ sender: UIButton) {
+    }
 }

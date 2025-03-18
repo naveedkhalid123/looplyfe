@@ -115,30 +115,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
         startSignInWithAppleFlow()
     }
     
-    //    @IBAction func googleBtnPressed(_ sender: UIButton) {
-    //        guard let presentingViewController = self as? UIViewController else { return }
-    //
-    //        GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
-    //            if let error = error {
-    //                print("Google Sign-In Error: \(error.localizedDescription)")
-    //                return
-    //            }
-    //
-    //            guard let signInResult = signInResult else { return }
-    //            let user = signInResult.user
-    //
-    //            let emailAddress = user.profile?.email ?? "No Email"
-    //            let fullName = user.profile?.name ?? "No Name"
-    //            let familyName = user.profile?.familyName ?? "No Family Name"
-    //            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-    //
-    //            print("Google User: \(fullName), Email: \(emailAddress)")
-    //
-    //            DispatchQueue.main.async {
-    //                self.googleButton.isHidden = true
-    //            }
-    //        }
-    //    }
+    
     
     
     @IBAction func googleBtnPressed(_ sender: UIButton) {

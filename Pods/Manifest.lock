@@ -8,6 +8,9 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (3.8.0)
   - PhoneNumberKit/UIKit (3.8.0):
     - PhoneNumberKit/PhoneNumberKitCore
+  - SDWebImage (5.20.0):
+    - SDWebImage/Core (= 5.20.0)
+  - SDWebImage/Core (5.20.0)
   - SearchTextField (1.2.4)
   - Toast-Swift (5.1.1)
 
@@ -15,9 +18,10 @@ DEPENDENCIES:
   - Alamofire
   - DPOTPView
   - IQKeyboardManager
-  - PhoneNumberKit (~> 3.6)
+  - PhoneNumberKit
+  - SDWebImage
   - SearchTextField
-  - Toast-Swift (~> 5.1.1)
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -25,6 +29,7 @@ SPEC REPOS:
     - DPOTPView
     - IQKeyboardManager
     - PhoneNumberKit
+    - SDWebImage
     - SearchTextField
     - Toast-Swift
 
@@ -33,9 +38,10 @@ SPEC CHECKSUMS:
   DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   PhoneNumberKit: ec00ab8cef5342c1dc49fadb99d23fa7e66cf0ef
+  SDWebImage: 73c6079366fea25fa4bb9640d5fb58f0893facd8
   SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 9c462edb4bc50115bc000f67cb0278bea06cd9f2
+PODFILE CHECKSUM: 4c20c3714a3141ca4a93494bae791b1fba723338
 
 COCOAPODS: 1.16.2

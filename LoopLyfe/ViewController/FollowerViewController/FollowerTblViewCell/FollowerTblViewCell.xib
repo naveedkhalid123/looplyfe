@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FollowerTblViewCell" id="KGk-i7-Jjw" customClass="FollowerTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parent" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-Zc-Q3L">
+                        <rect key="frame" x="14" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="b1T-xo-58G"/>
+                            <constraint firstAttribute="width" constant="40" id="seE-L9-gFq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8L-c1-LYB">
+                        <rect key="frame" x="65" y="12" width="125" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follows you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMK-qZ-EqG">
+                        <rect key="frame" x="65" y="34" width="125" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" name="darkTxtGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="965-BF-pN1">
+                        <rect key="frame" x="198" y="16" width="94" height="32"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="NGZ-gV-N3Q"/>
+                            <constraint firstAttribute="height" constant="32" id="e39-FO-Y9M"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Follow back">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-zu-Pdc">
+                        <rect key="frame" x="310" y="21" width="16" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="U8a-Gb-KXt"/>
+                            <constraint firstAttribute="width" constant="16" id="bDS-xE-W9v"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="dismiss"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="965-BF-pN1" firstAttribute="leading" secondItem="y8L-c1-LYB" secondAttribute="trailing" constant="8" id="4VI-51-XRY"/>
+                    <constraint firstItem="y8L-c1-LYB" firstAttribute="leading" secondItem="dM1-Zc-Q3L" secondAttribute="trailing" constant="11" id="67t-BN-Jq4"/>
+                    <constraint firstItem="uMK-qZ-EqG" firstAttribute="trailing" secondItem="y8L-c1-LYB" secondAttribute="trailing" id="Dwa-y7-CG6"/>
+                    <constraint firstItem="uMK-qZ-EqG" firstAttribute="top" secondItem="y8L-c1-LYB" secondAttribute="bottom" constant="4" id="G6Q-rx-OoG"/>
+                    <constraint firstItem="965-BF-pN1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NWe-y8-MaC"/>
+                    <constraint firstItem="y8L-c1-LYB" firstAttribute="top" secondItem="dM1-Zc-Q3L" secondAttribute="top" id="UKl-Nb-83O"/>
+                    <constraint firstItem="dM1-Zc-Q3L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="Z5y-W4-JaV"/>
+                    <constraint firstAttribute="trailing" secondItem="LGn-zu-Pdc" secondAttribute="trailing" constant="14" id="auj-pR-tr8"/>
+                    <constraint firstItem="LGn-zu-Pdc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mjf-wK-ydW"/>
+                    <constraint firstItem="LGn-zu-Pdc" firstAttribute="leading" secondItem="965-BF-pN1" secondAttribute="trailing" constant="18" id="t83-5k-MPW"/>
+                    <constraint firstItem="dM1-Zc-Q3L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zOc-Ks-kys"/>
+                    <constraint firstItem="uMK-qZ-EqG" firstAttribute="leading" secondItem="dM1-Zc-Q3L" secondAttribute="trailing" constant="11" id="zaq-aN-QXR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnDismiss" destination="LGn-zu-Pdc" id="HX0-AV-DmG"/>
+                <outlet property="btnFollowBack" destination="965-BF-pN1" id="YRr-rL-Oui"/>
+                <outlet property="followerImage" destination="dM1-Zc-Q3L" id="Md7-Bl-9zO"/>
+                <outlet property="lblDescription" destination="uMK-qZ-EqG" id="kib-7d-iYP"/>
+                <outlet property="lblFollower" destination="y8L-c1-LYB" id="zPZ-wT-Zjc"/>
+            </connections>
+            <point key="canvasLocation" x="-73.282442748091597" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dismiss" width="15.666666984558105" height="15.666666984558105"/>
+        <image name="parent" width="132" height="132"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkTxtGrey">
+            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

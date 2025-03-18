@@ -48,6 +48,8 @@ class ApiManager {
     enum Endpoint: String {
         case showUserDetail
         case registerUser
+        case showSuggestedUsers
+        case followUser
         
         func url(baseURL: String) -> String {
             return baseURL + rawValue
