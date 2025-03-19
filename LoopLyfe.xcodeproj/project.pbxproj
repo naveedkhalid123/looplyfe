@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670F00252D89D3AD00D61D07 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670F00232D89D3AD00D61D07 /* FollowerCollectionViewCell.swift */; };
+		670F00262D89D3AD00D61D07 /* FollowerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670F00242D89D3AD00D61D07 /* FollowerCollectionViewCell.xib */; };
 		67169BE32D82C90C00695970 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67169BE22D82C90C00695970 /* GoogleService-Info.plist */; };
 		671D5BB52D6356E700926F7E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D5BB42D6356E700926F7E /* TabBarViewController.swift */; };
 		671D5BB82D63576300926F7E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D5BB72D63576300926F7E /* HomeViewController.swift */; };
@@ -91,6 +93,7 @@
 		679786AF2D7EDA45006A542E /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679786AD2D7EDA45006A542E /* ProfileCollectionViewCell.xib */; };
 		679786B32D7EEE41006A542E /* InboxTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679786B12D7EEE41006A542E /* InboxTblViewCell.swift */; };
 		679786B42D7EEE41006A542E /* InboxTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679786B22D7EEE41006A542E /* InboxTblViewCell.xib */; };
+		67A253882D8ABB6800D364DD /* FollowUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A253872D8ABB6800D364DD /* FollowUserModel.swift */; };
 		67A7459D2D68489C00C7BA12 /* ContentPreferncesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */; };
 		67A7459E2D68489C00C7BA12 /* ContentPreferncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */; };
 		67A745A22D684A3400C7BA12 /* LangugeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */; };
@@ -182,6 +185,8 @@
 
 /* Begin PBXFileReference section */
 		1EFD678788525064D5D4F099 /* Pods_LoopLyfe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoopLyfe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F00232D89D3AD00D61D07 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
+		670F00242D89D3AD00D61D07 /* FollowerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCollectionViewCell.xib; sourceTree = "<group>"; };
 		67169BE22D82C90C00695970 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		671D5BB42D6356E700926F7E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		671D5BB72D63576300926F7E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +261,7 @@
 		679786AD2D7EDA45006A542E /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		679786B12D7EEE41006A542E /* InboxTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTblViewCell.swift; sourceTree = "<group>"; };
 		679786B22D7EEE41006A542E /* InboxTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxTblViewCell.xib; sourceTree = "<group>"; };
+		67A253872D8ABB6800D364DD /* FollowUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserModel.swift; sourceTree = "<group>"; };
 		67A7459B2D68489C00C7BA12 /* ContentPreferncesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreferncesViewController.swift; sourceTree = "<group>"; };
 		67A7459C2D68489C00C7BA12 /* ContentPreferncesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentPreferncesViewController.xib; sourceTree = "<group>"; };
 		67A745A02D684A3400C7BA12 /* LangugeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangugeTableViewCell.swift; sourceTree = "<group>"; };
@@ -371,6 +377,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670F00222D89D38C00D61D07 /* FollowerCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				670F00232D89D3AD00D61D07 /* FollowerCollectionViewCell.swift */,
+				670F00242D89D3AD00D61D07 /* FollowerCollectionViewCell.xib */,
+			);
+			path = FollowerCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		671D5BB32D6356BE00926F7E /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +451,7 @@
 				67253F282D80387A0058161D /* ShowUserDetailModel.swift */,
 				67F81E842D81856100C21985 /* RegisterUserModel.swift */,
 				67C7377C2D89706C000A4F82 /* ShowSuggestedUsersModel.swift */,
+				67A253872D8ABB6800D364DD /* FollowUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -672,6 +688,7 @@
 		6752D59D2D883F5800B613B2 /* FollowerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				670F00222D89D38C00D61D07 /* FollowerCollectionViewCell */,
 				6752D5A22D88424200B613B2 /* FollowerTblViewCell */,
 				6752D59E2D883F7E00B613B2 /* FollowerViewController.swift */,
 				6752D59F2D883F7E00B613B2 /* FollowerViewController.xib */,
@@ -1380,6 +1397,7 @@
 				67E6D49E2D6C595F008436CA /* DurationViewController.xib in Resources */,
 				67458CA02D673040005CB7E4 /* ManageAccountViewController.xib in Resources */,
 				67458CCD2D679690005CB7E4 /* FamilyPairingViewController.xib in Resources */,
+				670F00262D89D3AD00D61D07 /* FollowerCollectionViewCell.xib in Resources */,
 				67EAECD52D5E24AE00C4F1DF /* SF-Pro-Display-Semibold.otf in Resources */,
 				678EA6662D6D908C00DA4701 /* CommentsViewController.xib in Resources */,
 				67FEE9D42D5F26E4004DEAA5 /* InterestTblViewCell.xib in Resources */,
@@ -1537,11 +1555,13 @@
 				67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */,
 				67458CCC2D679690005CB7E4 /* FamilyPairingViewController.swift in Sources */,
 				67458C952D6725AE005CB7E4 /* SettingAndPrivacyViewController.swift in Sources */,
+				670F00252D89D3AD00D61D07 /* FollowerCollectionViewCell.swift in Sources */,
 				671D5BBB2D6357BC00926F7E /* DiscoverViewController.swift in Sources */,
 				67FEE9D32D5F26E4004DEAA5 /* InterestTblViewCell.swift in Sources */,
 				67A7459D2D68489C00C7BA12 /* ContentPreferncesViewController.swift in Sources */,
 				67FEE9CE2D5F1639004DEAA5 /* Onbording2ViewController.swift in Sources */,
 				67A745BB2D686D1800C7BA12 /* FamilyPairingLinkedViewController.swift in Sources */,
+				67A253882D8ABB6800D364DD /* FollowUserModel.swift in Sources */,
 				67A745AC2D685CB000C7BA12 /* ContentLanguagesViewController.swift in Sources */,
 				67E6D4A22D6C6408008436CA /* CreatorsToolViewController.swift in Sources */,
 				67458CB32D674258005CB7E4 /* ManageThisAccTblViewCell.swift in Sources */,

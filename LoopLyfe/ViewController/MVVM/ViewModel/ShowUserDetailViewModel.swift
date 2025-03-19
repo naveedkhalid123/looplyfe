@@ -16,6 +16,10 @@ class ShowUserDetailViewModel {
     // for ShowSuggestedUsers
     var showSuggestedUsers: ShowSuggestedUsersModel?
     var onnShowSuggestionUsersLoaded: ((Bool) -> Void)?
+    
+    // for follow user
+    var showFollowUser: FollowUserModel?
+    var onShowFollowUserLoaded: ((Bool) -> Void)?
 
     func fetchUserDetails() {
         ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
@@ -74,16 +78,38 @@ class ShowUserDetailViewModel {
         
     }
     
+//    func followUser(parameters: [String: Any]) {
+//        ApiManager.shared.apiRequestWithoutT(endpoint: .followUser, parameters: parameters) { (result: Result<Int, Error>) in
+//            switch result {
+//            case .success(let statusCode):
+//                print("✅ Follow request successful with status code: \(statusCode)")
+//                
+//            case .failure(let error):
+//                print("❌ Follow request failed: \(error.localizedDescription)")
+//            }
+//        }
+//    }
+    
     func followUser(parameters: [String: Any]) {
-        ApiManager.shared.apiRequestWithoutT(endpoint: .followUser, parameters: parameters) { (result: Result<Int, Error>) in
+        ApiManager.shared.apiRequest(endpoint: .followUser, parameters: parameters) { (result: Result<Int, Error>) in // Changed `FollowUserModel` to `Int`
             switch result {
             case .success(let statusCode):
-                print("✅ Follow request successful with status code: \(statusCode)")
+                print("Follow API Response Code: \(statusCode)")
+                
+                if statusCode == 202 {
+                    Utility.shared.showToast(message: "Access Restricted")
+                    return
+                }
+                
+                self.onShowFollowUserLoaded?(true)
                 
             case .failure(let error):
                 print("❌ Follow request failed: \(error.localizedDescription)")
+                self.onShowFollowUserLoaded?(false)
             }
         }
     }
+
+
 
 }

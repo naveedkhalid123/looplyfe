@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowerViewController" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
+                <outlet property="followerCollectionView" destination="4XV-sg-T01" id="NwD-el-zw3"/>
                 <outlet property="followerTblView" destination="stS-Wc-8a8" id="TKy-6f-uZD"/>
                 <outlet property="navigationBar" destination="OmG-Jl-olv" id="O3c-XZ-iCe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,7 +27,7 @@
                     <items>
                         <navigationItem title="naveedkhalid2030" id="Iyy-KD-yCj">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="K8b-eR-FUY">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nqu-zf-WLb">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nqu-zf-WLb">
                                     <rect key="frame" x="20" y="0.0" width="128" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,10 +42,10 @@
                     <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaH-Zu-vuH">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                            <rect key="frame" x="0.0" y="2" width="414" height="672"/>
                             <subviews>
                                 <searchBar contentMode="redraw" placeholder="Search Users" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-Jy-tB3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <rect key="frame" x="0.0" y="49" width="414" height="56"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="Dhc-8t-7Af"/>
                                     </constraints>
@@ -54,18 +55,34 @@
                                     </connections>
                                 </searchBar>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="stS-Wc-8a8">
-                                    <rect key="frame" x="0.0" y="66" width="414" height="606"/>
+                                    <rect key="frame" x="0.0" y="115" width="414" height="557"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableView>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4XV-sg-T01">
+                                    <rect key="frame" x="0.0" y="4" width="414" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="uW4-Cs-fGW"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g9X-pR-eDL">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="stS-Wc-8a8" firstAttribute="top" secondItem="sU4-Jy-tB3" secondAttribute="bottom" constant="10" id="24R-nE-ucp"/>
                                 <constraint firstAttribute="trailing" secondItem="stS-Wc-8a8" secondAttribute="trailing" id="ATk-pT-bPO"/>
-                                <constraint firstItem="sU4-Jy-tB3" firstAttribute="top" secondItem="iaH-Zu-vuH" secondAttribute="top" id="Ak5-N8-Ztn"/>
+                                <constraint firstAttribute="trailing" secondItem="4XV-sg-T01" secondAttribute="trailing" id="Ct3-Aj-ckX"/>
+                                <constraint firstItem="4XV-sg-T01" firstAttribute="top" secondItem="iaH-Zu-vuH" secondAttribute="top" constant="4" id="L2t-F4-yLw"/>
+                                <constraint firstItem="4XV-sg-T01" firstAttribute="leading" secondItem="iaH-Zu-vuH" secondAttribute="leading" id="P9l-yQ-i5I"/>
                                 <constraint firstItem="stS-Wc-8a8" firstAttribute="leading" secondItem="iaH-Zu-vuH" secondAttribute="leading" id="cQ5-ii-OQQ"/>
                                 <constraint firstAttribute="bottom" secondItem="stS-Wc-8a8" secondAttribute="bottom" id="dwH-Rc-s27"/>
                                 <constraint firstItem="sU4-Jy-tB3" firstAttribute="leading" secondItem="iaH-Zu-vuH" secondAttribute="leading" id="jKV-2m-wBT"/>
+                                <constraint firstItem="sU4-Jy-tB3" firstAttribute="top" secondItem="4XV-sg-T01" secondAttribute="bottom" constant="5" id="otZ-nC-gk7"/>
                                 <constraint firstAttribute="trailing" secondItem="sU4-Jy-tB3" secondAttribute="trailing" id="xlX-aA-SYV"/>
                             </constraints>
                         </view>
@@ -73,7 +90,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="iaH-Zu-vuH" secondAttribute="trailing" id="3Gm-zf-nP9"/>
                         <constraint firstAttribute="bottom" secondItem="iaH-Zu-vuH" secondAttribute="bottom" id="5p9-rm-oV1"/>
-                        <constraint firstItem="iaH-Zu-vuH" firstAttribute="top" secondItem="Ok9-43-pQX" secondAttribute="top" id="9y5-UP-WnS"/>
+                        <constraint firstItem="iaH-Zu-vuH" firstAttribute="top" secondItem="Ok9-43-pQX" secondAttribute="top" constant="2" id="9y5-UP-WnS"/>
                         <constraint firstItem="iaH-Zu-vuH" firstAttribute="height" secondItem="Ok9-43-pQX" secondAttribute="height" priority="250" id="JJQ-Io-jJK"/>
                         <constraint firstItem="iaH-Zu-vuH" firstAttribute="leading" secondItem="Ok9-43-pQX" secondAttribute="leading" id="chU-CK-kBD"/>
                         <constraint firstItem="iaH-Zu-vuH" firstAttribute="width" secondItem="Ok9-43-pQX" secondAttribute="width" id="eWL-A7-LAG"/>
