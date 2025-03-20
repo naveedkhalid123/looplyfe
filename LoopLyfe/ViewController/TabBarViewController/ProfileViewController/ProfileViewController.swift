@@ -7,20 +7,37 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+import SDWebImage
+
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    // make a variable and store the value of view model in the variable
+    var showUserDetails = ShowUserDetailViewModel()
     
-    var profileArr = [["isSelected":"true","img" :"ideas"],["isSelected": "false", "img": "heartCircle"],["isSelected": "false","img" : "profileLock"]]
+    var profileArr = [["isSelected": "true", "img": "ideas"], ["isSelected": "false", "img": "heartCircle"], ["isSelected": "false", "img": "profileLock"]]
     
+    var videosImagesArr = ["QRCode", "QRCode", "QRCode", "QRCode", "QRCode", "QRCode", "QRCode", "QRCode", "QRCode"]
+
+    // MVVM Implementation
+    @IBOutlet var ImageUserProfile: UIImageView!
+    @IBOutlet var lblUsername: UILabel!
+    @IBOutlet var followingCount: UILabel!
+    @IBOutlet var followersCount: UILabel!
+    @IBOutlet var likesCount: UILabel!
     
-  
+    @IBOutlet var editProfileBt: UIButton!
+    @IBOutlet var saveBtn: UIButton!
+    @IBOutlet var profileCollectionView: UICollectionView!
     
-    @IBOutlet weak var editProfileBt: UIButton!
-    @IBOutlet weak var saveBtn: UIButton!
-    
-    @IBOutlet weak var profileCollectionView: UICollectionView!
+    @IBOutlet var videosCollectionView: UICollectionView!
+    // collection view height code
+    @IBOutlet var videosCollectionViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchUserDetails()
+        ImageUserProfile.layer.cornerRadius = 55
+        
         editProfileBt.layer.borderWidth = 1
         editProfileBt.layer.borderColor = UIColor(named: "lightGrey")?.cgColor
         
@@ -30,27 +47,57 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
         profileCollectionView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProfileCollectionViewCell")
+        
+        videosCollectionView.delegate = self
+        videosCollectionView.dataSource = self
+        videosCollectionView.register(UINib(nibName: "VideosCollectionView", bundle: nil), forCellWithReuseIdentifier: "VideosCollectionView")
+        
+        // for making the collection view and table view collection view height dynamic, give the height to the collection view and tbl view and then make the constraints of their height and then write the below function code in view did load
+        
+        updateCollectionViewHeight()
+    }
+
+    // collection view height code
+    func updateCollectionViewHeight() {
+        let contentSize = videosCollectionView.collectionViewLayout.collectionViewContentSize.height
+        print("contentSize", contentSize)
+           
+        videosCollectionViewHeight.constant = contentSize
+        view.layoutIfNeeded()
+        videosCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profileArr.count
+        if collectionView == profileCollectionView {
+            return profileArr.count
+        } else {
+            return videosImagesArr.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as! ProfileCollectionViewCell
-        cell.profileImages.image = UIImage(named: profileArr[indexPath.row]["img"] ?? "")
-        
-        if profileArr[indexPath.row]["isSelected"] == "true" {
-            cell.selectedView.isHidden = false
-        }else {
-            cell.selectedView.isHidden = true
+        if collectionView == profileCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as! ProfileCollectionViewCell
+            cell.profileImages.image = UIImage(named: profileArr[indexPath.row]["img"] ?? "")
+            
+            if profileArr[indexPath.row]["isSelected"] == "true" {
+                cell.selectedView.isHidden = false
+                cell.profileImages.tintColor = .black
+            } else {
+                cell.selectedView.isHidden = true
+                cell.profileImages.tintColor = .darkTxtGrey
+            }
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
+            cell.videosImageView.image = UIImage(named: videosImagesArr[indexPath.row])
+            return cell
         }
-        return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for i in 0..<profileArr.count {
+        for i in 0 ..< profileArr.count {
             profileArr[i]["isSelected"] = "false"
         }
 
@@ -58,18 +105,42 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         collectionView.reloadData()
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 3 , height: 40)
+        if collectionView == profileCollectionView {
+            return CGSize(width: collectionView.frame.width / 3, height: 40)
+        } else {
+            return CGSize(width: (collectionView.frame.width / 3) - 10, height: 150)
+
+        }
     }
     
+    @IBAction func followingBtnPressed(_ sender: UIButton) {}
     
-    @IBAction func followingBtnPressed(_ sender: UIButton) {
-    }
+    @IBAction func followersBtnPressed(_ sender: UIButton) {}
     
+    @IBAction func likesBtnPressed(_ sender: UIButton) {}
     
-    @IBAction func followersBtnPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func likesBtnPressed(_ sender: UIButton) {
+    private func fetchUserDetails() {
+        showUserDetails.fetchProfileUserDetails { [weak self] userDetails in
+            guard let self = self, let userDetails = userDetails else { return }
+
+            DispatchQueue.main.async {
+                self.lblUsername.text = userDetails.msg?.user.username ?? "N/A"
+                self.followingCount.text = "\(userDetails.msg?.user.followingCount ?? 0)"
+                self.followersCount.text = "\(userDetails.msg?.user.followersCount ?? 0)"
+                self.likesCount.text = "\(userDetails.msg?.user.likesCount ?? 0)"
+                
+                // Load image using SDWebImage
+                if let imageUrl = URL(string: userDetails.msg?.user.profilePic ?? "") {
+                    self.ImageUserProfile.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "placeholder"))
+                }
+                
+                self.ImageUserProfile.layer.cornerRadius = self.ImageUserProfile.frame.height / 2
+                self.ImageUserProfile.clipsToBounds = true
+                self.ImageUserProfile.layer.borderWidth = 2
+                self.ImageUserProfile.layer.borderColor = UIColor.white.cgColor
+            }
+        }
     }
 }

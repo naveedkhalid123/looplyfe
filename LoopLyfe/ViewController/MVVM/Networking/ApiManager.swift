@@ -41,7 +41,7 @@ class ApiManager {
         return [
             "Content-Type": "application/json",
             "Api-Key": "156c4675-9608-4591-b2ec-427503464aac",
-            "Auth-Token": "EtnpZg9zoWd1qRVTHAZvirR79lF2"
+            "Auth-Token": "tGy1hQKd1ESBxm56KJDfdQ8D3Js2"
         ]
     }
     
@@ -50,6 +50,8 @@ class ApiManager {
         case registerUser
         case showSuggestedUsers
         case followUser
+        case showFollowing
+        case showFollowers
         
         func url(baseURL: String) -> String {
             return baseURL + rawValue

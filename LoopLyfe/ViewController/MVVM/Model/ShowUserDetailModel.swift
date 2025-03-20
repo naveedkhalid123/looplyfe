@@ -136,7 +136,7 @@ struct User: Codable {
     let parent, business: Int?
     let comissionEarned, totalBalanceUsd, totalAllTimeCoins: Int?
     let followersCount, followingCount, likesCount, videoCount: Int?
-    let profileVisitCount: Bool?
+    let profileVisitCount: Int?
     let soldItemsCount, taggedProductsCount, shop, unreadNotification: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -235,7 +235,7 @@ struct User: Codable {
         followingCount = try container.decodeIfPresent(Int.self, forKey: .followingCount)
         likesCount = try container.decodeIfPresent(Int.self, forKey: .likesCount)
         videoCount = try container.decodeIfPresent(Int.self, forKey: .videoCount)
-        profileVisitCount = try container.decodeIfPresent(Bool.self, forKey: .profileVisitCount)
+        profileVisitCount = try container.decodeIfPresent(Int.self, forKey: .profileVisitCount)
         soldItemsCount = try container.decodeIfPresent(Int.self, forKey: .soldItemsCount)
         taggedProductsCount = try container.decodeIfPresent(Int.self, forKey: .taggedProductsCount)
         shop = try container.decodeIfPresent(Int.self, forKey: .shop)
