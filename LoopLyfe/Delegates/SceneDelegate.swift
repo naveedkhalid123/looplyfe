@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
     
         
-//        let languageVC = FollowerViewController(nibName: "FollowerViewController", bundle: nil)
+//        let languageVC = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
 //        let navigationController = UINavigationController(rootViewController: languageVC)
 //        navigationController.isNavigationBarHidden = true
 //        self.window = UIWindow(windowScene: windowScene)

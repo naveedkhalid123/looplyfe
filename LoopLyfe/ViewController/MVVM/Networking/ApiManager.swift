@@ -52,6 +52,12 @@ class ApiManager {
         case followUser
         case showFollowing
         case showFollowers
+       
+        // working.....
+        case showVideosAgainstUserID
+        case showUserLikedVideos
+        
+        case showAllNotifications
         
         func url(baseURL: String) -> String {
             return baseURL + rawValue

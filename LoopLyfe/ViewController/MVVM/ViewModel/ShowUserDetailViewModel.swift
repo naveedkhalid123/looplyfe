@@ -30,14 +30,23 @@ class ShowUserDetailViewModel {
     var showFollowerUser: ShowFollowersModel?
     var onShowFollowersUserLoaded: ((Bool) -> Void)?
     
+    // for ShowVideosAgainstUserIDModel
+    var showVideosAgainstUser: ShowVideosAgainstUserIDModel?
+    var onShowVideosAgainstUserLoaded: ((Bool) -> Void)?
     
+    // for showUserLikedVideosModel
+    var showUserLikedVideos: ShowUserLikedVideosModel?
+    var onShowUserLikedVideosLoaded: ((Bool) -> Void)?
     
-
+    // for ShowAllNotificationsModel
+    var showAllNotifications: ShowAllNotificationsModel?
+    var onShowAllNotificationsLoaded: ((Bool) -> Void)?
+    
     func fetchUserDetails() {
         ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
             switch result {
             case .success(let showUserDetails):
-                print("showUserDetails",showUserDetails)
+                print("showUserDetails", showUserDetails)
                 if showUserDetails.code == 202 {
                     Utility.shared.showToast(message: "Access Restricted")
                     return
@@ -51,32 +60,8 @@ class ShowUserDetailViewModel {
         }
     }
     
-    
-    func fetchProfileUserDetails(completion: @escaping (ShowUserDetailModel?) -> Void) {
-           ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
-               switch result {
-               case .success(let showUserDetails):
-                   print("showUserDetails", showUserDetails)
-                   
-                   if showUserDetails.code == 202 {
-                       Utility.shared.showToast(message: "Access Restricted")
-                       completion(nil)  // Return nil if access is restricted
-                       return
-                   }
-                   
-                   self.showUserDetail = showUserDetails
-                   completion(showUserDetails)  // Now returns data
-                   
-               case .failure(let error):
-                   print("Fetch User Details Error: \(error.localizedDescription)")
-                   completion(nil)  // Return nil in case of failure
-               }
-           }
-       }
-    
-    
     func registerUser(parameters: [String: Any]) {
-        ApiManager.shared.apiRequest(endpoint: .registerUser,parameters: parameters) { (result: Result<RegisterUserModel, Error>) in
+        ApiManager.shared.apiRequest(endpoint: .registerUser, parameters: parameters) { (result: Result<RegisterUserModel, Error>) in
             switch result {
             case .success(let showRegisterUser):
                 print("Registered User:", showRegisterUser)
@@ -93,11 +78,10 @@ class ShowUserDetailViewModel {
         }
     }
     
-    
-    func showSuggestionUsers(parameters: [String: Any]){
-        ApiManager.shared.apiRequest(endpoint: .showSuggestedUsers,parameters: parameters){(result: Result<ShowSuggestedUsersModel, Error>) in
+    func showSuggestionUsers(parameters: [String: Any]) {
+        ApiManager.shared.apiRequest(endpoint: .showSuggestedUsers, parameters: parameters) { (result: Result<ShowSuggestedUsersModel, Error>) in
             switch result {
-            case.success(let showSuggestedUsers):
+            case .success(let showSuggestedUsers):
                 print("Show Suggestions User:", showSuggestedUsers)
                 if showSuggestedUsers.code == 202 {
                     Utility.shared.showToast(message: "Access Restricted")
@@ -105,16 +89,12 @@ class ShowUserDetailViewModel {
                 }
                 self.showSuggestedUsers = showSuggestedUsers
                 self.onnShowSuggestionUsersLoaded?(true)
-            case.failure(let error):
+            case .failure(let error):
                 print("Show Suggestion Error: \(error.localizedDescription)")
                 self.onnShowSuggestionUsersLoaded?(false)
             }
-            
         }
-        
     }
-    
-
     
     func followUser(parameters: [String: Any]) {
         ApiManager.shared.apiRequest(endpoint: .followUser, parameters: parameters) { (result: Result<Int, Error>) in // Changed `FollowUserModel` to `Int`
@@ -135,9 +115,6 @@ class ShowUserDetailViewModel {
             }
         }
     }
-    
-    
-    
     
     func showFollowingUser(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
@@ -170,8 +147,6 @@ class ShowUserDetailViewModel {
         }
     }
     
-    
-    
     func showFollowersUser(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
 
@@ -202,7 +177,125 @@ class ShowUserDetailViewModel {
             }
         }
     }
+    
+    func fetchProfileUserDetails(completion: @escaping (ShowUserDetailModel?) -> Void) {
+        ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
+            switch result {
+            case .success(let showUserDetails):
+                print("showUserDetails", showUserDetails)
+                   
+                if showUserDetails.code == 202 {
+                    Utility.shared.showToast(message: "Access Restricted")
+                    completion(nil)
+                    return
+                }
+                   
+                self.showUserDetail = showUserDetails
+                completion(showUserDetails)
+                   
+            case .failure(let error):
+                print("Fetch User Details Error: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+    }
 
+    // show all notifciation
+    func showVideosAgainstUser(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
 
+        ApiManager.shared.apiRequest(endpoint: .showAllNotifications, parameters: parameters) { (result: Result<ShowVideosAgainstUserIDModel, Error>) in
+            switch result {
+            case .success(let showVideosAgainstUser):
+                print("✅ API Success - Show Suggestions User:", showVideosAgainstUser)
 
+                // Debugging: Checking the status code
+                print("🔍 Response Code:", showVideosAgainstUser.code)
+                
+                if showVideosAgainstUser.code == 200 {
+                    print("✅ Data Found: \(String(describing: showVideosAgainstUser.msg))")
+                    self.showVideosAgainstUser = showVideosAgainstUser
+                    self.onShowVideosAgainstUserLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showVideosAgainstUser.message ?? "Unknown error")
+                    if let message = showVideosAgainstUser.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onShowVideosAgainstUserLoaded?(true) // Ensure UI updates even if empty
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onShowVideosAgainstUserLoaded?(false)
+            }
+        }
+    }
+    
+    
+    // show user liked videos ... pending...
+    func showUserLikedVideos(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+
+        ApiManager.shared.apiRequest(endpoint: .showUserLikedVideos, parameters: parameters) { (result: Result<ShowUserLikedVideosModel, Error>) in
+            switch result {
+            case .success(let showUserLikedVideos):
+                print("✅ API Success - Show Suggestions User:", showUserLikedVideos)
+
+                // Debugging: Checking the status code
+                print("🔍 Response Code:", showUserLikedVideos.code)
+                
+                if showUserLikedVideos.code == 200 {
+                    print("✅ Data Found: \(String(describing: showUserLikedVideos.msg))")
+                    self.showUserLikedVideos = showUserLikedVideos
+                    self.onShowUserLikedVideosLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showUserLikedVideos.msg ?? "Unknown error")
+                    if let message = showUserLikedVideos.likedVideosMsg {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onShowUserLikedVideosLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onShowUserLikedVideosLoaded?(false)
+            }
+        }
+    }
+    
+    
+    // show all notifciation
+    func showAllNotifications(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+
+        ApiManager.shared.apiRequest(endpoint: .showAllNotifications, parameters: parameters) { (result: Result<ShowAllNotificationsModel, Error>) in
+            switch result {
+            case .success(let showAllNotifications):
+                print("✅ API Success - Show Suggestions User:", showAllNotifications)
+
+                // Debugging: Checking the status code
+                print("🔍 Response Code:", showAllNotifications.code)
+                
+                if showAllNotifications.code == 200 {
+                    print("✅ Data Found: \(String(describing: showAllNotifications.msg))")
+                    self.showAllNotifications = showAllNotifications
+                    self.onShowAllNotificationsLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showAllNotifications.message ?? "Unknown error")
+                    if let message = showAllNotifications.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onShowAllNotificationsLoaded?(true) // Ensure UI updates even if empty
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onShowAllNotificationsLoaded?(false)
+            }
+        }
+    }
+    
 }
