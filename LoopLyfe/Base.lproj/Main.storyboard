@@ -70,7 +70,7 @@
                                     <navigationItem title="Inbox" id="Tve-Yw-oSW">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="YIi-b4-T0k">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SBd-tc-cmQ">
-                                                <rect key="frame" x="350" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="370" y="3" width="44" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="searchAcc">
@@ -113,7 +113,7 @@
             <objects>
                 <viewController id="OzJ-Lo-9VF" customClass="ProfileViewController" customModule="LoopLyfe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GqH-nJ-QoX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="931"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1251"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-YS-yAR">
@@ -172,7 +172,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-iW-ljZ">
-                                <rect key="frame" x="0.0" y="70" width="414" height="861"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="1181"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWT-Fa-pBg">
                                         <rect key="frame" x="169" y="291" width="75" height="35"/>
@@ -181,7 +181,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uR-3d-HJ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="861"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1181"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userProfile" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-zl-uLR">
                                                 <rect key="frame" x="152" y="25" width="110" height="110"/>
@@ -392,11 +392,11 @@ more. Your videos will appear on your profile.</string>
                                                     <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                             </button>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pUk-YC-Bmb">
-                                                <rect key="frame" x="0.0" y="613" width="414" height="248"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pUk-YC-Bmb">
+                                                <rect key="frame" x="0.0" y="613" width="414" height="568"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="248" id="iNM-KD-74W"/>
+                                                    <constraint firstAttribute="height" constant="568" id="YWY-hs-wvI"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="PQv-1R-mIQ">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -469,7 +469,7 @@ more. Your videos will appear on your profile.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xfj-Eq-lgN"/>
-                    <size key="freeformSize" width="414" height="980"/>
+                    <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="ImageUserProfile" destination="NhQ-zl-uLR" id="1PP-1F-AQA"/>
                         <outlet property="editProfileBt" destination="pUx-8G-bZu" id="nST-BD-Kst"/>
@@ -480,7 +480,6 @@ more. Your videos will appear on your profile.</string>
                         <outlet property="profileCollectionView" destination="ZZR-LN-3hv" id="zIP-ig-Gwq"/>
                         <outlet property="saveBtn" destination="tEO-2g-Smm" id="VJr-pl-itp"/>
                         <outlet property="videosCollectionView" destination="pUk-YC-Bmb" id="985-bD-drS"/>
-                        <outlet property="videosCollectionViewHeight" destination="iNM-KD-74W" id="Lzl-xO-atJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gC8-VF-Do5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

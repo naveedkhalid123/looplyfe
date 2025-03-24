@@ -52,11 +52,9 @@ class ApiManager {
         case followUser
         case showFollowing
         case showFollowers
-       
-        // working.....
         case showVideosAgainstUserID
         case showUserLikedVideos
-        
+        case showUserRepostedVideos
         case showAllNotifications
         
         func url(baseURL: String) -> String {

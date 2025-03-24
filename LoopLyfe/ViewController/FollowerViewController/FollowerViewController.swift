@@ -44,19 +44,19 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
         followerTblView.register(UINib(nibName: "FollowerTblViewCell", bundle: nil), forCellReuseIdentifier: "FollowerTblViewCell")
         
 //        // Corrected Dictionary Format
-//        let param: [String: Any] = [
-//            "user_id": "1000",
-//            "other_user_id": "500",
-//            "starting_point": "0"
-//        ]
-//        
-//        // Fetch suggested users
-//        showSuggestionUsers.showSuggestionUsers(parameters: param)
-//        
-//        showSuggestionUsers.onnShowSuggestionUsersLoaded = { [weak self] success in
-//            print("API Response: \(String(describing: self?.showSuggestionUsers.showSuggestionUsers))")
-//            self?.followerTblView.reloadData()
-//        }
+        let param: [String: Any] = [
+            "user_id": "1000",
+            "other_user_id": "500",
+            "starting_point": "0"
+        ]
+        
+        // Fetch suggested users
+        showSuggestionUsers.showSuggestionUsers(parameters: param)
+        
+        showSuggestionUsers.onnShowSuggestionUsersLoaded = { [weak self] success in
+            print("API Response: \(String(describing: self?.showSuggestionUsers.showSuggestionUsers))")
+            self?.followerTblView.reloadData()
+        }
 //        
 //        
 //        let param: [String: Any] = [
@@ -74,19 +74,19 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         
-        let param: [String: Any] = [
-            "user_id": "9363",
-            "starting_point": 0
-        ]
-        
-        // Fetch suggested users
-        showSuggestionUsers.showFollowersUser(parameters: param)
-        
-        showSuggestionUsers.onShowFollowersUserLoaded = { [weak self] success in
-            print("API Response: \(String(describing: self?.showSuggestionUsers.showFollowersUser))")
-            self?.followerTblView.reloadData()
-        }
-        
+//        let param: [String: Any] = [
+//            "user_id": "9363",
+//            "starting_point": 0
+//        ]
+//        
+//        // Fetch suggested users
+//        showSuggestionUsers.showFollowersUser(parameters: param)
+//        
+//        showSuggestionUsers.onShowFollowersUserLoaded = { [weak self] success in
+//            print("API Response: \(String(describing: self?.showSuggestionUsers.showFollowersUser))")
+//            self?.followerTblView.reloadData()
+//        }
+//        
         
 
 
@@ -124,11 +124,11 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - UITableViewDataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1st api
-        // return showSuggestionUsers.showSuggestedUsers?.msg?.count ?? 0
+         return showSuggestionUsers.showSuggestedUsers?.msg?.count ?? 0
         // 2nd api
         //return showSuggestionUsers.showFollowingUser?.msg?.count ?? 0
         
-        return showSuggestionUsers.showFollowerUser?.msg?.count ?? 0
+        //return showSuggestionUsers.showFollowerUser?.msg?.count ?? 0
         
         
 
@@ -140,12 +140,12 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
         
         // 1st api
          
-//        let showSuggestionUsersArr = showSuggestionUsers.showSuggestedUsers?.msg?[indexPath.row]
-//        
-//        cell.followerImage.sd_setImage(with: URL(string: showSuggestionUsersArr?.user.profilePic ?? ""), placeholderImage: nil, context: nil)
-//        cell.lblFollower.text = showSuggestionUsersArr?.user.username
-//        let fullName = (showSuggestionUsersArr?.user.firstName ?? "") + " " + (showSuggestionUsersArr?.user.lastName ?? "")
-//        cell.lblDescription.text = "Follow you \(fullName)"
+        let showSuggestionUsersArr = showSuggestionUsers.showSuggestedUsers?.msg?[indexPath.row]
+        
+        cell.followerImage.sd_setImage(with: URL(string: showSuggestionUsersArr?.user.profilePic ?? ""), placeholderImage: nil, context: nil)
+        cell.lblFollower.text = showSuggestionUsersArr?.user.username
+        let fullName = (showSuggestionUsersArr?.user.firstName ?? "") + " " + (showSuggestionUsersArr?.user.lastName ?? "")
+        cell.lblDescription.text = "Follow you \(fullName)"
         
         
         
@@ -158,11 +158,11 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         // 3rd api
-        let showFollowersUSersArr = showSuggestionUsers.showFollowerUser?.msg?[indexPath.row]
-        cell.followerImage.sd_setImage(with: URL(string: showFollowersUSersArr?.user.profilePic ?? ""), placeholderImage: nil, context: nil)
-        cell.lblFollower.text = showFollowersUSersArr?.user.username
-        let fullName = (showFollowersUSersArr?.user.firstName ?? "") + " " + (showFollowersUSersArr?.user.lastName ?? "")
-        cell.lblDescription.text = "Follow you \(fullName)"
+//        let showFollowersUSersArr = showSuggestionUsers.showFollowerUser?.msg?[indexPath.row]
+//        cell.followerImage.sd_setImage(with: URL(string: showFollowersUSersArr?.user.profilePic ?? ""), placeholderImage: nil, context: nil)
+//        cell.lblFollower.text = showFollowersUSersArr?.user.username
+//        let fullName = (showFollowersUSersArr?.user.firstName ?? "") + " " + (showFollowersUSersArr?.user.lastName ?? "")
+//        cell.lblDescription.text = "Follow you \(fullName)"
       
     
         cell.btnFollowBack.tag = indexPath.row

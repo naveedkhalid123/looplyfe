@@ -204,12 +204,11 @@ class ShowUserDetailViewModel {
     func showVideosAgainstUser(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
 
-        ApiManager.shared.apiRequest(endpoint: .showAllNotifications, parameters: parameters) { (result: Result<ShowVideosAgainstUserIDModel, Error>) in
+        ApiManager.shared.apiRequest(endpoint: .showVideosAgainstUserID, parameters: parameters) { (result: Result<ShowVideosAgainstUserIDModel, Error>) in
             switch result {
             case .success(let showVideosAgainstUser):
                 print("✅ API Success - Show Suggestions User:", showVideosAgainstUser)
 
-                // Debugging: Checking the status code
                 print("🔍 Response Code:", showVideosAgainstUser.code)
                 
                 if showVideosAgainstUser.code == 200 {
@@ -222,7 +221,7 @@ class ShowUserDetailViewModel {
                     if let message = showVideosAgainstUser.message {
                         Utility.shared.showToast(message: message)
                     }
-                    self.onShowVideosAgainstUserLoaded?(true) // Ensure UI updates even if empty
+                    self.onShowVideosAgainstUserLoaded?(true)
                 }
                 
             case .failure(let error):
@@ -252,7 +251,7 @@ class ShowUserDetailViewModel {
                     
                 } else {
                     print("⚠️ No Data Available - Message:", showUserLikedVideos.msg ?? "Unknown error")
-                    if let message = showUserLikedVideos.likedVideosMsg {
+                    if let message = showUserLikedVideos.message {
                         Utility.shared.showToast(message: message)
                     }
                     self.onShowUserLikedVideosLoaded?(true)

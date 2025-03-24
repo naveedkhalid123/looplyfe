@@ -12,6 +12,7 @@ import SDWebImage
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     // make a variable and store the value of view model in the variable
     var showUserDetails = ShowUserDetailViewModel()
+    var showVideosAgainstUser: ShowVideosAgainstUserIDModel?
     
     var profileArr = [["isSelected": "true", "img": "ideas"], ["isSelected": "false", "img": "heartCircle"], ["isSelected": "false", "img": "profileLock"]]
     
@@ -51,40 +52,38 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         videosCollectionView.delegate = self
         videosCollectionView.dataSource = self
         videosCollectionView.register(UINib(nibName: "VideosCollectionView", bundle: nil), forCellWithReuseIdentifier: "VideosCollectionView")
-        
-        // for making the collection view and table view collection view height dynamic, give the height to the collection view and tbl view and then make the constraints of their height and then write the below function code in view did load
-        
-        updateCollectionViewHeight()
-        
+                
 //        // For showVideosAgainstUserID api
 //        let param: [String: Any] = [
-//            "user_id": "9363",
 //            "starting_point": 0
 //        ]
 //        
-//        // Fetch suggested users
 //        showUserDetails.showVideosAgainstUser(parameters: param)
-//        
 //        showUserDetails.onShowVideosAgainstUserLoaded = { [weak self] _ in
 //            print("API Response: \(String(describing: self?.showUserDetails.showVideosAgainstUser))")
-//            self?.videosCollectionView.reloadData()
+//            self?.showVideosAgainstUser = self?.showUserDetails.showVideosAgainstUser
+//            print(self?.showVideosAgainstUser?.msg?.msgPublic.count)
+//            
+//            DispatchQueue.main.async {
+//                self?.videosCollectionView.reloadData()
+//            }
 //        }
-
         
+        
+        
+        
+        // For showVideosAgainstUserID api
         let param: [String: Any] = [
-            "user_id": "9363",
             "starting_point": 0
         ]
-
-        // Fetch suggested users
+        
         showUserDetails.showUserLikedVideos(parameters: param)
-
-        showUserDetails.onShowUserLikedVideosLoaded = { [weak self] _ in
+        showUserDetails.onShowUserLikedVideosLoaded = { [weak self] success in
             print("API Response: \(String(describing: self?.showUserDetails.showUserLikedVideos))")
             self?.videosCollectionView.reloadData()
         }
-        
-        
+        // for making the collection view and table view collection view height dynamic, give the height to the collection view and tbl view and then make the constraints of their height and then write the below function code in view did load
+        //self.updateCollectionViewHeight()
     }
 
     // collection view height code
@@ -101,8 +100,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         if collectionView == profileCollectionView {
             return profileArr.count
         } else {
-           //return showUserDetails.showVideosAgainstUser?.msg?.count ?? 0
-            return showUserDetails.showUserLikedVideos?.msg.count ?? 0
+            //return showUserDetails.showVideosAgainstUser?.msg?.msgPublic.count ?? 0
+            return showUserDetails.showUserLikedVideos?.msg?.count ?? 0
         }
     }
     
@@ -121,44 +120,61 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             return cell
             
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
-
-//            let showVideosArr = showUserDetails.showVideosAgainstUser?.msg?[indexPath.row]
-//            if let firstImageURL = showVideosArr?.msgPublic.first, let url = URL(string: firstImageURL) {
-//                cell.videosImageView.sd_setImage(with: url, placeholderImage: nil, context: nil)
-//            } else {
-//                cell.videosImageView.image = UIImage(named: "placeholder")
-//            }
-//            
-            
-//            let showFollowersUsersArr = showUserDetails.showVideosAgainstUser?.msg?[indexPath.row]
-//            if let videoURLString = showFollowersUsersArr?.msgPublic.first?.videoURL {
-//                cell.videosImageView.sd_setImage(with: URL(string: videoURLString), placeholderImage: nil, context: nil)
-//            }
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
+//            let showVideosArr = showVideosAgainstUser?.msg?.msgPublic[indexPath.row]
+//            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.gif ?? ""), placeholderImage: nil, context: nil)
 //            return cell
-
             
-            if let showFollowersUsersArr = showUserDetails.showUserLikedVideos?.msg, indexPath.row < showFollowersUsersArr.count {
-                let videoItem = showFollowersUsersArr[indexPath.row]  // Access the correct index safely
-                cell.videosImageView.sd_setImage(with: URL(string: videoItem.video.video ?? ""), placeholderImage: nil, context: nil)
-            } else {
-                cell.videosImageView.image = nil  // Handle case where data is not available
-            }
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
+            let showVideosArr = showUserDetails.showUserLikedVideos?.msg?[indexPath.row]
+            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.thum ?? ""), placeholderImage: nil, context: nil)
             return cell
 
         }
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        for i in 0 ..< profileArr.count {
+//            profileArr[i]["isSelected"] = "false"
+//        }
+//
+//        profileArr[indexPath.row]["isSelected"] = "true"
+//        
+//        collectionView.reloadData()
+//    }
+//    
+    
+    // Dictionary to track selected index for videosCollectionView
+    var selectedVideoIndex: IndexPath?
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for i in 0 ..< profileArr.count {
-            profileArr[i]["isSelected"] = "false"
+        if collectionView == profileCollectionView {
+            guard indexPath.row < profileArr.count else { return }
+            for i in 0 ..< profileArr.count {
+                profileArr[i]["isSelected"] = "false"
+            }
+
+            profileArr[indexPath.row]["isSelected"] = "true"
+
+        } else if collectionView == videosCollectionView {
+            guard let numberOfItems = collectionView.dataSource?.collectionView(collectionView, numberOfItemsInSection: indexPath.section),
+                  indexPath.row < numberOfItems else {
+                print("⚠️ Error: Index out of range in videosCollectionView - indexPath: \(indexPath.row), total: \(collectionView.numberOfItems(inSection: indexPath.section))")
+                return
+            }
+
+            if selectedVideoIndex == indexPath {
+                selectedVideoIndex = nil
+            } else {
+                selectedVideoIndex = indexPath
+            }
         }
 
-        profileArr[indexPath.row]["isSelected"] = "true"
-        
         collectionView.reloadData()
     }
-    
+
+
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == profileCollectionView {
             return CGSize(width: collectionView.frame.width / 3, height: 40)
