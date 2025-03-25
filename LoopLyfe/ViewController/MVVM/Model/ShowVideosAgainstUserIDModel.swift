@@ -5,13 +5,14 @@
 //  Created by Naveed Khalid on 20/03/2025.
 //
 
+
 import Foundation
 
 // MARK: - ShowVideosAgainstUserIDModel
 struct ShowVideosAgainstUserIDModel: Codable {
     let code: Int
-    var msg: Msg?
-    var message: String? 
+    var msg: ShowUserRepostedVideosMsg?
+    var message: String?
 
     enum CodingKeys: String, CodingKey {
         case code, msg
@@ -21,16 +22,23 @@ struct ShowVideosAgainstUserIDModel: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         code = try container.decode(Int.self, forKey: .code)
         if code == 200 {
-            msg = try container.decodeIfPresent(Msg.self, forKey: .msg)
+            msg = try container.decodeIfPresent(ShowUserRepostedVideosMsg.self, forKey: .msg)
             message = nil
         } else {
             msg = nil
             message = try container.decodeIfPresent(String.self, forKey: .msg)
         }
     }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(code, forKey: .code)
+        try container.encodeIfPresent(msg, forKey: .msg)
+        try container.encodeIfPresent(message, forKey: .msg)
+    }
 }
 
-// MARK: - Msg
+// MARK: - ShowUserRepostedVideosMsg
 struct ShowUserRepostedVideosMsg: Codable {
     let msgPublic, msgPrivate: [Private]
 
@@ -51,7 +59,7 @@ struct Private: Codable {
     }
 }
 
-// MARK: - User
+// MARK: - VideoUser
 struct VideoUser: Codable {
     let id: Int
     let firstName, lastName: String
@@ -67,7 +75,7 @@ struct VideoUser: Codable {
     }
 }
 
-// MARK: - Video
+// MARK: - UserVideo
 struct UserVideo: Codable {
     let id, userID: Int
     let video: String

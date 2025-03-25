@@ -38,6 +38,10 @@ class ShowUserDetailViewModel {
     var showUserLikedVideos: ShowUserLikedVideosModel?
     var onShowUserLikedVideosLoaded: ((Bool) -> Void)?
     
+    // for ShowUserRepostedVideosModel
+    var showShowUserRepostedVideos: ShowUserRepostedVideosModel?
+    var showShowUserRepostedLoaded: ((Bool) -> Void)?
+    
     // for ShowAllNotificationsModel
     var showAllNotifications: ShowAllNotificationsModel?
     var onShowAllNotificationsLoaded: ((Bool) -> Void)?
@@ -232,7 +236,6 @@ class ShowUserDetailViewModel {
     }
     
     
-    // show user liked videos ... pending...
     func showUserLikedVideos(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
 
@@ -265,16 +268,49 @@ class ShowUserDetailViewModel {
     }
     
     
+    
+    
+    // show user liked showShowUserRepostedVideos ...
+    
+    func showShowUserRepostedVideos(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+        ApiManager.shared.apiRequest(endpoint: .showUserRepostedVideos, parameters: parameters) { (result: Result<ShowUserRepostedVideosModel, Error>) in
+            switch result {
+            case .success(let showShowUserRepostedVideos):
+                print("✅ API Success - Show Suggestions User:", showShowUserRepostedVideos)
+                print("🔍 Response Code:", showShowUserRepostedVideos.code)
+                
+                if showShowUserRepostedVideos.code == 200 {
+                    print("✅ Data Found: \(String(describing: showShowUserRepostedVideos.msg))")
+                    self.showShowUserRepostedVideos = showShowUserRepostedVideos
+                    self.showShowUserRepostedLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showShowUserRepostedVideos.msg ?? "Unknown error")
+                    if let message = showShowUserRepostedVideos.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.showShowUserRepostedLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.showShowUserRepostedLoaded?(false)
+            }
+        }
+    }
+    
+    
+    
+
     // show all notifciation
     func showAllNotifications(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
-
+        
         ApiManager.shared.apiRequest(endpoint: .showAllNotifications, parameters: parameters) { (result: Result<ShowAllNotificationsModel, Error>) in
             switch result {
             case .success(let showAllNotifications):
                 print("✅ API Success - Show Suggestions User:", showAllNotifications)
-
-                // Debugging: Checking the status code
                 print("🔍 Response Code:", showAllNotifications.code)
                 
                 if showAllNotifications.code == 200 {
@@ -287,7 +323,7 @@ class ShowUserDetailViewModel {
                     if let message = showAllNotifications.message {
                         Utility.shared.showToast(message: message)
                     }
-                    self.onShowAllNotificationsLoaded?(true) // Ensure UI updates even if empty
+                    self.onShowAllNotificationsLoaded?(true)
                 }
                 
             case .failure(let error):

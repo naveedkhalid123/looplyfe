@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet var profileCollectionView: UICollectionView!
     
     @IBOutlet var videosCollectionView: UICollectionView!
+    
     // collection view height code
     @IBOutlet var videosCollectionViewHeight: NSLayoutConstraint!
     
@@ -70,18 +71,35 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
 //        }
         
         
+
+        // 2nd For showVideosAgainstUserID api
+//        let param: [String: Any] = [
+//            "starting_point": 0
+//        ]
+//        
+//        showUserDetails.showUserLikedVideos(parameters: param)
+//        showUserDetails.onShowUserLikedVideosLoaded = { [weak self] success in
+//            print("API Response: \(String(describing: self?.showUserDetails.showUserLikedVideos))")
+//            self?.videosCollectionView.reloadData()
+//        }
         
         
-        // For showVideosAgainstUserID api
+        // 3rd For showShowUserRepostedVideos api
+
         let param: [String: Any] = [
             "starting_point": 0
         ]
         
-        showUserDetails.showUserLikedVideos(parameters: param)
-        showUserDetails.onShowUserLikedVideosLoaded = { [weak self] success in
-            print("API Response: \(String(describing: self?.showUserDetails.showUserLikedVideos))")
+        showUserDetails.showShowUserRepostedVideos(parameters: param)
+        showUserDetails.showShowUserRepostedLoaded = { [weak self] success in
+            print("API Response: \(String(describing: self?.showUserDetails.showShowUserRepostedVideos))")
             self?.videosCollectionView.reloadData()
         }
+        
+        
+        
+        
+        
         // for making the collection view and table view collection view height dynamic, give the height to the collection view and tbl view and then make the constraints of their height and then write the below function code in view did load
         //self.updateCollectionViewHeight()
     }
@@ -101,7 +119,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             return profileArr.count
         } else {
             //return showUserDetails.showVideosAgainstUser?.msg?.msgPublic.count ?? 0
-            return showUserDetails.showUserLikedVideos?.msg?.count ?? 0
+            //return showUserDetails.showUserLikedVideos?.msg?.count ?? 0
+            return showUserDetails.showShowUserRepostedVideos?.msg?.count ?? 0
         }
     }
     
@@ -125,8 +144,13 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
 //            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.gif ?? ""), placeholderImage: nil, context: nil)
 //            return cell
             
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
+//            let showVideosArr = showUserDetails.showUserLikedVideos?.msg?[indexPath.row]
+//            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.thum ?? ""), placeholderImage: nil, context: nil)
+//            return cell
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
-            let showVideosArr = showUserDetails.showUserLikedVideos?.msg?[indexPath.row]
+            let showVideosArr = showUserDetails.showShowUserRepostedVideos?.msg?[indexPath.row]
             cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.thum ?? ""), placeholderImage: nil, context: nil)
             return cell
 

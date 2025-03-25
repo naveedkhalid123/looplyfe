@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainTblViewCell" id="KGk-i7-Jjw" customClass="MainTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Jxe-z3-ld5">
+                        <rect key="frame" x="12" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2eT-u4-jlc"/>
+                            <constraint firstAttribute="height" constant="50" id="vSy-WU-vF6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wasiq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-uy-QaR">
+                        <rect key="frame" x="72" y="10" width="39" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wasiq@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syh-Au-YqX">
+                        <rect key="frame" x="72" y="26" width="49" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" name="darkTxtGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG4-5g-eCN">
+                        <rect key="frame" x="72" y="42" width="71.666666666666686" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" name="darkTxtGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh2-P2-q5j">
+                        <rect key="frame" x="255" y="17.666666666666671" width="93" height="35"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="KWR-4I-LZa"/>
+                            <constraint firstAttribute="width" constant="93" id="T80-Py-nxx"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Follow">
+                            <color key="titleColor" name="darkWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="followBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hUu-Yj-3J3"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GG4-5g-eCN" firstAttribute="leading" secondItem="syh-Au-YqX" secondAttribute="leading" id="0Q5-sn-EWL"/>
+                    <constraint firstAttribute="trailing" secondItem="Gh2-P2-q5j" secondAttribute="trailing" constant="12" id="6A2-u0-6yA"/>
+                    <constraint firstItem="jmz-uy-QaR" firstAttribute="top" secondItem="Jxe-z3-ld5" secondAttribute="top" id="6wK-v0-Adr"/>
+                    <constraint firstItem="syh-Au-YqX" firstAttribute="leading" secondItem="jmz-uy-QaR" secondAttribute="leading" id="AkU-73-6Ji"/>
+                    <constraint firstItem="Jxe-z3-ld5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Ckr-bg-uJd"/>
+                    <constraint firstItem="Jxe-z3-ld5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IPl-F2-nVl"/>
+                    <constraint firstItem="syh-Au-YqX" firstAttribute="top" secondItem="jmz-uy-QaR" secondAttribute="bottom" constant="-1" id="VdA-a4-65M"/>
+                    <constraint firstItem="GG4-5g-eCN" firstAttribute="top" secondItem="syh-Au-YqX" secondAttribute="bottom" constant="-1" id="ZHY-Ym-13i"/>
+                    <constraint firstItem="Gh2-P2-q5j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="k6Y-Gt-5NS"/>
+                    <constraint firstItem="jmz-uy-QaR" firstAttribute="leading" secondItem="Jxe-z3-ld5" secondAttribute="trailing" constant="10" id="ser-rD-KcA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ImgUsrProfile" destination="Jxe-z3-ld5" id="s6Z-M9-xIl"/>
+                <outlet property="btnFollow" destination="Gh2-P2-q5j" id="Rbo-4t-IYQ"/>
+                <outlet property="lblFollowers" destination="GG4-5g-eCN" id="O4g-dA-GC9"/>
+                <outlet property="lblName" destination="jmz-uy-QaR" id="L4F-D5-Ald"/>
+                <outlet property="lblUserName" destination="syh-Au-YqX" id="FYb-6o-Dh4"/>
+            </connections>
+            <point key="canvasLocation" x="13.740458015267174" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="userProfile" width="110" height="110"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkTxtGrey">
+            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkWhite">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

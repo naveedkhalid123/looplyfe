@@ -20,12 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
     
         
-//        let languageVC = FollowerViewController(nibName: "FollowerViewController", bundle: nil)
-//        let navigationController = UINavigationController(rootViewController: languageVC)
-//        navigationController.isNavigationBarHidden = true
-//        self.window = UIWindow(windowScene: windowScene)
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
+        let languageVC = SearchBarViewController(nibName: "SearchBarViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: languageVC)
+        navigationController.isNavigationBarHidden = true
+        self.window = UIWindow(windowScene: windowScene)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
