@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SF-Pro-Display-Regular.otf">
-            <string>SFProDisplay-Regular</string>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
         </array>
         <array key="SF-Pro-Display-Semibold.otf">
             <string>SFProDisplay-Semibold</string>
@@ -40,15 +40,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wasiq@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syh-Au-YqX">
-                        <rect key="frame" x="72" y="26" width="49" height="17"/>
-                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
-                        <color key="textColor" name="darkTxtGrey"/>
+                        <rect key="frame" x="72" y="28.999999999999996" width="42.666666666666657" height="14.333333333333332"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                        <color key="textColor" name="subHeadGrey"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG4-5g-eCN">
-                        <rect key="frame" x="72" y="42" width="71.666666666666686" height="17"/>
-                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
-                        <color key="textColor" name="darkTxtGrey"/>
+                        <rect key="frame" x="72" y="45.333333333333336" width="63.666666666666657" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                        <color key="textColor" name="subHeadGrey"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh2-P2-q5j">
@@ -75,8 +75,8 @@
                     <constraint firstItem="syh-Au-YqX" firstAttribute="leading" secondItem="jmz-uy-QaR" secondAttribute="leading" id="AkU-73-6Ji"/>
                     <constraint firstItem="Jxe-z3-ld5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Ckr-bg-uJd"/>
                     <constraint firstItem="Jxe-z3-ld5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IPl-F2-nVl"/>
-                    <constraint firstItem="syh-Au-YqX" firstAttribute="top" secondItem="jmz-uy-QaR" secondAttribute="bottom" constant="-1" id="VdA-a4-65M"/>
-                    <constraint firstItem="GG4-5g-eCN" firstAttribute="top" secondItem="syh-Au-YqX" secondAttribute="bottom" constant="-1" id="ZHY-Ym-13i"/>
+                    <constraint firstItem="syh-Au-YqX" firstAttribute="top" secondItem="jmz-uy-QaR" secondAttribute="bottom" constant="2" id="VdA-a4-65M"/>
+                    <constraint firstItem="GG4-5g-eCN" firstAttribute="top" secondItem="syh-Au-YqX" secondAttribute="bottom" constant="2" id="ZHY-Ym-13i"/>
                     <constraint firstItem="Gh2-P2-q5j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="k6Y-Gt-5NS"/>
                     <constraint firstItem="jmz-uy-QaR" firstAttribute="leading" secondItem="Jxe-z3-ld5" secondAttribute="trailing" constant="10" id="ser-rD-KcA"/>
                 </constraints>
@@ -97,11 +97,11 @@
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="darkTxtGrey">
-            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="darkWhite">
             <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subHeadGrey">
+            <color red="0.60799998044967651" green="0.60799998044967651" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

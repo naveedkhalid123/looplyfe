@@ -22,10 +22,15 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="284" id="4MP-GG-van"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#CapCut" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veH-Yi-kFe">
-                        <rect key="frame" x="1" y="288" width="60.666666666666664" height="18"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <rect key="frame" x="0.99999999999999645" y="288" width="62.666666666666657" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -35,6 +40,11 @@
                             <constraint firstAttribute="width" constant="25" id="oOo-3j-y8x"/>
                             <constraint firstAttribute="height" constant="25" id="xeT-a9-8l1"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wasiq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysn-Aq-3bj">
                         <rect key="frame" x="33" y="316" width="47" height="21"/>

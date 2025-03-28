@@ -46,6 +46,26 @@ class ShowUserDetailViewModel {
     var showAllNotifications: ShowAllNotificationsModel?
     var onShowAllNotificationsLoaded: ((Bool) -> Void)?
     
+    // for showingSeachbarModel
+    var showSearchBarData: SearchBarModel?
+    var onShowSearchBarLoaded: ((Bool) -> Void)?
+    
+    // for SearchVideosModel
+    var showSearchVideos: SearchVideosModel?
+    var onnShowSearchVideosLoaded: ((Bool) -> Void)?
+    
+   // for SearchSoundModel
+    var showSearchSound: SearchSoundModel?
+    var onShowSearchSoundModelLoaded: ((Bool) -> Void)?
+    
+    // for SearchHastagsModel
+    var showSearchHashtags: SearchHastagsModel?
+    var onnShowSearchHastagsLoaded: ((Bool) -> Void)?
+    
+    
+    
+    
+    
     func fetchUserDetails() {
         ApiManager.shared.apiRequest(endpoint: .showUserDetail) { (result: Result<ShowUserDetailModel, Error>) in
             switch result {
@@ -269,8 +289,7 @@ class ShowUserDetailViewModel {
     
     
     
-    
-    // show user liked showShowUserRepostedVideos ...
+
     
     func showShowUserRepostedVideos(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
@@ -302,6 +321,39 @@ class ShowUserDetailViewModel {
     
     
     
+    
+    
+    // show user liked showSearchBar  ...
+    
+    func showSearchBarData(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchBarModel, Error>) in
+            switch result {
+            case .success(let showSearchBarData):
+                print("✅ API Success - Show Suggestions User:", showSearchBarData)
+                print("🔍 Response Code:", showSearchBarData.code)
+                
+                if showSearchBarData.code == 200 {
+                    print("✅ Data Found: \(String(describing: showSearchBarData.msg))")
+                    self.showSearchBarData = showSearchBarData
+                    self.onShowSearchBarLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showSearchBarData.msg ?? "Unknown error")
+                    if let message = showSearchBarData.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onShowSearchBarLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onShowSearchBarLoaded?(false)
+            }
+        }
+    }
+    
+    
 
     // show all notifciation
     func showAllNotifications(parameters: [String: Any]) {
@@ -329,6 +381,102 @@ class ShowUserDetailViewModel {
             case .failure(let error):
                 print("❌ API Error: \(error.localizedDescription)")
                 self.onShowAllNotificationsLoaded?(false)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    // show user liked showSearchVideos  ...
+    
+    func showSearchVideos(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchVideosModel, Error>) in
+            switch result {
+            case .success(let showSearchVideos):
+                print("✅ API Success - Show Suggestions User:", showSearchVideos)
+                print("🔍 Response Code:", showSearchVideos.code)
+                
+                if showSearchVideos.code == 200 {
+                    print("✅ Data Found: \(String(describing: showSearchVideos.msg))")
+                    self.showSearchVideos = showSearchVideos
+                    self.onnShowSearchVideosLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showSearchVideos.msg ?? "Unknown error")
+                    if let message = showSearchVideos.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onnShowSearchVideosLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onnShowSearchVideosLoaded?(false)
+            }
+        }
+    }
+    
+    
+    // show user liked showSearchSoundModel  ...
+    
+    func showSearchSound(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchSoundModel, Error>) in
+            switch result {
+            case .success(let showSearchSound):
+                print("✅ API Success - Show Suggestions User:", showSearchSound)
+                print("🔍 Response Code:", showSearchSound.code)
+                
+                if showSearchSound.code == 200 {
+                    print("✅ Data Found: \(String(describing: showSearchSound.msg))")
+                    self.showSearchSound = showSearchSound
+                    self.onShowSearchSoundModelLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showSearchSound.msg ?? "Unknown error")
+                    if let message = showSearchSound.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onShowSearchSoundModelLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onShowSearchSoundModelLoaded?(false)
+            }
+        }
+    }
+    
+    
+    // show user liked showSearchHashtags  ...
+    
+    func showSearchHashtags(parameters: [String: Any]) {
+        print("🔍 API Request Parameters: \(parameters)")
+        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchHastagsModel, Error>) in
+            switch result {
+            case .success(let showSearchHashtags):
+                print("✅ API Success - Show Suggestions User:", showSearchHashtags)
+                print("🔍 Response Code:", showSearchHashtags.code)
+                
+                if showSearchHashtags.code == 200 {
+                    print("✅ Data Found: \(String(describing: showSearchHashtags.msg))")
+                    self.showSearchHashtags = showSearchHashtags
+                    self.onnShowSearchHastagsLoaded?(true)
+                    
+                } else {
+                    print("⚠️ No Data Available - Message:", showSearchHashtags.msg ?? "Unknown error")
+                    if let message = showSearchHashtags.message {
+                        Utility.shared.showToast(message: message)
+                    }
+                    self.onnShowSearchHastagsLoaded?(true)
+                }
+                
+            case .failure(let error):
+                print("❌ API Error: \(error.localizedDescription)")
+                self.onnShowSearchHastagsLoaded?(false)
             }
         }
     }

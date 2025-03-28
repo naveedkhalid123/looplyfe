@@ -146,12 +146,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             
 //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
 //            let showVideosArr = showUserDetails.showUserLikedVideos?.msg?[indexPath.row]
-//            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.thum ?? ""), placeholderImage: nil, context: nil)
+//            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.gif ?? ""), placeholderImage: nil, context: nil)
 //            return cell
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionView", for: indexPath) as! VideosCollectionView
             let showVideosArr = showUserDetails.showShowUserRepostedVideos?.msg?[indexPath.row]
-            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.thum ?? ""), placeholderImage: nil, context: nil)
+            cell.videosImageView.sd_setImage(with: URL(string: showVideosArr?.video.gif ?? ""), placeholderImage: nil, context: nil)
             return cell
 
         }
@@ -203,7 +203,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         if collectionView == profileCollectionView {
             return CGSize(width: collectionView.frame.width / 3, height: 40)
         } else {
-            return CGSize(width: (collectionView.frame.width / 3) - 10, height: 150)
+            return CGSize(width: (collectionView.frame.width / 2) - 10, height: 200)
         }
     }
     

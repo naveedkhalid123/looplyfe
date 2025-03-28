@@ -132,6 +132,7 @@
 		67B967EA2D64705B0092E995 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B967E82D64705B0092E995 /* ShareViewController.xib */; };
 		67B967EE2D6472990092E995 /* RepostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B967EC2D6472990092E995 /* RepostCollectionViewCell.swift */; };
 		67B967EF2D6472990092E995 /* RepostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B967ED2D6472990092E995 /* RepostCollectionViewCell.xib */; };
+		67BD1A7C2D95585800DE5918 /* SearchBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD1A7B2D95585800DE5918 /* SearchBarModel.swift */; };
 		67C7377D2D89706C000A4F82 /* ShowSuggestedUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7377C2D89706C000A4F82 /* ShowSuggestedUsersModel.swift */; };
 		67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBEAC42D60F0FF00FBCED7 /* CreatePasswordViewController.swift */; };
 		67CBEAC72D60F0FF00FBCED7 /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */; };
@@ -142,6 +143,9 @@
 		67CC82332D78641B00FF7AAD /* countryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82302D78641B00FF7AAD /* countryCodeTableViewCell.swift */; };
 		67CEDD712D8C716000BBD1FF /* ShowVideosAgainstUserIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CEDD702D8C716000BBD1FF /* ShowVideosAgainstUserIDModel.swift */; };
 		67CEDD732D8C878800BBD1FF /* ShowUserLikedVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CEDD722D8C878800BBD1FF /* ShowUserLikedVideosModel.swift */; };
+		67E51E992D96A0E500638EE5 /* SearchVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E51E982D96A0E500638EE5 /* SearchVideosModel.swift */; };
+		67E51E9B2D96AE1500638EE5 /* SearchSoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E51E9A2D96AE1500638EE5 /* SearchSoundModel.swift */; };
+		67E51E9D2D96B2BA00638EE5 /* SearchHastagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E51E9C2D96B2BA00638EE5 /* SearchHastagsModel.swift */; };
 		67E6D4882D6C43BD008436CA /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D4862D6C43BD008436CA /* GoalViewController.swift */; };
 		67E6D4892D6C43BD008436CA /* GoalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E6D4872D6C43BD008436CA /* GoalViewController.xib */; };
 		67E6D48D2D6C49C9008436CA /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E6D48B2D6C49C9008436CA /* GoalTableViewCell.swift */; };
@@ -316,6 +320,7 @@
 		67B967E82D64705B0092E995 /* ShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		67B967EC2D6472990092E995 /* RepostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostCollectionViewCell.swift; sourceTree = "<group>"; };
 		67B967ED2D6472990092E995 /* RepostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepostCollectionViewCell.xib; sourceTree = "<group>"; };
+		67BD1A7B2D95585800DE5918 /* SearchBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarModel.swift; sourceTree = "<group>"; };
 		67C7377C2D89706C000A4F82 /* ShowSuggestedUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSuggestedUsersModel.swift; sourceTree = "<group>"; };
 		67CBEAC42D60F0FF00FBCED7 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		67CBEAC52D60F0FF00FBCED7 /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
@@ -326,6 +331,9 @@
 		67CC82302D78641B00FF7AAD /* countryCodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = countryCodeTableViewCell.swift; sourceTree = "<group>"; };
 		67CEDD702D8C716000BBD1FF /* ShowVideosAgainstUserIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideosAgainstUserIDModel.swift; sourceTree = "<group>"; };
 		67CEDD722D8C878800BBD1FF /* ShowUserLikedVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowUserLikedVideosModel.swift; sourceTree = "<group>"; };
+		67E51E982D96A0E500638EE5 /* SearchVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVideosModel.swift; sourceTree = "<group>"; };
+		67E51E9A2D96AE1500638EE5 /* SearchSoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSoundModel.swift; sourceTree = "<group>"; };
+		67E51E9C2D96B2BA00638EE5 /* SearchHastagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHastagsModel.swift; sourceTree = "<group>"; };
 		67E6D4862D6C43BD008436CA /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		67E6D4872D6C43BD008436CA /* GoalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalViewController.xib; sourceTree = "<group>"; };
 		67E6D48B2D6C49C9008436CA /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
@@ -529,6 +537,10 @@
 				67CEDD722D8C878800BBD1FF /* ShowUserLikedVideosModel.swift */,
 				670850AC2D91D358007593E7 /* ShowUserRepostedVideosModel.swift */,
 				679119062D8D740600D6E7B6 /* ShowAllNotificationsModel.swift */,
+				67BD1A7B2D95585800DE5918 /* SearchBarModel.swift */,
+				67E51E982D96A0E500638EE5 /* SearchVideosModel.swift */,
+				67E51E9A2D96AE1500638EE5 /* SearchSoundModel.swift */,
+				67E51E9C2D96B2BA00638EE5 /* SearchHastagsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1620,6 +1632,7 @@
 				671D5BC12D63581900926F7E /* InboxViewController.swift in Sources */,
 				6783C7DD2D8B2C58003E4D84 /* ShowFollowersModel.swift in Sources */,
 				6731B6F02D6886F40008F85B /* SwitchPopUpViewController.swift in Sources */,
+				67E51E9B2D96AE1500638EE5 /* SearchSoundModel.swift in Sources */,
 				67E6D48D2D6C49C9008436CA /* GoalTableViewCell.swift in Sources */,
 				670850AD2D91D358007593E7 /* ShowUserRepostedVideosModel.swift in Sources */,
 				67E6D4AC2D6C7C44008436CA /* PromotionsViewController.swift in Sources */,
@@ -1650,6 +1663,7 @@
 				6783B0B82D60BBD800E5AEC1 /* OTPVerificationViewController.swift in Sources */,
 				67C7377D2D89706C000A4F82 /* ShowSuggestedUsersModel.swift in Sources */,
 				67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */,
+				67BD1A7C2D95585800DE5918 /* SearchBarModel.swift in Sources */,
 				67458CCC2D679690005CB7E4 /* FamilyPairingViewController.swift in Sources */,
 				67458C952D6725AE005CB7E4 /* SettingAndPrivacyViewController.swift in Sources */,
 				670F00252D89D3AD00D61D07 /* FollowerCollectionViewCell.swift in Sources */,
@@ -1677,12 +1691,14 @@
 				67A745B62D6863C900C7BA12 /* LoopLyfeFamilyViewController.swift in Sources */,
 				67458C902D671BAA005CB7E4 /* CategoriesTblViewCell.swift in Sources */,
 				67E6D4882D6C43BD008436CA /* GoalViewController.swift in Sources */,
+				67E51E992D96A0E500638EE5 /* SearchVideosModel.swift in Sources */,
 				67ECD73C2D8C2020006DA44D /* VideosCollectionView.swift in Sources */,
 				67458CD12D67A483005CB7E4 /* LinkedAccountViewController.swift in Sources */,
 				67ED5CDA2D65EA94009FAF5E /* RepostVideoViewController.swift in Sources */,
 				67FEE9E02D5F31D7004DEAA5 /* Onbording4ViewController.swift in Sources */,
 				67FEE9C92D5F0BD7004DEAA5 /* Onbording3ViewController.swift in Sources */,
 				679786B32D7EEE41006A542E /* InboxTblViewCell.swift in Sources */,
+				67E51E9D2D96B2BA00638EE5 /* SearchHastagsModel.swift in Sources */,
 				6752D5A52D88425A00B613B2 /* FollowerTblViewCell.swift in Sources */,
 				67253F292D80387A0058161D /* ShowUserDetailModel.swift in Sources */,
 				67B719DE2D62120900D79804 /* SignInCollectionViewCell.swift in Sources */,

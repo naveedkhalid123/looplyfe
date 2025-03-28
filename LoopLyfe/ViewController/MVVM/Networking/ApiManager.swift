@@ -56,6 +56,7 @@ class ApiManager {
         case showUserLikedVideos
         case showUserRepostedVideos
         case showAllNotifications
+        case search
         
         func url(baseURL: String) -> String {
             return baseURL + rawValue

@@ -18,7 +18,7 @@
                 <outlet property="searchBar" destination="NaI-3v-Rmm" id="fs2-uj-e4f"/>
                 <outlet property="suggestionCollectionView" destination="F0Q-2b-GxM" id="Ea9-0R-aoU"/>
                 <outlet property="tableViewHeight" destination="P8r-kO-dTp" id="kwv-mN-aY2"/>
-                <outlet property="videosCollectionViewHeight" destination="xU5-5D-5jJ" id="eDw-Az-MJk"/>
+                <outlet property="videosCollectionViewHeight" destination="xBV-ge-w1c" id="wNT-gm-1gx"/>
                 <outlet property="view" destination="DXF-7h-Zlq" id="ZzV-bh-whM"/>
             </connections>
         </placeholder>
@@ -86,11 +86,11 @@
                                         <constraint firstAttribute="height" constant="608" id="P8r-kO-dTp"/>
                                     </constraints>
                                 </tableView>
-                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-Ta-SMc">
-                                    <rect key="frame" x="0.0" y="58" width="414" height="608"/>
+                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-Ta-SMc">
+                                    <rect key="frame" x="12" y="58" width="390" height="608"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="608" id="xU5-5D-5jJ"/>
+                                        <constraint firstAttribute="height" constant="608" id="xBV-ge-w1c"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="ml7-qg-b7n">
                                         <size key="itemSize" width="128" height="128"/>
@@ -103,13 +103,13 @@
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="uJy-Ta-SMc" secondAttribute="bottom" id="LyB-fI-PD4"/>
                                 <constraint firstAttribute="trailing" secondItem="F0Q-2b-GxM" secondAttribute="trailing" id="ULo-KH-DIK"/>
-                                <constraint firstItem="uJy-Ta-SMc" firstAttribute="leading" secondItem="DWO-Ba-MZJ" secondAttribute="leading" id="UaV-Le-Y1m"/>
+                                <constraint firstItem="uJy-Ta-SMc" firstAttribute="leading" secondItem="DWO-Ba-MZJ" secondAttribute="leading" constant="12" id="UaV-Le-Y1m"/>
                                 <constraint firstItem="uJy-Ta-SMc" firstAttribute="top" secondItem="F0Q-2b-GxM" secondAttribute="bottom" constant="8" symbolic="YES" id="kcV-V1-0sA"/>
                                 <constraint firstItem="G5q-NT-AQs" firstAttribute="top" secondItem="F0Q-2b-GxM" secondAttribute="bottom" constant="8" symbolic="YES" id="kfw-TK-Kys"/>
                                 <constraint firstItem="F0Q-2b-GxM" firstAttribute="leading" secondItem="DWO-Ba-MZJ" secondAttribute="leading" id="ktH-HW-WZ6"/>
                                 <constraint firstItem="G5q-NT-AQs" firstAttribute="leading" secondItem="DWO-Ba-MZJ" secondAttribute="leading" id="nKj-a5-ixg"/>
                                 <constraint firstItem="F0Q-2b-GxM" firstAttribute="top" secondItem="DWO-Ba-MZJ" secondAttribute="top" id="pN4-4l-fx8"/>
-                                <constraint firstAttribute="trailing" secondItem="uJy-Ta-SMc" secondAttribute="trailing" id="rys-OH-1D1"/>
+                                <constraint firstAttribute="trailing" secondItem="uJy-Ta-SMc" secondAttribute="trailing" constant="12" id="rys-OH-1D1"/>
                                 <constraint firstAttribute="trailing" secondItem="G5q-NT-AQs" secondAttribute="trailing" id="t1X-pn-Fbo"/>
                                 <constraint firstAttribute="bottom" secondItem="G5q-NT-AQs" secondAttribute="bottom" id="vxC-J7-0UX"/>
                             </constraints>
