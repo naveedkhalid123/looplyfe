@@ -57,4 +57,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
             return 80
         }
     }
+    
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

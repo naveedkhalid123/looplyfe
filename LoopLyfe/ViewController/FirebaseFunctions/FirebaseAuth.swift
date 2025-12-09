@@ -20,49 +20,75 @@ final class FirebaseAuth {
     // utliity shared fucntion
     private let functions = Utility.shared
     
-    func signIn(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
+    func signIn(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+    
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                completion(false, error)
+            if let error = error as NSError? {
+                let errorCode = AuthErrorCode.Code(rawValue: error.code)
+            
+                switch errorCode {
+                case .wrongPassword:
+                    print("Wrong password.")
+                    completion(.failure(NSError(domain: "", code: error.code,
+                                                userInfo: [NSLocalizedDescriptionKey: "Incorrect password. Please try again."])))
+                    
+                case .invalidEmail:
+                    print("Invalid email format.")
+                    completion(.failure(NSError(domain: "", code: error.code,
+                                                userInfo: [NSLocalizedDescriptionKey: "Invalid email address. Please check and try again."])))
+                    
+                case .userNotFound:
+                    print("No user found with this email.")
+                    completion(.failure(NSError(domain: "", code: error.code,
+                                                userInfo: [NSLocalizedDescriptionKey: "No account found with this email. Please sign up first."])))
+                    
+                default:
+                    print("Firebase Auth Error:", error.localizedDescription)
+                    completion(.failure(NSError(domain: "", code: error.code,
+                                                userInfo: [NSLocalizedDescriptionKey: error.localizedDescription])))
+                }
                 return
             }
+
             
-            guard let user = authResult?.user else {
+            guard let authResult = authResult else {
                 print("No user found")
-                completion(false, nil)
+                let noUserError = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No user found."])
+                completion(.failure(noUserError))
                 return
             }
             
-            if user.isEmailVerified {
-                self.functions.showToast(message: "Signed in successfully. Email is verified.")
-                completion(true, nil)
+            if authResult.user.isEmailVerified {
+                completion(.success(authResult))
+                
             } else {
-                self.functions.showToast(message: "Email is not verified. Please check your email.")
-                completion(false, nil)
+                print("Email is not verified. Please check your email.")
+                let noUserError = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Email is not verified. Please check your email."])
+                completion(.failure(noUserError))
             }
         }
     }
     
-        func createUser(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
+        func createUser(email: String, password: String, completion: @escaping (String?, Error?) -> Void) {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error {
-                    completion(false, error)
+                    completion(nil, error)
                     return
                 }
     
                 guard let user = authResult?.user else {
                     print("User creation failed")
-                    completion(false, nil)
+                    completion(nil, nil)
                     return
                 }
     
                 user.sendEmailVerification { error in
                     if let error = error {
                         print("Error sending verification email: \(error.localizedDescription)")
-                        completion(false, error)
+                        completion(nil, error)
                     } else {
                         self.functions.showToast(message: "User created successfully. Verification email sent.")
-                        completion(true, nil)
+                        completion(user.uid, nil)
                     }
                 }
             }
@@ -79,15 +105,12 @@ final class FirebaseAuth {
                 return
             }
             
-            self.functions.showToast(message: "Password reset email sent successfully. Check your inbox.")
+            //self.functions.showToast(message: "Password reset email sent successfully. Check your inbox.")
             completion(true, nil)
         }
     }
     
-    func verifyPhoneNumber(
-        phoneNumber: String,
-        completion: @escaping (String?, Error?) -> Void
-    ) {
+    func verifyPhoneNumber(phoneNumber: String,completion: @escaping (String?, Error?) -> Void) {
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
             if let error = error {
                 print("Error verifying phone number: \(error.localizedDescription)")
@@ -102,16 +125,26 @@ final class FirebaseAuth {
             }
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             
-            
-            self.functions.showToast(message: "Otp sent to your mobile phone")
             completion(verificationID, nil)
         }
     }
     
     
-    func createPhoneAuthCredential(verificationID: String, verificationCode: String) -> PhoneAuthCredential {
-        return PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
+    func createPhoneAuthCredential(verificationID: String, verificationCode: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID,verificationCode: verificationCode)
+        
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let authResult = authResult {
+                completion(.success(authResult))
+            }
+        }
     }
+
     
    
     func loginWithPhone(verificationID: String, verificationCode: String, completion: @escaping (Bool, Error?) -> Void) {

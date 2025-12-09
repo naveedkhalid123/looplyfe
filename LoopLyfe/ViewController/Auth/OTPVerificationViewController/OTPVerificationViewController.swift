@@ -9,12 +9,32 @@ import DPOTPView
 import UIKit
 
 class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
+    
+    var isSignIn = false
+    var phoneNumber: String = ""
+    
+    var verificationId = ""
+    var signinEmailPhoneViewModel = SigninEmailPhoneViewModel()
+    
+    var siginViewModel = SigninViewModel()
+    
+    private lazy var loader: UIView = {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let keyWindow = windowScene.windows.first(where: { $0.isKeyWindow })
+        else {
+            fatalError("Unable to access key window")
+        }
+        return Utility.shared.createActivityIndicator(keyWindow)
+    }()
+    
     @IBOutlet var navigationBar: UINavigationBar!
     
+    @IBOutlet weak var message: UILabel!
     @IBOutlet var OTPView: DPOTPView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.message.text = "Your code was sent to \(phoneNumber)"
         
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
@@ -37,14 +57,54 @@ class OTPVerificationViewController: UIViewController, DPOTPViewDelegate {
         OTPView.fontTextField = UIFont.systemFont(ofSize: 22, weight: .medium)
         OTPView.isBottomLineTextField = true
     }
-
-    func dpOTPViewAddText(_ text: String, at position: Int) {}
     
-    func dpOTPViewRemoveText(_ text: String, at position: Int) {}
+    private func verifyOTP(otpCode: String){
+        self.loader.isHidden = false
+        signinEmailPhoneViewModel.verifyOTP(verificationID: self.verificationId, otpCode: otpCode) { result in
+            self.loader.isHidden = true
+            switch result {
+            case .success(let uid):
+                // sign in hu chuka hai
+                UserDefaultsManager.shared.authToken = uid
+                self.siginViewModel.showUserDetail { result in
+                    switch result {
+                    case .success(let status):
+                        UserDefaultsManager.shared.userId = status.msg?.user?.id?.toString() ?? "0"
+                        if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+                            appdelegate.goToHomeViewController()
+                        }
+                    case .failure(let error):
+                        Utility.shared.showToast(message: error.localizedDescription)
+                    }
+                }
+               
+            case .failure(let error):
+                Utility.shared.showToast(message: error.localizedDescription)
+            }
+        }
+    }
+    
+
+    func dpOTPViewAddText(_ text: String, at position: Int) {
+        if position <= 5 && text.count == 6 {
+            self.verifyOTP(otpCode: text)
+        }
+    }
+    
+    func dpOTPViewRemoveText(_ text: String, at position: Int) {
+        if position <= 5 && text.count == 6 {
+            self.verifyOTP(otpCode: text)
+        }
+    }
     
     func dpOTPViewChangePositionAt(_ position: Int) {}
     
     func dpOTPViewBecomeFirstResponder() {}
     
     func dpOTPViewResignFirstResponder() {}
+    
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

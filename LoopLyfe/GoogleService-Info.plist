@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1053729180998-ioip742oh1kagjh0ht3i6morter0dsj7.apps.googleusercontent.com</string>
+	<string>964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1053729180998-ioip742oh1kagjh0ht3i6morter0dsj7</string>
+	<string>com.googleusercontent.apps.964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>964642536474-4rgho8j448g7sj7sd3h6alipsv7pm3kt.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDqbLIzRGjUnEkKwnk5jZFF7hsjQEFycnU</string>
+	<string>AIzaSyCB-tE_-TSSkiL6jhkM-Fv7PgZ4lOjJGNc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1053729180998</string>
+	<string>964642536474</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.naveed.looplyfe</string>
+	<string>com.dinosoftlabs.tiktik</string>
 	<key>PROJECT_ID</key>
-	<string>looplyfe-ef99b</string>
+	<string>tictic-6a4d6</string>
 	<key>STORAGE_BUCKET</key>
-	<string>looplyfe-ef99b.firebasestorage.app</string>
+	<string>tictic-6a4d6.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1053729180998:ios:c9ca43e754f13813592947</string>
+	<string>1:964642536474:ios:f248307d0c4ec58b</string>
+	<key>DATABASE_URL</key>
+	<string>https://tictic-6a4d6.firebaseio.com</string>
 </dict>
 </plist>

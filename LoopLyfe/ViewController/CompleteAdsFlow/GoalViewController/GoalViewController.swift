@@ -40,4 +40,14 @@ class GoalViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+    @IBAction func cancelBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnTapped(_ sender: Any) {
+        let settingsVC = ChooseAudienceViewController(nibName: "ChooseAudienceViewController", bundle: nil)
+        navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
 }

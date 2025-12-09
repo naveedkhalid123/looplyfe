@@ -14,7 +14,7 @@ class InboxTblViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        userImage.layer.cornerRadius = 21
+        userImage.layer.cornerRadius = 26
  
     }
 

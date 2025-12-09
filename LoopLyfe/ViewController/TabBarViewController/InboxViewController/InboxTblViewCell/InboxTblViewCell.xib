@@ -16,31 +16,40 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="InboxTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InboxTblViewCell" id="KGk-i7-Jjw" customClass="InboxTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userProfile" translatesAutoresizingMaskIntoConstraints="NO" id="7ul-tf-xnT">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="7ul-tf-xnT">
                         <rect key="frame" x="16" y="9" width="52" height="52"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="52" id="CfF-xf-YJ7"/>
                             <constraint firstAttribute="height" constant="52" id="tnz-fY-1dv"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpW-6j-zrM">
                         <rect key="frame" x="80" y="14" width="82.666666666666686" height="17"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bilal started following you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-eR-Zlb">
                         <rect key="frame" x="79.999999999999986" y="34" width="147.66666666666663" height="17"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                         <color key="textColor" name="subHeadGrey"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowNext" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-XN-sTk">
                         <rect key="frame" x="286" y="26" width="18" height="18"/>
@@ -48,6 +57,9 @@
                             <constraint firstAttribute="height" constant="18" id="b6v-cr-PIb"/>
                             <constraint firstAttribute="width" constant="18" id="jy9-R6-Aqi"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -60,19 +72,25 @@
                     <constraint firstItem="7iI-XN-sTk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kXm-5H-hZ1"/>
                     <constraint firstItem="zpW-6j-zrM" firstAttribute="leading" secondItem="7ul-tf-xnT" secondAttribute="trailing" constant="12" id="tBn-Es-W9y"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="InboxHeadLbl" destination="zpW-6j-zrM" id="diD-ae-9mL"/>
-                <outlet property="InboxSubHeadLbl" destination="cqB-eR-Zlb" id="OTq-S3-b7w"/>
-                <outlet property="userImage" destination="7ul-tf-xnT" id="Vzi-bW-HwX"/>
+                <outlet property="InboxHeadLbl" destination="zpW-6j-zrM" id="onO-Bh-tMR"/>
+                <outlet property="InboxSubHeadLbl" destination="cqB-eR-Zlb" id="ghj-VB-0xy"/>
+                <outlet property="userImage" destination="7ul-tf-xnT" id="5r0-By-QVk"/>
             </connections>
             <point key="canvasLocation" x="-73.282442748091597" y="19.718309859154932"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="arrowNext" width="18" height="18"/>
-        <image name="userProfile" width="110" height="110"/>
+        <image name="placeholder" width="1024" height="1024"/>
         <namedColor name="subHeadGrey">
             <color red="0.60799998044967651" green="0.60799998044967651" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

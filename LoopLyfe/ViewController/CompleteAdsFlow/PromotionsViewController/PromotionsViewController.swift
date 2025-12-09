@@ -33,4 +33,10 @@ class PromotionsViewController: UIViewController {
     @IBAction func likesViewPressed(_ sender: UIButton) {
         print("Videos spent view pressed")
     }
+    
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="WalletTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-ob-LQ6">
+                        <rect key="frame" x="22" y="11" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="C2P-za-Zs1"/>
+                            <constraint firstAttribute="width" constant="32" id="E7D-Xp-aAJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twP-B4-Vcf">
+                        <rect key="frame" x="67" y="17" width="89" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2g-72-SJ2">
+                        <rect key="frame" x="225" y="9.6666666666666643" width="75" height="35"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="7ym-0s-Jhy"/>
+                            <constraint firstAttribute="width" constant="75" id="dNY-2d-xZt"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="30$">
+                            <color key="titleColor" name="black"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="twP-B4-Vcf" firstAttribute="leading" secondItem="XFW-ob-LQ6" secondAttribute="trailing" constant="13" id="U4V-ya-FqM"/>
+                    <constraint firstItem="XFW-ob-LQ6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="a3k-Qp-qsV"/>
+                    <constraint firstItem="twP-B4-Vcf" firstAttribute="centerY" secondItem="XFW-ob-LQ6" secondAttribute="centerY" id="a7x-NK-ZSq"/>
+                    <constraint firstItem="W2g-72-SJ2" firstAttribute="centerY" secondItem="twP-B4-Vcf" secondAttribute="centerY" id="lzi-fX-e6E"/>
+                    <constraint firstItem="XFW-ob-LQ6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uxg-u4-cXo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="W2g-72-SJ2" secondAttribute="trailing" constant="20" id="ED3-4O-wMb"/>
+            </constraints>
+            <connections>
+                <outlet property="btnPrice" destination="W2g-72-SJ2" id="1pk-YQ-KY1"/>
+                <outlet property="lblNumberOfCoins" destination="twP-B4-Vcf" id="Ubg-5n-jBf"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="coin" width="32" height="32"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.80000001192092896" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

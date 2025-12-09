@@ -39,4 +39,16 @@ class ChooseAudienceViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    
+    @IBAction func cancelBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnTapped(_ sender: Any) {
+        let settingsVC = DurationViewController(nibName: "DurationViewController", bundle: nil)
+        navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
+    
 }

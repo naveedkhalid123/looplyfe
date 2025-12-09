@@ -126,3 +126,49 @@ public extension UIDevice {
         }
     }
 }
+
+
+enum StringOrInt: Codable, Equatable {
+    case string(String)
+    case int(Int)
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let intValue = try? container.decode(Int.self) {
+            self = .int(intValue)
+        } else if let stringValue = try? container.decode(String.self) {
+            self = .string(stringValue)
+        } else {
+            throw DecodingError.typeMismatch(StringOrInt.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Expected either Int or String"))
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .string(let value):
+            try container.encode(value)
+        case .int(let value):
+            try container.encode(value)
+        }
+    }
+    
+    var stringValue: String? {
+        switch self {
+        case .string(let value):
+            return value
+        case .int(let value):
+            return String(value)
+        }
+    }
+    
+    var intValue: Int? {
+        switch self {
+        case .string(let value):
+            return Int(value)
+        case .int(let value):
+            return value
+        }
+    }
+}
+ 

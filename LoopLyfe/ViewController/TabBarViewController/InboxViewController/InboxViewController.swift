@@ -7,17 +7,23 @@
 
 import SDWebImage
 import UIKit
+import SkeletonView
 
-class InboxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var InboxArr = [["Image": "userProfile", "headLbl": "New followers", "subHeadLbl": "Bilal started following you"], ["Image": "userProfile", "headLbl": "System notifications", "subHeadLbl": "Ahmad started following you"], ["Image": "userProfile", "headLbl": "Activity", "subHeadLbl": "Rizwan started following you"], ["Image": "userProfile", "headLbl": "New followers", "subHeadLbl": "Ali started following you"]]
+class InboxViewController: UIViewController {
+    var viewModel = NotificationsViewModel()
+    private var startPoint = 0
     
-    var showAllNotifications = ShowUserDetailViewModel()
-    
+    @IBOutlet weak var lblNoData: UILabel!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var inboxTblView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
+    }
+    
+    //MARK: - FUNCTIONS
+    private func setup() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.isTranslucent = true
         navigationBar.backgroundColor = .clear
@@ -25,36 +31,101 @@ class InboxViewController: UIViewController, UITableViewDataSource, UITableViewD
         inboxTblView.delegate = self
         inboxTblView.dataSource = self
         inboxTblView.register(UINib(nibName: "InboxTblViewCell", bundle: nil), forCellReuseIdentifier: "InboxTblViewCell")
+        inboxTblView.register(UINib(nibName: "VideoNotificationCell", bundle: nil), forCellReuseIdentifier: "VideoNotificationCell")
+        inboxTblView.rowHeight = 70
+        viewModel.delegate = self
+        viewModel.fetchNotifications(startPoint: startPoint)
+        inboxTblView.showAnimatedGradientSkeleton()
+    }
+    
+    //MARK: - BUTTON ACTION
         
-        let param: [String: Any] = [
-            "user_id": "9363",
-            "starting_point": 0
-        ]
-        
-        // Fetch suggested users
-        showAllNotifications.showAllNotifications(parameters: param)
-        
-        showAllNotifications.onShowAllNotificationsLoaded = { [weak self] _ in
-            print("API Response: \(String(describing: self?.showAllNotifications.showAllNotifications))")
-            self?.inboxTblView.reloadData()
+    
+}
+
+//MARK: - TABLE VIEW
+
+extension InboxViewController:  UITableViewDataSource, UITableViewDelegate ,  SkeletonTableViewDataSource {
+    
+    // skeletonView setup
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        if indexPath.row % 2 == 0 {
+            return "InboxTblViewCell"
+        } else {
+            return "VideoNotificationCell"
         }
     }
-        
+       
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return showAllNotifications.showAllNotifications?.msg?.count ?? 0
+        return viewModel.notifications.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InboxTblViewCell") as! InboxTblViewCell
-        let showAllNotificationsArr = showAllNotifications.showAllNotifications?.msg?[indexPath.row]
-        cell.userImage.sd_setImage(with: URL(string: showAllNotificationsArr?.sender.profilePic ?? ""), placeholderImage: nil, context: nil)
-            
-        cell.InboxHeadLbl.text = showAllNotificationsArr?.notification.string
-        cell.InboxSubHeadLbl.text = showAllNotificationsArr?.notification.type
-        return cell
-    }
         
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        let showNotifications = viewModel.notifications[indexPath.row].notification
+        let sender = viewModel.notifications[indexPath.row].sender
+        let video = viewModel.notifications[indexPath.row].video
+
+        if showNotifications.type == "following" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "InboxTblViewCell") as! InboxTblViewCell
+            if sender.firstName != "" {
+                cell.InboxHeadLbl.text = sender.firstName + " " + sender.lastName
+            }else {
+                cell.InboxHeadLbl.text = sender.username
+            }
+           
+            cell.InboxSubHeadLbl.text = showNotifications.string
+            
+            let url = URL(string: sender.profilePic)
+            cell.userImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "VideoNotificationCell") as! VideoNotificationCell
+            if sender.firstName != "" {
+                cell.lblHeading.text = sender.firstName + " " + sender.lastName
+            }else {
+                cell.lblSubHeading.text = sender.username
+            }
+            cell.lblSubHeading.text = showNotifications.string
+            
+            let url = URL(string: sender.profilePic)
+            cell.profileImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
+            
+            let videoUrl = URL(string: video?.thum ?? "")
+            cell.videoThumbImage.sd_setImage(with: videoUrl, placeholderImage: UIImage(named: "placeholder"))
+            
+            return cell
+        }
+      
     }
+}
+
+
+//MARK: - DELEGATE
+extension InboxViewController: NotificationsUpdater {
+    func didUpdateNotifications(_ notifications: [ShowAllNotificationsMsg]) {
+        DispatchQueue.main.async {
+            if self.startPoint == 0 {
+                self.lblNoData.isHidden = !notifications.isEmpty
+            } else {
+                self.lblNoData.isHidden = true
+            }
+            self.inboxTblView.reloadData()
+            // Hide skeletion
+            self.inboxTblView.hideSkeleton()
+        }
+    }
+    
+    func didFailToUpdateNotifications(error: Error) {
+        DispatchQueue.main.async {
+            print("error",error.localizedDescription)
+            // Hide skeletion
+            self.inboxTblView.hideSkeleton()
+        }
+    }
+    
 }

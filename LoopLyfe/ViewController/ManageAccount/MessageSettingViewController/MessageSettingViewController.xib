@@ -54,7 +54,7 @@
                 <constraint firstItem="QSm-Cg-jwf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xNU-hn-Xs4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QSm-Cg-jwf" secondAttribute="trailing" id="yGU-ZM-PvM"/>
             </constraints>
-            <point key="canvasLocation" x="26.086956521739133" y="19.565217391304348"/>
+            <point key="canvasLocation" x="-290" y="46"/>
         </view>
     </objects>
     <resources>

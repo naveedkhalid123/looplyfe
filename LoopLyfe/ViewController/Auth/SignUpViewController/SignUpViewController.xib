@@ -36,7 +36,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="SignUpViewController" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -54,6 +54,9 @@
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="dismiss"/>
+                                    <connections>
+                                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="Bcb-ro-ImT"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awb-VT-xxu">
                                     <rect key="frame" x="364" y="26" width="28" height="28"/>
@@ -344,7 +347,7 @@ your own videos, and more.</string>
                 <constraint firstAttribute="bottom" secondItem="WfI-Wy-kNs" secondAttribute="bottom" id="vRW-yC-doa"/>
                 <constraint firstItem="WfI-Wy-kNs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wAt-yP-e9f"/>
             </constraints>
-            <point key="canvasLocation" x="24.637681159420293" y="17.934782608695652"/>
+            <point key="canvasLocation" x="-110" y="-7"/>
         </view>
     </objects>
     <resources>

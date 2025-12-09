@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoNotificationCell" id="wZO-wF-nyx" customClass="VideoNotificationCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZO-wF-nyx" id="crh-kv-77s">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fUY-ES-sCC">
+                        <rect key="frame" x="16" y="9" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="7gy-t8-rQ9"/>
+                            <constraint firstAttribute="width" constant="52" id="fWQ-Dy-b9i"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQP-H3-xLc">
+                        <rect key="frame" x="80" y="14" width="82.666666666666686" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bilal started following you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-YI-Sep">
+                        <rect key="frame" x="79.999999999999986" y="34" width="147.66666666666663" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                        <color key="textColor" name="subHeadGrey"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="GVf-YE-TKG">
+                        <rect key="frame" x="264" y="15" width="40" height="40"/>
+                        <color key="tintColor" name="darkTxtGrey"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="CKz-pO-WEU"/>
+                            <constraint firstAttribute="width" constant="40" id="i7V-EU-UdY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hQP-H3-xLc" firstAttribute="leading" secondItem="fUY-ES-sCC" secondAttribute="trailing" constant="12" id="5av-Rg-wjp"/>
+                    <constraint firstItem="MfC-YI-Sep" firstAttribute="top" secondItem="hQP-H3-xLc" secondAttribute="bottom" constant="3" id="6jK-VI-Ofj"/>
+                    <constraint firstItem="fUY-ES-sCC" firstAttribute="centerY" secondItem="crh-kv-77s" secondAttribute="centerY" id="BPr-su-lw2"/>
+                    <constraint firstItem="MfC-YI-Sep" firstAttribute="leading" secondItem="fUY-ES-sCC" secondAttribute="trailing" constant="12" id="WzN-Xc-ehv"/>
+                    <constraint firstItem="fUY-ES-sCC" firstAttribute="leading" secondItem="crh-kv-77s" secondAttribute="leading" constant="16" id="jX4-Wg-vK0"/>
+                    <constraint firstItem="GVf-YE-TKG" firstAttribute="centerY" secondItem="crh-kv-77s" secondAttribute="centerY" id="uh5-qk-8WL"/>
+                    <constraint firstAttribute="trailing" secondItem="GVf-YE-TKG" secondAttribute="trailing" constant="16" id="vTx-cg-DMQ"/>
+                    <constraint firstItem="hQP-H3-xLc" firstAttribute="top" secondItem="crh-kv-77s" secondAttribute="top" constant="14" id="yAN-Vt-G2h"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="gq7-aa-eKJ"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="lblHeading" destination="hQP-H3-xLc" id="hXf-8v-x8J"/>
+                <outlet property="lblSubHeading" destination="MfC-YI-Sep" id="Kau-jT-ePL"/>
+                <outlet property="profileImage" destination="fUY-ES-sCC" id="SPn-Ag-eJj"/>
+                <outlet property="videoThumbImage" destination="GVf-YE-TKG" id="sj3-Yz-jCP"/>
+            </connections>
+            <point key="canvasLocation" x="327" y="-15"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="1024" height="1024"/>
+        <namedColor name="darkTxtGrey">
+            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subHeadGrey">
+            <color red="0.60799998044967651" green="0.60799998044967651" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

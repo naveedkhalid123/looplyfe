@@ -31,12 +31,12 @@ class ShowUserDetailViewModel {
     var onShowFollowersUserLoaded: ((Bool) -> Void)?
     
     // for ShowVideosAgainstUserIDModel
-    var showVideosAgainstUser: ShowVideosAgainstUserIDModel?
-    var onShowVideosAgainstUserLoaded: ((Bool) -> Void)?
-    
-    // for showUserLikedVideosModel
-    var showUserLikedVideos: ShowUserLikedVideosModel?
-    var onShowUserLikedVideosLoaded: ((Bool) -> Void)?
+//    var showVideosAgainstUser: ShowVideosAgainstUserIDModel?
+//    var onShowVideosAgainstUserLoaded: ((Bool) -> Void)?
+//    
+//    // for showUserLikedVideosModel
+//    var showUserLikedVideos: ShowUserLikedVideosModel?
+//    var onShowUserLikedVideosLoaded: ((Bool) -> Void)?
     
     // for ShowUserRepostedVideosModel
     var showShowUserRepostedVideos: ShowUserRepostedVideosModel?
@@ -50,9 +50,9 @@ class ShowUserDetailViewModel {
     var showSearchBarData: SearchBarModel?
     var onShowSearchBarLoaded: ((Bool) -> Void)?
     
-    // for SearchVideosModel
-    var showSearchVideos: SearchVideosModel?
-    var onnShowSearchVideosLoaded: ((Bool) -> Void)?
+//    // for SearchVideosModel
+//    var showSearchVideos: SearchVideosModel?
+//    var onnShowSearchVideosLoaded: ((Bool) -> Void)?
     
    // for SearchSoundModel
     var showSearchSound: SearchSoundModel?
@@ -225,71 +225,69 @@ class ShowUserDetailViewModel {
     }
 
     // show all notifciation
-    func showVideosAgainstUser(parameters: [String: Any]) {
-        print("🔍 API Request Parameters: \(parameters)")
-
-        ApiManager.shared.apiRequest(endpoint: .showVideosAgainstUserID, parameters: parameters) { (result: Result<ShowVideosAgainstUserIDModel, Error>) in
-            switch result {
-            case .success(let showVideosAgainstUser):
-                print("✅ API Success - Show Suggestions User:", showVideosAgainstUser)
-
-                print("🔍 Response Code:", showVideosAgainstUser.code)
-                
-                if showVideosAgainstUser.code == 200 {
-                    print("✅ Data Found: \(String(describing: showVideosAgainstUser.msg))")
-                    self.showVideosAgainstUser = showVideosAgainstUser
-                    self.onShowVideosAgainstUserLoaded?(true)
-                    
-                } else {
-                    print("⚠️ No Data Available - Message:", showVideosAgainstUser.message ?? "Unknown error")
-                    if let message = showVideosAgainstUser.message {
-                        Utility.shared.showToast(message: message)
-                    }
-                    self.onShowVideosAgainstUserLoaded?(true)
-                }
-                
-            case .failure(let error):
-                print("❌ API Error: \(error.localizedDescription)")
-                self.onShowVideosAgainstUserLoaded?(false)
-            }
-        }
-    }
+//    func showVideosAgainstUser(parameters: [String: Any]) {
+//        print("🔍 API Request Parameters: \(parameters)")
+//
+//        ApiManager.shared.apiRequest(endpoint: .showVideosAgainstUserID, parameters: parameters) { (result: Result<ShowVideosAgainstUserIDModel, Error>) in
+//            switch result {
+//            case .success(let showVideosAgainstUser):
+//                print("✅ API Success - Show Suggestions User:", showVideosAgainstUser)
+//
+//                print("🔍 Response Code:", showVideosAgainstUser.code)
+//                
+//                if showVideosAgainstUser.code == 200 {
+//                    print("✅ Data Found: \(String(describing: showVideosAgainstUser.msg))")
+//                    self.showVideosAgainstUser = showVideosAgainstUser
+//                    self.onShowVideosAgainstUserLoaded?(true)
+//                    
+//                } else {
+//                    print("⚠️ No Data Available - Message:", showVideosAgainstUser.message ?? "Unknown error")
+//                    if let message = showVideosAgainstUser.message {
+//                        Utility.shared.showToast(message: message)
+//                    }
+//                    self.onShowVideosAgainstUserLoaded?(true)
+//                }
+//                
+//            case .failure(let error):
+//                print("❌ API Error: \(error.localizedDescription)")
+//                self.onShowVideosAgainstUserLoaded?(false)
+//            }
+//        }
+//    }
     
     
-    func showUserLikedVideos(parameters: [String: Any]) {
-        print("🔍 API Request Parameters: \(parameters)")
-
-        ApiManager.shared.apiRequest(endpoint: .showUserLikedVideos, parameters: parameters) { (result: Result<ShowUserLikedVideosModel, Error>) in
-            switch result {
-            case .success(let showUserLikedVideos):
-                print("✅ API Success - Show Suggestions User:", showUserLikedVideos)
-
-                // Debugging: Checking the status code
-                print("🔍 Response Code:", showUserLikedVideos.code)
-                
-                if showUserLikedVideos.code == 200 {
-                    print("✅ Data Found: \(String(describing: showUserLikedVideos.msg))")
-                    self.showUserLikedVideos = showUserLikedVideos
-                    self.onShowUserLikedVideosLoaded?(true)
-                    
-                } else {
-                    print("⚠️ No Data Available - Message:", showUserLikedVideos.msg ?? "Unknown error")
-                    if let message = showUserLikedVideos.message {
-                        Utility.shared.showToast(message: message)
-                    }
-                    self.onShowUserLikedVideosLoaded?(true)
-                }
-                
-            case .failure(let error):
-                print("❌ API Error: \(error.localizedDescription)")
-                self.onShowUserLikedVideosLoaded?(false)
-            }
-        }
-    }
+//    func showUserLikedVideos(parameters: [String: Any]) {
+//        print("🔍 API Request Parameters: \(parameters)")
+//
+//        ApiManager.shared.apiRequest(endpoint: .showUserLikedVideos, parameters: parameters) { (result: Result<ShowUserLikedVideosModel, Error>) in
+//            switch result {
+//            case .success(let showUserLikedVideos):
+//                print("✅ API Success - Show Suggestions User:", showUserLikedVideos)
+//
+//                // Debugging: Checking the status code
+//                print("🔍 Response Code:", showUserLikedVideos.code)
+//                
+//                if showUserLikedVideos.code == 200 {
+//                    print("✅ Data Found: \(String(describing: showUserLikedVideos.msg))")
+//                    self.showUserLikedVideos = showUserLikedVideos
+//                    self.onShowUserLikedVideosLoaded?(true)
+//                    
+//                } else {
+//                    print("⚠️ No Data Available - Message:", showUserLikedVideos.msg ?? "Unknown error")
+//                    if let message = showUserLikedVideos.message {
+//                        Utility.shared.showToast(message: message)
+//                    }
+//                    self.onShowUserLikedVideosLoaded?(true)
+//                }
+//                
+//            case .failure(let error):
+//                print("❌ API Error: \(error.localizedDescription)")
+//                self.onShowUserLikedVideosLoaded?(false)
+//            }
+//        }
+//    }
     
     
-    
-
     
     func showShowUserRepostedVideos(parameters: [String: Any]) {
         print("🔍 API Request Parameters: \(parameters)")
@@ -391,33 +389,33 @@ class ShowUserDetailViewModel {
     
     // show user liked showSearchVideos  ...
     
-    func showSearchVideos(parameters: [String: Any]) {
-        print("🔍 API Request Parameters: \(parameters)")
-        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchVideosModel, Error>) in
-            switch result {
-            case .success(let showSearchVideos):
-                print("✅ API Success - Show Suggestions User:", showSearchVideos)
-                print("🔍 Response Code:", showSearchVideos.code)
-                
-                if showSearchVideos.code == 200 {
-                    print("✅ Data Found: \(String(describing: showSearchVideos.msg))")
-                    self.showSearchVideos = showSearchVideos
-                    self.onnShowSearchVideosLoaded?(true)
-                    
-                } else {
-                    print("⚠️ No Data Available - Message:", showSearchVideos.msg ?? "Unknown error")
-                    if let message = showSearchVideos.message {
-                        Utility.shared.showToast(message: message)
-                    }
-                    self.onnShowSearchVideosLoaded?(true)
-                }
-                
-            case .failure(let error):
-                print("❌ API Error: \(error.localizedDescription)")
-                self.onnShowSearchVideosLoaded?(false)
-            }
-        }
-    }
+//    func showSearchVideos(parameters: [String: Any]) {
+//        print("🔍 API Request Parameters: \(parameters)")
+//        ApiManager.shared.apiRequest(endpoint: .search, parameters: parameters) { (result: Result<SearchVideosModel, Error>) in
+//            switch result {
+//            case .success(let showSearchVideos):
+//                print("✅ API Success - Show Suggestions User:", showSearchVideos)
+//                print("🔍 Response Code:", showSearchVideos.code)
+//                
+//                if showSearchVideos.code == 200 {
+//                    print("✅ Data Found: \(String(describing: showSearchVideos.msg))")
+//                    self.showSearchVideos = showSearchVideos
+//                    self.onnShowSearchVideosLoaded?(true)
+//                    
+//                } else {
+//                    print("⚠️ No Data Available - Message:", showSearchVideos.msg ?? "Unknown error")
+//                    if let message = showSearchVideos.message {
+//                        Utility.shared.showToast(message: message)
+//                    }
+//                    self.onnShowSearchVideosLoaded?(true)
+//                }
+//                
+//            case .failure(let error):
+//                print("❌ API Error: \(error.localizedDescription)")
+//                self.onnShowSearchVideosLoaded?(false)
+//            }
+//        }
+//    }
     
     
     // show user liked showSearchSoundModel  ...

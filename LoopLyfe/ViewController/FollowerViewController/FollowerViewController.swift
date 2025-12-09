@@ -19,7 +19,7 @@ class FollowerViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     /// Call the view model in a variable
-    private var showSuggestionUsers = ShowUserDetailViewModel()
+     var showSuggestionUsers = ShowUserDetailViewModel()
     
 
     @IBOutlet weak var navigationBar: UINavigationBar!

@@ -37,6 +37,16 @@ class DurationViewController: UIViewController {
     @IBAction func budgetSliderPressed(_ sender: UISlider) {}
 
     @IBAction func durationSliderPressed(_ sender: UISlider) {}
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnTapped(_ sender: Any) {
+    
+    }
+    
+    
 }
 
 extension UIColor {

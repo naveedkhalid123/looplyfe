@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletViewController" customModule="LoopLyfe" customModuleProvider="target">
+            <connections>
+                <outlet property="lblCoinBalance" destination="8Lh-1r-lyP" id="CXZ-AJ-Ews"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletTblView" destination="tgy-aK-mlX" id="nsn-f4-QLW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="WalletViewController" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mM4-8X-7uH">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                    <items>
+                        <navigationItem title="Wallet" id="ef6-Rh-N9o">
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="Vpq-ib-B82">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H4Y-AH-BTG">
+                                    <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" name="black"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chevron.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="0LG-C4-MzH"/>
+                                    </connections>
+                                </button>
+                                <color key="tintColor" name="black"/>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-OW-prX">
+                    <rect key="frame" x="22" y="87" width="94" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="textColor" name="grey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-6k-wRu">
+                    <rect key="frame" x="22" y="122" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ef0-nL-Bp0"/>
+                        <constraint firstAttribute="width" constant="32" id="f1f-zF-y10"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-1r-lyP">
+                    <rect key="frame" x="61.999999999999993" y="122" width="16.666666666666664" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <color key="textColor" name="black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-aK-mlX">
+                    <rect key="frame" x="0.0" y="187" width="414" height="549"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-6y-izc">
+                    <rect key="frame" x="0.0" y="184" width="414" height="1"/>
+                    <color key="backgroundColor" name="darkTxtGrey"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Ql9-Bu-BZ1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tgy-aK-mlX" secondAttribute="trailing" id="2nJ-o8-yqt"/>
+                <constraint firstItem="8Lh-1r-lyP" firstAttribute="leading" secondItem="W4i-6k-wRu" secondAttribute="trailing" constant="8" symbolic="YES" id="BDm-5K-drz"/>
+                <constraint firstItem="W4i-6k-wRu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="BpF-Pg-xib"/>
+                <constraint firstItem="tgy-aK-mlX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E6Y-Zd-MT4"/>
+                <constraint firstItem="pwY-6y-izc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L6R-ZJ-jfI"/>
+                <constraint firstItem="8Lh-1r-lyP" firstAttribute="top" secondItem="W4i-6k-wRu" secondAttribute="top" id="Nx4-UU-lVa"/>
+                <constraint firstItem="tgy-aK-mlX" firstAttribute="top" secondItem="pwY-6y-izc" secondAttribute="bottom" constant="2" id="PR8-lC-jO1"/>
+                <constraint firstItem="mM4-8X-7uH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XRY-5c-Qh1"/>
+                <constraint firstItem="pwY-6y-izc" firstAttribute="top" secondItem="W4i-6k-wRu" secondAttribute="bottom" constant="30" id="bpV-LO-Moe"/>
+                <constraint firstItem="PxR-OW-prX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="iVg-3W-B3q"/>
+                <constraint firstItem="mM4-8X-7uH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ner-Hm-ZO8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tgy-aK-mlX" secondAttribute="bottom" id="pbN-Ml-HJv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pwY-6y-izc" secondAttribute="trailing" id="pi9-UQ-JvD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mM4-8X-7uH" secondAttribute="trailing" id="rf7-TR-Slo"/>
+                <constraint firstItem="PxR-OW-prX" firstAttribute="top" secondItem="mM4-8X-7uH" secondAttribute="bottom" constant="23" id="vPl-n7-dGK"/>
+                <constraint firstItem="W4i-6k-wRu" firstAttribute="top" secondItem="PxR-OW-prX" secondAttribute="bottom" constant="18" id="ysp-8s-6lG"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="-11.413043478260871"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="coin" width="32" height="32"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkTxtGrey">
+            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey">
+            <color red="0.41200000047683716" green="0.40799999237060547" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

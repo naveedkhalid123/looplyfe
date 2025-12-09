@@ -103,6 +103,12 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     
     
     // MARK: - Button Actions
+    
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func phoneBtnPressed(_ sender: UIButton) {
         print("Phone button pressed")
     }

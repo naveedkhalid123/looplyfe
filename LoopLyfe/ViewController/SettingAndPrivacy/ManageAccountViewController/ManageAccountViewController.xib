@@ -33,6 +33,9 @@
                                     <color key="tintColor" name="black"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="Sg0-yC-Aje"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </navigationItem>

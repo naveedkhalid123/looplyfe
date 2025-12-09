@@ -37,5 +37,22 @@ class CreatorsToolViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            let VC = GoalViewController(nibName: "GoalViewController", bundle: nil)
+            navigationController?.pushViewController(VC, animated: true)
+        }
+        
+        if indexPath.row  == 2 {
+            let settingsVC = PromotionsViewController(nibName: "PromotionsViewController", bundle: nil)
+            navigationController?.pushViewController(settingsVC, animated: true)
+        }
+    }
+    
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

@@ -35,6 +35,9 @@
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" name="black"/>
                                     </state>
+                                    <connections>
+                                        <action selector="cancelBtnTapped:" destination="-1" eventType="touchUpInside" id="4pd-FF-Jpe"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="Done" style="plain" id="WGT-zx-Vw2">

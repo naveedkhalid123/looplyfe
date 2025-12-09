@@ -25,6 +25,47 @@ class SettingAndPrivacyViewController: UIViewController, UITableViewDelegate, UI
         settingTblView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
     }
 
+    
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            let settingsVC = ManageAccountViewController(nibName: "ManageAccountViewController", bundle: nil)
+            navigationController?.pushViewController(settingsVC, animated: true)
+        }
+        
+        if indexPath.row == 1 {
+            let settingsVC = PrivacyViewController(nibName: "PrivacyViewController", bundle: nil)
+            navigationController?.pushViewController(settingsVC, animated: true)
+        }
+        
+        if indexPath.row == 3 {
+            let settingVC = WalletViewController(nibName: "WalletViewController", bundle: nil)
+            navigationController?.pushViewController(settingVC, animated: true
+            
+            
+            )
+        }
+        
+        if indexPath.row == 8 {
+            let settingsVC = ContentLanguagesViewController(nibName: "ContentLanguagesViewController", bundle: nil)
+            navigationController?.pushViewController(settingsVC, animated: true)
+            
+        }
+        
+        if indexPath.row == 11 {
+            let settingsVC = CreatorsToolViewController(nibName: "CreatorsToolViewController", bundle: nil)
+            navigationController?.pushViewController(settingsVC, animated: true)
+        }
+        
+        
+    }
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settingArr.count
     }
@@ -39,4 +80,8 @@ class SettingAndPrivacyViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
+    
+    
+    
+    
 }

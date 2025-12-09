@@ -39,4 +39,16 @@ class ChooseCategoriesViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
+    
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func nextBtnTapped(_ sender: Any) {
+        let settingsVC = ChooseCategoriesViewController(nibName: "ChooseCategoriesViewController", bundle: nil)
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
 }

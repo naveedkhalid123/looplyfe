@@ -47,4 +47,9 @@ class ContentLanguagesViewController: UIViewController, UITableViewDelegate, UIT
         languageArr[indexPath.row]["isSelected"] = "true"
         langugesTblView.reloadData()
     }
+    
+    
+    @IBAction func cancelBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

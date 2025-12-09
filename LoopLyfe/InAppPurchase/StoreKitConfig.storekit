@@ -1,0 +1,145 @@
+{
+  "identifier" : "F27284B2",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "94.99",
+      "familyShareable" : false,
+      "internalID" : "6444150512",
+      "localizations" : [
+        {
+          "description" : "Purchase 10000 Coins for $94.99",
+          "displayName" : "10000 Coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.dinosoftlab.tiktik.buy10000Coins",
+      "referenceName" : "buy10000Coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6444150542",
+      "localizations" : [
+        {
+          "description" : "Purchase 100 Coins for $4.99",
+          "displayName" : "100 Coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.dinosoftlab.tiktik.buy100Coins",
+      "referenceName" : "buy100Coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "20.99",
+      "familyShareable" : false,
+      "internalID" : "6444150446",
+      "localizations" : [
+        {
+          "description" : "Purchase 2000 Coins for $20.99",
+          "displayName" : "2000 Coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.dinosoftlab.tiktik.buy2000Coins",
+      "referenceName" : "buy2000Coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : false,
+      "internalID" : "6444150513",
+      "localizations" : [
+        {
+          "description" : "Purchase 5000 Coins for $49.99",
+          "displayName" : "5000 Coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.dinosoftlab.tiktik.buy5000Coins",
+      "referenceName" : "buy5000Coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "10.99",
+      "familyShareable" : false,
+      "internalID" : "6444150620",
+      "localizations" : [
+        {
+          "description" : "Purchase 500 Coins for $10.99",
+          "displayName" : "500 Coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.dinosoftlab.tiktik.buy500Coins",
+      "referenceName" : "buy500Coins",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1467862516",
+    "_developerTeamID" : "G99QAZBHL2",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 786720719.013304,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

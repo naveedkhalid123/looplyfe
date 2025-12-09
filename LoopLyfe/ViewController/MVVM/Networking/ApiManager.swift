@@ -31,7 +31,6 @@ enum NetworkError: Error {
 }
 
 
-
 class ApiManager {
     static let shared = ApiManager()
     
@@ -66,6 +65,8 @@ class ApiManager {
     // MARK: - API Request with Decodable Response
     func apiRequest<T: Codable>(endpoint: Endpoint, method: HTTPMethod = .post, parameters: Parameters? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         let url = endpoint.url(baseURL: baseURL)
+        print("url", url)
+        print("parameters", parameters)
         
         AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default,headers: HTTPHeaders(ApiManager.headers().dictionary))
             .validate()

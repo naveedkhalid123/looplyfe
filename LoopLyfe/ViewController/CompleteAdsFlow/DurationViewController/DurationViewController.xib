@@ -49,6 +49,9 @@
                                     <color key="tintColor" name="black"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="chevron.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="Pre-49-yHQ"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="cZt-LY-jaQ">
@@ -272,6 +275,9 @@
                             <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextBtnTapped:" destination="-1" eventType="touchUpInside" id="Deh-H3-FqP"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="4fo-J6-urI"/>

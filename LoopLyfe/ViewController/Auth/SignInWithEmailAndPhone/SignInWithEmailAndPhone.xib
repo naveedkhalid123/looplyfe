@@ -20,14 +20,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInWithEmailAndPhone" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
+                <outlet property="btnForgotPassword" destination="Fbd-tM-reR" id="hWD-4h-P7W"/>
                 <outlet property="emailTextView" destination="8Vb-tC-zn5" id="zHg-KI-qSL"/>
                 <outlet property="emailTxtField" destination="iS9-VO-Oj1" id="7NN-dY-dRj"/>
                 <outlet property="emailView" destination="OOm-Cs-9sg" id="qzI-h3-s9e"/>
                 <outlet property="learnTextView" destination="lsX-cF-U5R" id="iMq-bD-iOz"/>
                 <outlet property="navigationBar" destination="oHt-y7-rHu" id="6Rv-VJ-feD"/>
-                <outlet property="passwordTxtField" destination="qyE-vF-qWe" id="rVI-DH-Vly"/>
+                <outlet property="passwordTextField" destination="wPT-KT-Y7R" id="ayo-Wp-nCd"/>
                 <outlet property="phoneNumberView" destination="x4I-Sw-Tti" id="kiG-J3-FDv"/>
                 <outlet property="signInCollectionView" destination="nkL-Nw-jOe" id="fEn-40-MzN"/>
+                <outlet property="tfPhoneNumber" destination="xbp-0S-jgp" id="c9f-qe-9eD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,27 +58,52 @@
                         <constraint firstAttribute="height" constant="1" id="S7e-nz-HHp"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
-                    <rect key="frame" x="36" y="182.99999999999997" width="342" height="322.33333333333326"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Cs-9sg">
+                    <rect key="frame" x="36" y="183" width="342" height="254.33333333333337"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-VO-Oj1">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dPM-ry-Fb8">
                             <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-VO-Oj1">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="sR0-Ta-6Rq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPT-KT-Y7R">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="sqb-zs-9e8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbd-tM-reR">
+                                    <rect key="frame" x="233" y="0.0" width="109" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="5t3-eO-7h3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Forgot Password">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="forgotPasswordTapped:" destination="-1" eventType="touchUpInside" id="ZJz-pO-aVH"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="sR0-Ta-6Rq"/>
+                                <constraint firstAttribute="trailing" secondItem="wPT-KT-Y7R" secondAttribute="trailing" id="MjO-1X-0pA"/>
+                                <constraint firstAttribute="trailing" secondItem="iS9-VO-Oj1" secondAttribute="trailing" id="PMh-ye-8aN"/>
+                                <constraint firstItem="wPT-KT-Y7R" firstAttribute="leading" secondItem="dPM-ry-Fb8" secondAttribute="leading" id="ioX-YZ-1fL"/>
+                                <constraint firstItem="iS9-VO-Oj1" firstAttribute="leading" secondItem="dPM-ry-Fb8" secondAttribute="leading" id="mRL-pB-Je6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-vF-qWe">
-                            <rect key="frame" x="0.0" y="60" width="342" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Jwf-yl-waC"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eZF-ca-YbU">
-                            <rect key="frame" x="0.0" y="140" width="342" height="182.33333333333337"/>
+                            <rect key="frame" x="0.0" y="72.000000000000014" width="342" height="182.33333333333337"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-tC-zn5">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="116.33333333333333"/>
@@ -97,7 +124,7 @@ SMS fees may apply. Learn more</string>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Send Code">
+                                    <state key="normal" title="Next">
                                         <color key="titleColor" name="black"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
@@ -105,38 +132,38 @@ SMS fees may apply. Learn more</string>
                                             <integer key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sendCodeOneEmailTapped:" destination="-1" eventType="touchUpInside" id="3JJ-kE-bsZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="eZF-ca-YbU" firstAttribute="top" secondItem="qyE-vF-qWe" secondAttribute="bottom" constant="40" id="Avx-HH-tsZ"/>
-                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="IMo-GW-udg"/>
-                        <constraint firstAttribute="trailing" secondItem="qyE-vF-qWe" secondAttribute="trailing" id="Mn5-OX-9Uu"/>
+                        <constraint firstItem="eZF-ca-YbU" firstAttribute="top" secondItem="dPM-ry-Fb8" secondAttribute="bottom" constant="32" id="EX4-kC-E6m"/>
+                        <constraint firstItem="dPM-ry-Fb8" firstAttribute="top" secondItem="OOm-Cs-9sg" secondAttribute="top" id="P10-b0-guh"/>
+                        <constraint firstItem="dPM-ry-Fb8" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="R1I-6S-ypR"/>
                         <constraint firstAttribute="bottom" secondItem="eZF-ca-YbU" secondAttribute="bottom" id="UIx-Ru-AYA"/>
-                        <constraint firstItem="qyE-vF-qWe" firstAttribute="top" secondItem="iS9-VO-Oj1" secondAttribute="bottom" constant="20" id="YmR-tt-Vob"/>
-                        <constraint firstAttribute="trailing" secondItem="iS9-VO-Oj1" secondAttribute="trailing" id="hG0-RS-Mlq"/>
                         <constraint firstAttribute="trailing" secondItem="eZF-ca-YbU" secondAttribute="trailing" id="hek-gS-Sz5"/>
-                        <constraint firstItem="iS9-VO-Oj1" firstAttribute="top" secondItem="OOm-Cs-9sg" secondAttribute="top" id="maw-Pg-Fzs"/>
-                        <constraint firstItem="qyE-vF-qWe" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="rAP-AY-de8"/>
+                        <constraint firstAttribute="trailing" secondItem="dPM-ry-Fb8" secondAttribute="trailing" id="oHW-rO-Dto"/>
                         <constraint firstItem="eZF-ca-YbU" firstAttribute="leading" secondItem="OOm-Cs-9sg" secondAttribute="leading" id="vhL-EY-t1H"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-Sw-Tti">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-Sw-Tti">
                     <rect key="frame" x="36" y="182" width="342" height="237.33333333333337"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBB-L9-HLW">
                             <rect key="frame" x="0.0" y="0.0" width="342" height="35"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SG +65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-oo-F1O">
-                                    <rect key="frame" x="0.0" y="10" width="53" height="15"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PK +92" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-oo-F1O">
+                                    <rect key="frame" x="0.0" y="10" width="50.666666666666664" height="15"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-RM-akD">
-                                    <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="72.666666666666671" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="GAf-LK-FjD"/>
                                     </constraints>
@@ -146,27 +173,27 @@ SMS fees may apply. Learn more</string>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="eid-fw-z72">
-                                    <rect key="frame" x="61" y="10.666666666666657" width="14" height="14"/>
+                                    <rect key="frame" x="58.666666666666671" y="10.666666666666657" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="VID-M3-2gp"/>
                                         <constraint firstAttribute="width" constant="14" id="mXl-Id-1la"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHO-fN-CLn">
-                                    <rect key="frame" x="81" y="11" width="1" height="13"/>
+                                    <rect key="frame" x="78.666666666666671" y="11" width="1" height="13"/>
                                     <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="P5E-R9-5Er"/>
                                         <constraint firstAttribute="height" constant="13" id="o8H-ls-Fg4"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0S-jgp">
-                                    <rect key="frame" x="90" y="-1.3333333333333428" width="252" height="38"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0S-jgp" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                    <rect key="frame" x="87.666666666666671" y="-1.3333333333333428" width="254.33333333333331" height="38"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="38" id="sVo-BM-stU"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,7 +243,7 @@ SMS fees may apply. Learn more</string>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Send Code">
+                                    <state key="normal" title="Next">
                                         <color key="titleColor" name="black"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
@@ -224,6 +251,9 @@ SMS fees may apply. Learn more</string>
                                             <integer key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sendCodeOnPhoneTapped:" destination="-1" eventType="touchUpInside" id="T36-3r-lWX"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

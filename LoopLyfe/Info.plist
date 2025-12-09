@@ -9,12 +9,12 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1053729180998-ioip742oh1kagjh0ht3i6morter0dsj7</string>
+				<string>com.googleusercontent.apps.964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85</string>
 			</array>
 		</dict>
 	</array>
 	<key>GIDClientID</key>
-	<string>1053729180998-ioip742oh1kagjh0ht3i6morter0dsj7.apps.googleusercontent.com</string>
+	<string>964642536474-jaldv56dmv19ijuc9nqfos51rt5rji85.apps.googleusercontent.com</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -51,5 +51,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

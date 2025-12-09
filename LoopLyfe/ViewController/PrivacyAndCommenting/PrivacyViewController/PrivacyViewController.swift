@@ -87,4 +87,19 @@ class PrivacyViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == safetyTblView {
+            if indexPath.row == 1 {
+                let settingsVC = CommentsViewController(nibName: "CommentsViewController", bundle: nil)
+                navigationController?.pushViewController(settingsVC, animated: true)
+            }
+        }
+    }
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 }

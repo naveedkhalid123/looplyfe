@@ -17,4 +17,16 @@ class BusinessViewController: UIViewController {
         navigationBar.isTranslucent = true
         navigationBar.backgroundColor = .clear
     }
+    
+    @IBAction func dismissBtnTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnTapped(_ sender: UIButton) {
+        let settingsVC = ChooseCategoriesViewController(nibName: "ChooseCategoriesViewController", bundle: nil)
+        navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
+    
+    
 }

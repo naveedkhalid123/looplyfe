@@ -23,9 +23,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="LoopLyfe" customModuleProvider="target">
             <connections>
+                <outlet property="appleBtn" destination="TaJ-1t-s6U" id="dqu-Gi-2YX"/>
                 <outlet property="appleView" destination="hMe-jh-qSX" id="y3f-bA-8vO"/>
+                <outlet property="emailPhoneBtn" destination="VJk-3Q-aek" id="tCV-DD-FoI"/>
                 <outlet property="emailView" destination="Sp3-jN-VnW" id="gYN-ub-707"/>
+                <outlet property="facebookBtn" destination="mPO-uW-cud" id="7II-p6-4pr"/>
                 <outlet property="facebookView" destination="UcF-T7-Kiq" id="tCm-yk-t4j"/>
+                <outlet property="googleBtn" destination="MdJ-Rg-cll" id="aXT-fE-fk6"/>
                 <outlet property="googleView" destination="lFN-R7-fVJ" id="Igw-Zs-rOo"/>
                 <outlet property="policyTxtView" destination="lkR-wz-gCP" id="yEb-3Q-qfC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,8 +40,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-EP-fQO">
-                    <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-EP-fQO">
+                    <rect key="frame" x="0.0" y="10" width="414" height="716"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-Cw-cS3">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="720.33333333333337"/>
@@ -50,6 +54,9 @@
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="dismiss"/>
+                                    <connections>
+                                        <action selector="dismissBtnTapped:" destination="-1" eventType="touchUpInside" id="Im5-dq-Bh7"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-ql-Xav">
                                     <rect key="frame" x="364" y="26" width="28" height="28"/>

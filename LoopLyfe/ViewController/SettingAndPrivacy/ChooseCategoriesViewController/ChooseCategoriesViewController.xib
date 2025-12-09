@@ -37,11 +37,14 @@
                         <navigationItem id="HdW-T5-SJW">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="cEM-rh-a9D">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8DC-eO-GjB">
-                                    <rect key="frame" x="19.999999999999996" y="5" width="39.666666666666657" height="34.333333333333336"/>
+                                    <rect key="frame" x="19.999999999999996" y="8" width="39.666666666666657" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" name="black"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="StH-la-fiK"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </navigationItem>
@@ -117,6 +120,9 @@ ccount. This category won’t be displayed publicly.</string>
                             <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextBtnTapped:" destination="-1" eventType="touchUpInside" id="Bl8-b2-Z8b"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
