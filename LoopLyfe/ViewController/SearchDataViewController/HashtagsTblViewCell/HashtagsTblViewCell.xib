@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HashtagsTblViewCell" id="KGk-i7-Jjw" customClass="HashtagsTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PsX-zu-jXc">
+                        <rect key="frame" x="28" y="9" width="41" height="40.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="Yxm-ZH-IrT"/>
+                            <constraint firstAttribute="width" constant="41" id="aDn-jV-elx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bilalmarth7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlB-mI-IM4">
+                        <rect key="frame" x="78" y="11" width="75" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="216.6K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmG-vn-G7i">
+                        <rect key="frame" x="78" y="30" width="46.333333333333343" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wlB-mI-IM4" firstAttribute="leading" secondItem="PsX-zu-jXc" secondAttribute="trailing" constant="9" id="3jc-eK-JAx"/>
+                    <constraint firstItem="QmG-vn-G7i" firstAttribute="leading" secondItem="PsX-zu-jXc" secondAttribute="trailing" constant="9" id="cV8-dY-CiX"/>
+                    <constraint firstItem="QmG-vn-G7i" firstAttribute="top" secondItem="wlB-mI-IM4" secondAttribute="bottom" constant="1" id="phc-Xa-yPM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="PsX-zu-jXc" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="28" id="65k-ZJ-517"/>
+                <constraint firstItem="wlB-mI-IM4" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="11" id="UAo-uS-od2"/>
+                <constraint firstItem="PsX-zu-jXc" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="XsG-ns-BOp"/>
+            </constraints>
+            <connections>
+                <outlet property="hashtagsImage" destination="PsX-zu-jXc" id="XXF-OB-fvs"/>
+                <outlet property="lblDescription" destination="QmG-vn-G7i" id="eCY-Mo-B21"/>
+                <outlet property="lblHashtags" destination="wlB-mI-IM4" id="FMq-kC-JAs"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="number.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

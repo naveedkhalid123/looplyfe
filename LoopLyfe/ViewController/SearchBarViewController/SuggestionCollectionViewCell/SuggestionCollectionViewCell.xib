@@ -28,7 +28,7 @@
                         <color key="textColor" name="darkTxtGrey"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-aq-8rR">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-aq-8rR">
                         <rect key="frame" x="0.0" y="48" width="70" height="2"/>
                         <color key="backgroundColor" name="black"/>
                         <constraints>

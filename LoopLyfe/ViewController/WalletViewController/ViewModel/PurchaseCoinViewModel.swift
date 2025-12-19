@@ -38,7 +38,6 @@ final class PurchaseCoinViewModel {
 
             case .failure(let error):
                 print("Purchase Failed:", error.localizedDescription)
-           
                 self.purchaseCoinsDelegate?.didFailUpdatePurchaseCoins(error: error)
             }
         }

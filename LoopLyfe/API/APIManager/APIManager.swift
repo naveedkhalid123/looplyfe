@@ -23,6 +23,7 @@ class APIManager {
         case showUserLikedVideos
         case showProfileVisitors
         case purchaseCoin
+        case search
         
         var path: String {
             return rawValue
@@ -60,6 +61,8 @@ class APIManager {
         session.request(url,method: method,parameters: parameters,encoding: JSONEncoding.default,headers: HTTPHeaders(allHeaders))
         .validate()
         .responseDecodable(of: T.self) { response in
+            
+            
             if let data = response.data {
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("Raw JSON Response:\n\(jsonString)")
@@ -199,6 +202,22 @@ class APIManager {
 
     func purchaseCoin( parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<PurchaseCoinModel, Error>) -> Void){
         apiRequest(endpoint: .purchaseCoin, method: method, parameters: parameters, completion: completion)
+    }
+    
+    func search( parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<SearchUserModel, Error>) -> Void){
+        apiRequest(endpoint: .search, method: method, parameters: parameters, completion: completion)
+    }
+   
+    func searchSound( parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<SearchSoundModel, Error>) -> Void){
+        apiRequest(endpoint: .search, method: method, parameters: parameters, completion: completion)
+    }
+    
+    func searchHashtags(parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<SearchHastagsModel, Error>) -> Void){
+        apiRequest(endpoint: .search, method: method, parameters: parameters, completion: completion)
+    }
+   
+    func searchVideos(parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<SearchVideosModel, Error>) -> Void){
+        apiRequest(endpoint: .search, method: method, parameters: parameters, completion: completion)
     }
 
 }

@@ -27,19 +27,33 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
                     return false
                 }
             }
+            
+            
+            if index == 3 {
+                DispatchQueue.main.async { [weak self] in
+                    self?.goToUploadViewController()
+                }
+                return false
+            }
         }
         return true
     }
-
-
     
     func goToSignInViewController() {
         let vc = SignInViewController(nibName: "SignInViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.isNavigationBarHidden = true
         navigationController.modalPresentationStyle = .overFullScreen
-       
+        
         self.present(navigationController, animated: true, completion: nil)
     }
-
+    
+    func goToUploadViewController() {
+        let vc = UploadViewController()
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
+        navigationController.modalPresentationStyle = .overFullScreen
+        
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }

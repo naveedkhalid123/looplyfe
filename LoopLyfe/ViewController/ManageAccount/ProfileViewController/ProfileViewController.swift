@@ -86,6 +86,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func menuBtnTapped(_ sender: Any) {
         let vc = SettingAndPrivacyViewController(nibName: "SettingAndPrivacyViewController", bundle: nil)
+        vc.userDetails = userDetails
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -206,7 +207,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDeleg
         if collectionView == profileCollectionView {
             return CGSize(width: collectionView.frame.width / 3, height: 40)
         } else {
-            return CGSize(width: (collectionView.frame.width / 2) - 10, height: 200)
+            return CGSize(width: (collectionView.frame.width / 3) - 10, height: 200)
         }
     }
 }

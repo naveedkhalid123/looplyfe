@@ -17,12 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinkedIn" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-K9-uRg">
-                        <rect key="frame" x="10" y="0.0" width="130" height="200"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-K9-uRg">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="8"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
@@ -31,9 +28,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="rnp-K9-uRg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="20n-hj-hMX"/>
-                <constraint firstItem="rnp-K9-uRg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Kwl-UD-FQu"/>
+                <constraint firstItem="rnp-K9-uRg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kwl-UD-FQu"/>
                 <constraint firstAttribute="bottom" secondItem="rnp-K9-uRg" secondAttribute="bottom" id="dOp-bo-TKk"/>
-                <constraint firstAttribute="trailing" secondItem="rnp-K9-uRg" secondAttribute="trailing" constant="10" id="pgf-Nk-1vr"/>
+                <constraint firstAttribute="trailing" secondItem="rnp-K9-uRg" secondAttribute="trailing" id="pgf-Nk-1vr"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -44,7 +41,4 @@
             <point key="canvasLocation" x="16.793893129770993" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="LinkedIn" width="300" height="300"/>
-    </resources>
 </document>

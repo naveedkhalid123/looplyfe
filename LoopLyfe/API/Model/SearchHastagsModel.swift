@@ -3,8 +3,8 @@ import Foundation
 // MARK: - SearchHastagsModel
 struct SearchHastagsModel: Codable {
     let code: Int
-    let msg: [HastagsMsg]?
-    let message: String?
+    var msg: [HastagsMsg]?
+    var message: String?
 
     enum CodingKeys: String, CodingKey {
         case code, msg
@@ -23,35 +23,60 @@ struct SearchHastagsModel: Codable {
             message = try container.decodeIfPresent(String.self, forKey: .msg)
         }
     }
-
-    // Custom initializer for manual instantiation
-    init(code: Int, msg: [HastagsMsg]? = nil, message: String? = nil) {
-        self.code = code
-        self.msg = msg
-        self.message = message
-    }
 }
 
 // MARK: - HastagsMsg
 struct HastagsMsg: Codable {
-    let hashtag: Hashtag
+    let hashtag: Hashtag?
 
     enum CodingKeys: String, CodingKey {
         case hashtag = "Hashtag"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        hashtag = try container.decodeIfPresent(Hashtag.self, forKey: .hashtag)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(hashtag, forKey: .hashtag)
     }
 }
 
 // MARK: - Hashtag
 struct Hashtag: Codable {
-    let id: Int
-    let name: String
-    let videosCount: Int
-    let views: String
-    let favourite: Int
+    let id: Int?
+    let name: String?
+    let videosCount: Int?
+    let views: String?
+    let favourite: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id
+        case name
         case videosCount = "videos_count"
-        case views, favourite
+        case views
+        case favourite
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        id = try container.decodeIfPresent(Int.self, forKey: .id)
+        name = try container.decodeIfPresent(String.self, forKey: .name)
+        videosCount = try container.decodeIfPresent(Int.self, forKey: .videosCount)
+        views = try container.decodeIfPresent(String.self, forKey: .views)
+        favourite = try container.decodeIfPresent(Int.self, forKey: .favourite)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encodeIfPresent(id, forKey: .id)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encodeIfPresent(videosCount, forKey: .videosCount)
+        try container.encodeIfPresent(views, forKey: .views)
+        try container.encodeIfPresent(favourite, forKey: .favourite)
     }
 }

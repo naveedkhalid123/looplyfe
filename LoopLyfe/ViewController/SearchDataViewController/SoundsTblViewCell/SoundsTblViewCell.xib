@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SoundsTblViewCell" customModule="LoopLyfe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="copy" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-ik-yF6">
+                        <rect key="frame" x="22" y="3" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="iTF-Fx-VEq"/>
+                            <constraint firstAttribute="height" constant="52" id="s3s-hK-feU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Look" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awl-Xs-iBG">
+                        <rect key="frame" x="85" y="8" width="81" height="21"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contains music from" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-Yi-b4N">
+                        <rect key="frame" x="85" y="28" width="213" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                        <color key="textColor" name="darkTxtGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZOb-Yi-b4N" firstAttribute="leading" secondItem="vlW-ik-yF6" secondAttribute="trailing" constant="11" id="47f-fq-MXP"/>
+                    <constraint firstItem="awl-Xs-iBG" firstAttribute="leading" secondItem="vlW-ik-yF6" secondAttribute="trailing" constant="11" id="ZcE-eL-O4b"/>
+                    <constraint firstItem="ZOb-Yi-b4N" firstAttribute="top" secondItem="awl-Xs-iBG" secondAttribute="bottom" constant="-1" id="uK8-zw-B27"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="awl-Xs-iBG" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="8" id="6mi-Nt-YES"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="ZOb-Yi-b4N" secondAttribute="trailing" constant="22" id="YB8-AW-cg8"/>
+                <constraint firstItem="vlW-ik-yF6" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="ZCH-cG-ozD"/>
+                <constraint firstItem="vlW-ik-yF6" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="22" id="aRv-DN-Avx"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="ZOb-Yi-b4N" secondAttribute="bottom" constant="12" id="vhh-85-GIW"/>
+            </constraints>
+            <connections>
+                <outlet property="lblDescription" destination="ZOb-Yi-b4N" id="rWu-sy-xgk"/>
+                <outlet property="lblName" destination="awl-Xs-iBG" id="sm3-Ua-srl"/>
+                <outlet property="soundImage" destination="vlW-ik-yF6" id="wb5-wf-444"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="copy" width="54" height="54"/>
+        <namedColor name="darkTxtGrey">
+            <color red="0.48199999332427979" green="0.48199999332427979" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

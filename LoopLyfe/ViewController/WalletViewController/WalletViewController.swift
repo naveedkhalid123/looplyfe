@@ -10,11 +10,8 @@ import StoreKit
 import NotificationCenter
 import UserNotifications
 
-
-class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
-    private var walletArr = [["lblCoins":"30", "lblPrice": "$50"]]
-   
+class WalletViewController: UIViewController {
+      
     @IBOutlet weak var lblCoinBalance: UILabel!
     @IBOutlet weak var walletTblView: UITableView!
     
@@ -25,15 +22,22 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        walletTblView.delegate = self
-        walletTblView.dataSource = self
-        walletTblView.register(UINib(nibName: "WalletTblViewCell", bundle: nil), forCellReuseIdentifier: "WalletTblViewCell")
         
+        tableViewSetUp()
         self.products = IAPManager.shared.products
         lblCoinBalance.text = UserDefaultsManager.shared.wallet
         
         viewModel.purchaseCoinsDelegate = self
+        notificationSetUp()
+    }
+    
+    func tableViewSetUp(){
+        walletTblView.delegate = self
+        walletTblView.dataSource = self
+        walletTblView.register(UINib(nibName: "WalletTblViewCell", bundle: nil), forCellReuseIdentifier: "WalletTblViewCell")
+    }
+    
+    func notificationSetUp(){
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(handleCoinPurchase(_:)),
@@ -53,6 +57,15 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func priceButtonPressed(_ sender: UIButton){
+        let product = products[sender.tag]
+        IAPManager.shared.purchase(product: product)
+    }
+}
+
+// MARK: - Wallet Table View
+extension WalletViewController : UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
@@ -70,12 +83,11 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54
     }
+}
 
-    @objc func priceButtonPressed(_ sender: UIButton){
-        let product = products[sender.tag]
-        IAPManager.shared.purchase(product: product)
-    }
-                                
+// MARK: - Notification Setup
+extension WalletViewController {
+    
     @objc func handleCoinPurchase(_ notification: NSNotification) {
         guard let userInfo = notification.userInfo as? [String: String] else { return }
 
@@ -95,15 +107,14 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
             print("Purchase failed:", errorMessage)
         }
     }
-
 }
 
+// MARK: - Delegate Setup
 extension WalletViewController : PurchaseCoinUpdater {
     func didUpdatePurchaseCoins(_ purchaseCoins: PurchaseCoinMsg) {
         self.purchaseCoins = purchaseCoins
         UserDefaultsManager.shared.wallet = purchaseCoins.user?.wallet ?? ""
         lblCoinBalance.text = UserDefaultsManager.shared.wallet
-    
     }
     
     func didFailUpdatePurchaseCoins(error: Error) {
