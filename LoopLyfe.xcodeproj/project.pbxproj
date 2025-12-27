@@ -192,6 +192,8 @@
 		8800793B2EBE10D100032D56 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880079392EBE10D100032D56 /* ForgotPasswordViewController.swift */; };
 		8800793C2EBE10D100032D56 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8800793A2EBE10D100032D56 /* ForgotPasswordViewController.xib */; };
 		8800793F2EBE14B100032D56 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8800793E2EBE14B100032D56 /* ForgotPasswordViewModel.swift */; };
+		8819135B2EFA60BA00990EDD /* DiscoverySectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819135A2EFA60BA00990EDD /* DiscoverySectionsModel.swift */; };
+		8819135E2EFA657200990EDD /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819135D2EFA657200990EDD /* DiscoveryViewModel.swift */; };
 		883FDB782EE7FD1C00A6FEE7 /* PurchaseCoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883FDB772EE7FD1C00A6FEE7 /* PurchaseCoinsModel.swift */; };
 		883FDB7B2EE8019100A6FEE7 /* PurchaseCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883FDB7A2EE8019100A6FEE7 /* PurchaseCoinViewModel.swift */; };
 		884355E52EC3415C00ADB16B /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 884355E42EC3415C00ADB16B /* SkeletonView */; };
@@ -421,6 +423,8 @@
 		880079392EBE10D100032D56 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8800793A2EBE10D100032D56 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		8800793E2EBE14B100032D56 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		8819135A2EFA60BA00990EDD /* DiscoverySectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySectionsModel.swift; sourceTree = "<group>"; };
+		8819135D2EFA657200990EDD /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		883FDB772EE7FD1C00A6FEE7 /* PurchaseCoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCoinsModel.swift; sourceTree = "<group>"; };
 		883FDB7A2EE8019100A6FEE7 /* PurchaseCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCoinViewModel.swift; sourceTree = "<group>"; };
 		884355E72EC341E700ADB16B /* VideoNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNotificationCell.swift; sourceTree = "<group>"; };
@@ -606,6 +610,7 @@
 				88644BF82ED5B705006C213A /* ShowVideosModel.swift */,
 				883FDB772EE7FD1C00A6FEE7 /* PurchaseCoinsModel.swift */,
 				8892F5702EEABDDD009ACEFF /* SearchUserModel.swift */,
+				8819135A2EFA60BA00990EDD /* DiscoverySectionsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1482,6 +1487,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8819135C2EFA654F00990EDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8819135D2EFA657200990EDD /* DiscoveryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		883FDB792EE8017800A6FEE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1675,6 +1688,7 @@
 		88EFE9562EF55C2F00189486 /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8819135C2EFA654F00990EDD /* ViewModel */,
 				88EFE95B2EF55F2000189486 /* SearchDataTblViewCell */,
 				88EFE9572EF55C6000189486 /* SearchViewController.swift */,
 				88EFE9582EF55C6000189486 /* SearchViewController.xib */,
@@ -1993,6 +2007,7 @@
 				67FEE9D82D5F2852004DEAA5 /* InterestCollectionViewCell.swift in Sources */,
 				67458CBD2D674B9D005CB7E4 /* TimeLineTblViewCell.swift in Sources */,
 				6783B0B82D60BBD800E5AEC1 /* OTPVerificationViewController.swift in Sources */,
+				8819135E2EFA657200990EDD /* DiscoveryViewModel.swift in Sources */,
 				67C7377D2D89706C000A4F82 /* ShowSuggestedUsersModel.swift in Sources */,
 				67CBEAC62D60F0FF00FBCED7 /* CreatePasswordViewController.swift in Sources */,
 				67BD1A7C2D95585800DE5918 /* SearchBarModel.swift in Sources */,
@@ -2000,6 +2015,7 @@
 				67458C952D6725AE005CB7E4 /* SettingAndPrivacyViewController.swift in Sources */,
 				670F00252D89D3AD00D61D07 /* FollowerCollectionViewCell.swift in Sources */,
 				885B62D02EE9661500BFB6F4 /* SearchDataTblViewCell.swift in Sources */,
+				8819135B2EFA60BA00990EDD /* DiscoverySectionsModel.swift in Sources */,
 				6783C7DB2D8B2A53003E4D84 /*  ShowFollowingModel .swift in Sources */,
 				671D5BBB2D6357BC00926F7E /* DiscoverViewController.swift in Sources */,
 				679119072D8D740600D6E7B6 /* ShowAllNotificationsModel.swift in Sources */,

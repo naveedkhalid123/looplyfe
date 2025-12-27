@@ -42,19 +42,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending hashtags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5Q-hu-NZH">
-                        <rect key="frame" x="58" y="30" width="93" height="15"/>
+                        <rect key="frame" x="58" y="30" width="240" height="14"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                         <color key="textColor" name="darkTxtGrey"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGM-bl-76k">
-                        <rect key="frame" x="266" y="16" width="32" height="15"/>
+                        <rect key="frame" x="266" y="16" width="32" height="14"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="12"/>
                         <color key="textColor" name="black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CyN-0u-2Yu">
-                        <rect key="frame" x="0.0" y="53" width="320" height="127"/>
+                        <rect key="frame" x="22" y="53" width="298" height="127"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BSS-U8-1kW">
                             <size key="itemSize" width="128" height="128"/>
@@ -78,8 +78,9 @@
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="fGM-bl-76k" secondAttribute="trailing" constant="22" id="IQq-AY-zGU"/>
                 <constraint firstItem="4dH-R7-g04" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="9" id="Kw4-en-gbs"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="CyN-0u-2Yu" secondAttribute="trailing" id="Mod-2c-mkl"/>
-                <constraint firstItem="CyN-0u-2Yu" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="OaL-LF-V8n"/>
+                <constraint firstItem="CyN-0u-2Yu" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="22" id="OaL-LF-V8n"/>
                 <constraint firstItem="tg0-Gy-iJS" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="T5a-eL-1xg"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="X5Q-hu-NZH" secondAttribute="trailing" constant="22" id="aAM-zg-nkw"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="CyN-0u-2Yu" secondAttribute="bottom" id="nht-L1-yCa"/>
             </constraints>
             <connections>

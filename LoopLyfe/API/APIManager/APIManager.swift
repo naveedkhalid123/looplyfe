@@ -24,6 +24,7 @@ class APIManager {
         case showProfileVisitors
         case purchaseCoin
         case search
+        case showDiscoverySections
         
         var path: String {
             return rawValue
@@ -219,5 +220,10 @@ class APIManager {
     func searchVideos(parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<SearchVideosModel, Error>) -> Void){
         apiRequest(endpoint: .search, method: method, parameters: parameters, completion: completion)
     }
+    
+    func discoverSections(parameters: Parameters,method: HTTPMethod = .post, completion: @escaping (Result<DiscoverySectionsModel, Error>) -> Void){
+        apiRequest(endpoint: .showDiscoverySections, method: method, parameters: parameters, completion: completion)
+    }
+
 
 }
